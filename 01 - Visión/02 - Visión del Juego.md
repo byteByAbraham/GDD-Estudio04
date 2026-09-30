@@ -6,7 +6,8 @@ Aquí se define la **idea central** del videojuego. Esta sección funciona como 
 
 ## Concepto central
 
-**El videojuego trata sobre:**
+**El videojuego trata sobre:** Hola esta es una prueba
+
 
 > Explica la fantasía principal que el jugador debe experimentar.
 
