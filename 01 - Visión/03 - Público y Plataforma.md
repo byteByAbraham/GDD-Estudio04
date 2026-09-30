@@ -7,13 +7,24 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 ## Público objetivo
 
 **Edad aproximada:**
+18-25 años 
 
 **Experiencia esperada:**  
-> Casual, intermedia, avanzada.
+ Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia, exploración y resolución de acertijos, pero no requiere experiencia avanzada.
+
 
 **Intereses relevantes:**
+- Videojuegos de terror y suspenso.
+- Historias narrativas y misteriosas.
+- Juegos en primera persona.
+- Exploración de bosques y lugares abandonados.
+- Resolución de acertijos y búsqueda de pistas.
+- Contenido audiovisual de terror, misterio y suspenso.
+
 
 **Conocimientos previos necesarios:**
+No es necesario contar con conocimientos avanzados para jugar. Se espera que el jugador tenga una familiaridad básica con los videojuegos, especialmente con el movimiento y la interacción dentro de un entorno en primera persona. Las mecánicas de investigación, acertijos, supervivencia y sigilo serán enseñadas progresivamente durante el juego.
+
 
 ## Plataforma
 
@@ -39,7 +50,7 @@ Documenta limitaciones de hardware, controles, memoria, almacenamiento, distribu
 
 ## Modelo de distribución
 
-> Gratuito, pago único, educativo, prototipo académico, etc.
+El videojuego será desarrollado como un proyecto académico. Su distribución estará limitada a profesores, estudiantes y personas relacionadas con la evaluación o presentación del proyecto.
 
 ## Consideraciones
 
