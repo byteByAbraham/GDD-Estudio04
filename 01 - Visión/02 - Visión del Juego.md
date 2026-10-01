@@ -42,21 +42,27 @@ Porque combina una historia emocional con terror, investigación y supervivencia
 
 Lista las características que definen la experiencia.
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Exploración del mundo que el jugador podra recorrer diferentes lugares para su investigación.
+El jugador puede recorrer diferentes modulos laboratorio,cabañas,bosque y zonas donde encotrara mas informacion  
+2. Investigacion mediante el entorno.
+La historia se descubre mediantes documentos, mensajes y elemantos encontrados en el mapa.
+3. Un ciclo de dia y noche que cambiará la forma en que el jugador deberá explorar .
+
+
 
 ## Diferenciadores
 
-¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
-
+¿Qué hace que este videojuego sea reconocible frente a otros del mismo género? 
+El principal diferencia es que el jugadro dependerá de las pistas y objetos que se encuentre durante la exploración para poder salvar a su hijo y recuperarlo. Además el juego contará con un clico de dia y noche que cambiará la forma en que el jugador debrá actuar y enfrentarse a los peligros.
 ## Límites del concepto
 
 ¿Qué cosas **NO** es este videojuego?
 
 > Esta sección es especialmente importante para evitar que el proyecto crezca sin control.
 
+1. No es un juego multijugadro
+2. No es un simuladro espacial
+3. No tiene infinitas posibilidades de exploración habra cosa solo para la historia 
+4. No es un juego de terror basado en jumpscares constantes 
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Ficha del Proyecto]] · [[03 - Público y Plataforma]] →
