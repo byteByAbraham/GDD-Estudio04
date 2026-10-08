@@ -9,7 +9,7 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 ## Público objetivo
 
 **Edad aproximada:**
-18-25 años
+Mayores de 18 años
 
 **Experiencia esperada:**
 Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia, exploración y resolución de acertijos, pero no requiere experiencia avanzada.
@@ -40,9 +40,9 @@ No es necesario contar con conocimientos avanzados para jugar. Se espera que el 
 
 ## Restricciones de plataforma
 
-**Hardware:** El videojuego requerirá un equipo capaz de ejecutar  y procesar escenarios en 2D, iluminación, efectos visuales sin afectar considerablemente el rendimiento
+**Hardware:** El videojuego requerirá un equipo capaz de ejecutar escenarios 3D, modelos de personajes, iluminación y efectos ambientales sin afectar considerablemente el rendimiento.
 
-**Memoria:** Se controlará el uso de memoria para evitar cargas excesivas de escenarios, imágenes, sprites y efectos 2D.
+**Memoria:** Se controlará el uso de memoria para evitar cargas excesivas de escenarios, texturas, modelos 3D y recursos visuales.
 
 **Controles:** El diseño estará pensado para teclado y mouse, utilizados para el movimiento, interacción y exploración del escenario, por lo que no se contempla como requisito el uso de controles alternativos.
 
@@ -52,10 +52,10 @@ No es necesario contar con conocimientos avanzados para jugar. Se espera que el 
 ## Sesión de juego
 
 **Duración esperada de una sesión:**
-10 a 30 minutos.
+25 a 35 minutos
 
 **Duración total estimada del juego:**
-1:30 a 2 horas para completar la experiencia principal.
+2 a 2:30 horas para completar la experiencia principal.
 
 ## Modelo de distribución
 
