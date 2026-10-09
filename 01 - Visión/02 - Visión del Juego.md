@@ -8,61 +8,53 @@ Aquí se define la **idea central** del videojuego. Esta sección funciona como 
 
 **El videojuego trata sobre:**
 
-Un padre desesperado que busca salvar la vida de su hijo de una enfermedad incurable. Ante la desesperación, acepta llevarlo con un científico que afirma haber desarrollado un tratamiento experimental. El experimento sale mal, el cuerpo del niño sobrevive, pero su conciencia desaparece y algo desconocido toma el control de su cuerpo.
-
-En un sitio con cabañas y un laboratorio en medio del bosque, el padre deberá investigar durante el día las pistas que dejó el alma de su hijo y descubrir qué ocurrió realmente. Durante la noche, tendrá que sobrevivir a la criatura que controla el cuerpo del niño.
-
-
-> Explica la fantasía principal que el jugador debe experimentar.
+- Un padre desesperado entrega a su hijo enfermo a un científico que promete tener la cura. El científico duerme al padre, experimenta con el niño y el proceso sale mal. El niño muta y ataca al científico antes de escapar al bosque. El padre despierta encerrado de noche en una cabaña y debe explorar el bosque, descubrir qué pasó y llegar al laboratorio, mientras la criatura lo acecha.
 
 ## Experiencia deseada
 
 Completa:
 
-- **Quiero que el jugador se sienta:**  Vulnerable, observado, confundido y bajo tensión constante.
-- **Quiero que el jugador piense:**  Generar dudas: ¿Mi hijo todavía está ahí? ¿Puedo confiar en esta voz?. Tengo que investigar que le sucedió a mi hijo.
-- **Quiero que el jugador haga:** Explorar las cabañas y el laboratorio, investigar pistas, resolver acertijos, interpretar mensajes, esconderse y escapar de la criatura.
-- **Quiero que el jugador recuerde:** La sensación de tristeza, el no saber si la persona que lo está llamando durante la noche realmente es su hijo y el conflicto de no saber si lo salvara o que no pueda recuperarlo.
+- **Quiero que el jugador se sienta:**  Vulnerable, solo, observado y bajo tensión constante.
+- **Quiero que el jugador piense:**  Generar preguntas: ¿Mi hijo todavía está ahí? ¿Puedo confiar en lo que veo y escucho? Tengo que descubrir qué le pasó.
+- **Quiero que el jugador haga:** Explorar el bosque bajo la lluvia, entrar a las cabañas y al laboratorio, interpretar notas, imágenes y grabaciones para abrir cada acceso, esconderse y escapar de la criatura.
+- **Quiero que el jugador recuerde:** La tristeza de la historia, la duda de si el niño sigue ahí o si la criatura solo lo imita, y el conflicto de no saber si logrará salvarlo o si ya lo perdió.
 
 ## Fantasía del jugador
 
 > [!question] Pregunta clave
 > ¿Qué fantasía estamos permitiendo cumplir al jugador?
 
-El jugador experimenta la fantasía de ser un padre investigador y superviviente que debe descubrir qué ocurrió con su hijo mientras intenta protegerlo y sobrevivir a una criatura.
-Es una persona vulnerable que debe utilizar su inteligencia, observación y capacidad de adaptación para sobrevivir.
+- El jugador vive la fantasía de ser un padre que haría cualquier cosa por su hijo. Es una persona vulnerable que debe utilizar su inteligencia, observación y su capacidad de deducción para descubrir que ocurrió.
 
 ## Propuesta de valor
 
 ¿Por qué alguien querría jugar este videojuego?
 
-Porque combina una historia emocional con terror, investigación y supervivencia en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabe que la criatura alguna vez fue su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
+Porque combina una historia emocional con terror, exploración y sigilo en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabra que la criatura es su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
 
 ## Características principales
 
 Lista las características que definen la experiencia.
 
-1. Exploración del mundo que el jugador podra recorrer diferentes lugares para su investigación.
-El jugador puede recorrer diferentes modulos laboratorio,cabañas,bosque y zonas donde encotrara mas informacion  
-2. Investigacion mediante el entorno.
-La historia se descubre mediantes documentos, mensajes y elemantos encontrados en el mapa.
-3. Un ciclo de dia y noche que cambiará la forma en que el jugador deberá explorar .
-
-
+1. Exploración nocturna bajo lluvia constante de un bosque con cabañas explorables y un laboratorio.
+2. Recorrer diferentes sitios donde encontrara mas información de lo sucedido y otros sucesos.
+3. Sigilo con linterna de batería limitada, escondites y una criatura.
+4. Narrativa ambiental mediante notas, dibujos y grabaciones.
 
 ## Diferenciadores
 
-¿Qué hace que este videojuego sea reconocible frente a otros del mismo género? 
-El principal diferencia es que el jugadro dependerá de las pistas y objetos que se encuentre durante la exploración para poder salvar a su hijo y recuperarlo. Además el juego contará con un clico de dia y noche que cambiará la forma en que el jugador debrá actuar y enfrentarse a los peligros.
+¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
+
+- El jugador nunca sabe si la criatura conserva algo de su hijo. Esa duda se refuerza con el encuentro a distancia donde el niño parece pedir ayuda. El avance depende de entender la historia, no de buscar objetos con una marca.
+
 ## Límites del concepto
 
 ¿Qué cosas **NO** es este videojuego?
 
-> Esta sección es especialmente importante para evitar que el proyecto crezca sin control.
-
-1. No es un juego multijugadro
-2. No es un simuladro espacial
-3. No tiene infinitas posibilidades de exploración habra cosa solo para la historia 
-4. No es un juego de terror basado en jumpscares constantes 
+1. No es un juego multijugador.
+2. No tiene combate, ni inventario complejo.
+3. No es de mundo abierto y solo contiene lo necesario para la historia.
+4. No hay ciclo día/noche, todo ocurre de noche.
+5. No depende de jumpscares constantes.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Ficha del Proyecto]] · [[03 - Público y Plataforma]] →
