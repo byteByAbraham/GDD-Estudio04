@@ -12,7 +12,7 @@ Documenta cada mecánica con suficiente detalle para que otro integrante pueda i
 
 **Propósito:**  
 
-Permitir que el jugador descubra información sobre el experimento mediante la observación, la lectura y el uso de objetos. La investigación proporciona razones para abandonar la seguridad del refugio.
+Permitir que el jugador descubra información sobre el experimento mediante la observación, la lectura y el uso de objetos. La investigación proporciona razones para abandonar la seguridad de las cabañas.
 
 **Activación:**  
 
@@ -24,13 +24,13 @@ Acercarse a un elemento interactivo, apuntar al mismo con el centro de la cámar
 
 - El mensaje contextual indica la acción disponible a realizar: leer, recoger, abrir, examinar o utilizar.
 
-- Los documentos se registran en el diario, los objetos de acceso se guardan en el inventario. Cada elemento tiene un identificador único y solo se incorpora una vez.
+- Los documentos, imágenes y dibujos se registran en el archivo de notas. Las llaves se guardan en una lista breve de llaves. Cada elemento tiene un identificador único y solo se incorpora una vez.
 
-- La resolución de un acertijo actualiza el progreso de acuerdo con sus requisitos. Su contenido, solución y consecuencias se definirán cuando se diseñe cada acertijo.
+- Resolver un puzle abre el acceso a la siguiente zona y guarda un checkpoint. La pista, la solución y la ubicación de cada puzle están en [[03 - Sistemas]], sistema S03.
 
 - Si una interacción no cumple sus requisitos, se informa al jugador sin marcarla como completada.
 
-- Las pantallas de lectura y diario pausan la simulación. Los acertijos que utilicen un panel contextual seguirán la misma regla; las interacciones realizadas directamente en el escenario no pausan por sí solas.
+- Las pantallas de lectura y archivo pausan la simulación. Los acertijos que utilicen un panel contextual seguirán la misma regla; las interacciones realizadas directamente en el escenario no pausan por sí solas.
 
 **Entrada:**  
 
@@ -38,7 +38,7 @@ Acercarse a un elemento interactivo, apuntar al mismo con el centro de la cámar
 
 - **[Esc]** para cerrar una pantalla contextual 
 
-- **[Tab]** para consultar el diario e inventario.
+- **[Tab]** para consultar el archivo de notas.
 
 **Estado inicial:**  
 
@@ -50,19 +50,19 @@ Información registrada, objeto incorporado o mecanismo actualizado. Si se compl
 
 **Recursos utilizados:**  
 
-Elementos interactivos, inventario de objetos clave, diario, interfaz contextual cuando corresponda y estados de progreso. No se utilizan monedas, fabricación ni objetos consumibles de investigación.
+Elementos interactivos, lista de llaves, archivo de notas, interfaz contextual cuando corresponda y estados de progreso. No se utilizan monedas, fabricación ni objetos consumibles de investigación
 
 **Recompensa:**  
 
-Información sobre el experimento, acceso a elementos o zonas y avance de la investigación, según los objetivos que se definan.
+Información sobre el experimento, acceso a la siguiente zona y avance de la historia.
 
 **Penalización:**  
 
-No cumplir los requisitos de una interacción impide completar esa acción. Las consecuencias de fallar un acertijo se definirán para cada caso. La exploración fuera de los espacios protegidos expone al jugador a la criatura.
+No cumplir los requisitos de una interacción impide completar esa acción. Las consecuencias de fallar un acertijo se definirán para cada caso. La exploración fuera de las cabañas expone al jugador a la criatura.
 
 **Interacciones con otras mecánicas:**
 
-El desplazamiento permite alcanzar las pistas; la iluminación facilita verlas; el sigilo y la defensa permiten investigar zonas amenazadas. El progreso puede activar la transición a lluvia mediante el evento que se defina para la investigación.
+El desplazamiento permite alcanzar las pistas, la linterna facilita verlas, el sigilo permite investigar zonas con riesgo.
 
 **Casos límite:**  
 
@@ -74,7 +74,7 @@ El desplazamiento permite alcanzar las pistas; la iluminación facilita verlas; 
 
 - Cerrar una interfaz no marca una interacción o acertijo como resuelto si sus requisitos no se han cumplido.
 
-- Tras un reinicio, objetos, documentos, mecanismos y puertas deben coincidir con el estado de partida que se restablezca. El método de reinicio y guardado está pendiente de definición.
+- Tras reaparecer en un checkpoint, objetos, notas, llaves y puertas coinciden con el estado guardado al resolver el último puzle.
 
 ### Mecánica 02 - Evitar a la criatura y utilizar escondites
 
@@ -92,17 +92,18 @@ Alejarse del campo visual de la criatura, reducir el ruido al agacharse y utiliz
 
 - Una pared o cobertura sólida bloquea la visión. La oscuridad y la lluvia reducen la visibilidad, pero no garantizan seguridad.
 
-- Correr y golpear generan señales que pueden atraer a la criatura.
+- Correr y encender un generador generan señales que pueden atraer a la criatura.
 
 - Para esconderse, el jugador debe estar a 2 metros o menos de un escondite libre y pulsar E.
 
-- Entrar en un escondite coloca al jugador en una posición definida, apaga la linterna y desactiva el movimiento, los golpes y la luz intensa. La cámara conserva un giro limitado.
+- Entrar en un escondite coloca al jugador en una posición definida, apaga la linterna y desactiva el movimiento. La cámara conserva un giro limitado.
 
 - Al salir, la linterna permanece apagada hasta que el jugador la encienda con F.
 
 - La cabaña inicial funciona como espacio protegido. La criatura no puede entrar ni atacar a través de sus paredes.
 
-- La lluvia dificulta orientarse y escuchar a la criatura. También reduce el alcance de sus sentidos en exteriores, por lo que ofrece oportunidades para moverse sin ser detectado.
+- La lluvia es constante y dificulta orientarse y escuchar a la criatura. Reduce el alcance de sus sentidos en exteriores, por lo que ofrece oportunidades para moverse sin ser detectado.
+- La criatura emite un tarareo apagado cuando está cerca, que funciona como aviso de proximidad. El ruido de un generador encendido también la atrae.
 
 **Entrada:**  
 
@@ -130,91 +131,56 @@ Ser visto puede provocar persecución; ser escuchado puede atraer a la criatura 
 
 **Interacciones con otras mecánicas:**  
 
-La carrera permite crear distancia, aunque produce ruido. La linterna facilita ver, pero puede revelar una posición. La defensa ofrece una oportunidad de romper contacto y esconderse.
+La carrera permite crear distancia, aunque produce ruido. La linterna facilita ver, pero puede revelar una posición. Los escondites permiten romper el contacto.
 
 **Casos límite:**
 
 - Un escondite no es válido si está bloqueado o su posición de salida no es utilizable, el nivel debe garantizar al menos una salida libre.
 
-- No se puede entrar durante el golpe, la captura o una pantalla de lectura.
+- No se puede entrar a un escondite durante la captura o una pantalla de lectura.
 
 - Salir no concede invulnerabilidad. Se coloca al jugador en un punto de salida que no atraviese paredes.
 
 - Si se solicita ponerse de pie bajo un obstáculo, el jugador continúa agachado hasta disponer de espacio.
 
-### Mecánica 03 - Defenderse con la luz y el golpe de la linterna
+### Mecánica 03 - Linterna y batería
 
-**Propósito:**  
+**Propósito:** Dar al jugador una herramienta de visión con un costo, de modo que cada decisión de iluminar sea un riesgo.
 
-Ofrecer una defensa limitada que permita escapar y refuerce el conflicto de enfrentarse al cuerpo del hijo.
-
-**Activación:**  
-
-Mantener la luz intensa sobre la criatura o ejecutar un golpe cuando se encuentre a corta distancia.
+**Activación:** Pulsar **[F]** para alternar la linterna. Recoger baterías con **[E]**.
 
 **Reglas:**
 
-- La iluminación normal ayuda a explorar. La luz intensa es una acción defensiva distinta que utiliza una reserva recargable.
+- La linterna inicia al 100% y consume 0.3% por segundo mientras está encendida. Apagada no consume.
 
-- Mantener el botón derecho activa la luz intensa y obliga a caminar. Alcanza hasta 8 metros y requiere apuntar a la parte superior del cuerpo o a la cabeza de la criatura, sin obstáculos entre ambos.
+- Cada batería recogida recarga 40%, hasta un máximo de 100%.
 
-- Mantener la exposición durante 1.2 segundos continuos interrumpe a la criatura durante 2 segundos. Si se pierde el objetivo o se interrumpe el haz, la exposición acumulada vuelve a cero.
+- Al llegar a 0%, la linterna se apaga y queda una luz ambiental mínima para no dejar la partida sin salida.
 
-- La reserva inicia en 100 unidades, consume 25 unidades por segundo de luz intensa y recupera 20 por segundo después de 3 segundos sin usarla. El golpe y la luz normal no consumen esa reserva.
+- La criatura puede notar el haz si lo percibe, y eso la atrae a investigar el origen.
 
-- Al agotarse la reserva, termina la luz intensa y vuelve la iluminación normal. Es necesario soltar y volver a pulsar el clic derecho después de recuperar reserva.
+- Entrar a un escondite apaga la linterna, y al salir se enciende con **[F]**.
 
-- Pulsar el clic izquierdo ejecuta un golpe frontal con la linterna, con alcance de 1.5 metros. Tiene 0.2 segundos de preparación, un solo instante de impacto y 1.5 segundos de recuperación desde el inicio.
+- Hay 4 baterías en el mapa y siempre una alcanzable antes del siguiente puzle.
 
-- Un golpe válido hace retroceder a la criatura hasta 0.5 metros, si hay espacio, y la interrumpe durante 1 segundo. Un golpe solo puede afectar una vez al mismo objetivo.
+**Entrada:** **[F]**, **[E]** y movimiento del mouse.
 
-- Después de cualquier interrupción, la criatura tiene 5 segundos de resistencia a nuevas interrupciones, contados desde que termina el efecto. Esta resistencia se comparte entre golpe y luz intensa.
+**Estado inicial:** Linterna encendida o apagada, con un porcentaje de batería.
 
-- Durante esa resistencia no se acumula exposición de luz y los golpes no vuelven a interrumpir. Un gesto de protección de la criatura y una reacción visual breve comunican la resistencia.
+**Estado final:** Haz visible o apagado, orientado hacia donde observa el jugador.
 
-- La defensa permite huir, no reduce una barra de salud de la criatura ni permite derrotarla mediante ataques repetidos.
+**Recursos utilizados:** Linterna, iluminación y visibilidad de los objetos.
 
-- El golpe interrumpe la luz intensa si se inicia durante su uso. No puede golpearse ni usar la luz intensa desde un escondite o una pantalla contextual.
+**Recompensa:** Reconocer caminos, pistas y amenazas.
 
-**Entrada:**  
+**Penalización:** Gastar batería y revelar posición.
 
-**[Clic derecho]** del mouse mantenido para luz intensa, **[Clic izquierdo]** pulsado para un golpe. **[F]** controla la iluminación normal.
+**Interacciones con otras mecánicas:** Investigación, sigilo y exploración. La linterna facilita ver pistas, pero puede revelar la posición al jugador.
 
-**Estado inicial:**  
+**Casos límite:**  
 
-Jugador activo con la linterna disponible. La criatura puede encontrarse patrullando, investigando o persiguiendo.
+Pausar o abrir el archivo no consume batería. Al reaparecer en un checkpoint, la batería tiene un mínimo del 30%. La lluvia no afecta a la linterna. 
 
-**Estado final:**  
-
-Criatura interrumpida si se cumplen las condiciones, o defensa fallida si no existe objetivo válido, falta reserva o la criatura está resistiendo. El jugador dispone de una oportunidad para alejarse.
-
-**Recursos utilizados:**  
-
-Linterna, reserva de luz intensa, exposición continua, distancia, visibilidad y tiempos de recuperación.
-
-**Recompensa:**  
-
-Crear un breve momento para romper la persecución y llegar a cobertura.
-
-**Penalización:**  
-
-Fallar consume tiempo y, en el caso de la luz intensa, reserva. Intentar golpear exige acercarse a la criatura y aumenta el riesgo de captura.
-
-**Interacciones con otras mecánicas:**  
-
-La defensa se combina con carrera, cobertura y escondites. La reserva se conserva para las amenazas mientras la luz normal permite investigar.
-
-**Casos límite:**
-
-- Una pared bloquea tanto el golpe como la luz intensa, aunque el modelo de la criatura sea parcialmente visible.
-
-- Una criatura interrumpida cancela su preparación de ataque. Si el jugador acierta una acción defensiva válida al mismo tiempo que la criatura ataca, se prioriza la acción del jugador.
-
-- Durante los 5 segundos de resistencia de la criatura, apuntar el haz no almacena tiempo para interrumpir inmediatamente al terminarla.
-
-- Mantener el botón izquierdo no genera golpes automáticos, cada golpe requiere una pulsación nueva después de la recuperación.
-
-- La linterna está disponible desde el inicio y no puede soltarse ni perderse.
 
 ## Mecánicas secundarias
 
@@ -236,7 +202,7 @@ Pulsar las **teclas de dirección** y mantener **[Shift izquierdo]** para correr
 
 - El movimiento diagonal tiene la misma velocidad máxima que el movimiento en línea recta.
 
-- La carrera se limita al estado de pie, termina al agacharse, usar luz intensa o iniciar un golpe.
+- La carrera se limita al estado de pie y termina al agacharse.
 
 - La carrera no utiliza una barra de resistencia en el alcance inicial. Su costo es el ruido y la dificultad para observar pistas.
 
@@ -256,7 +222,7 @@ Pulsar las **teclas de dirección** y mantener **[Shift izquierdo]** para correr
 
 **Penalización:** Correr genera pasos que pueden atraer la criatura desde más lejos.
 
-**Interacciones con otras mecánicas:** Investigación, sigilo, defensa y acceso a escondites.
+**Interacciones con otras mecánicas:** Investigación, sigilo y acceso a escondites.
 
 **Casos límite:**  
 
@@ -288,57 +254,21 @@ Reduce la altura de la cámara y la velocidad a 1.2 m/s. No permite correr y no 
 
 **Casos límite:**  
 
-No cambia la postura durante captura, escondite, golpe o pantalla contextual. Si se entra agachado a un escondite, se recupera esa postura al salir.
+No cambia la postura durante captura, escondite o pantalla contextual. Si se entra agachado a un escondite, se recupera esa postura al salir.
 
-### Mecánica secundaria 03 - Encender y orientar la iluminación normal
+### Mecánica secundaria 03 - Consultar el archivo de notas
 
-**Propósito:** Facilitar la navegación y lectura del entorno durante las dos fases nocturnas.
+**Propósito:** Permitir recordar la información encontrada, sin indicar al jugador qué hacer a continuación.
 
-**Activación:** Encender la linterna y orientar el haz con la cámara.
-
-**Reglas:**
-
-- **[F]** alterna encendida y apagada. La iluminación normal no consume la reserva defensiva y no interrumpe a la criatura.
-
-- Pulsar luz intensa con la iluminación apagada enciende temporalmente el haz. Al soltarla se restaura el estado normal anterior, salvo el agotamiento de reserva, que deja la luz normal encendida.
-
-- **[F]** no altera el estado mientras se usa luz intensa o se ejecuta un golpe, debe pulsarse después de terminar la acción.
-
-- La lluvia reduce la claridad del entorno, pero no modifica la reserva ni avería la linterna.
-
-**Entrada:** **[F]** y movimiento del **[Mouse]**.
-
-**Estado inicial:** Iluminación normal encendida o apagada.
-
-**Estado final:** Haz visible o apagado, orientado hacia donde observa el jugador.
-
-**Recursos utilizados:** Linterna, iluminación y visibilidad de los objetos.
-
-**Recompensa:** Reconocer caminos, pistas y amenazas.
-
-**Penalización:** Dirigir el haz hacia la criatura puede atraerla.
-
-**Interacciones con otras mecánicas:** Investigación, sigilo y defensa con luz intensa.
-
-**Casos límite:**  
-
-Entrar en un escondite apaga la luz y salir no la enciende automáticamente. Durante una pantalla contextual o captura no se acepta **[F]**. Tras reanudar una pausa, la luz intensa requiere una nueva pulsación.
-
-### Mecánica secundaria 04 - Consultar el diario y los objetos clave
-
-**Propósito:** Permitir recordar la información encontrada y consultar el objetivo actual.
-
-**Activación:** Abrir el panel y seleccionar una entrada o un objeto.
+**Activación:** Pulsar **[Tab]** y seleccionar una entrada.
 
 **Reglas:**
 
-- El diario muestra únicamente información descubierta, el objetivo actual y los objetos clave obtenidos.
+- El archivo muestra únicamente notas, imágenes y mensajes, y las llaves obtenidas. No muestra objetivos.
 
 - Los documentos conservan su texto e imagen después de recogerse. Las voces no se etiquetan como auténticas o falsas.
 
-- El inventario inicial es una lista de objetos clave: su capacidad basta para todos los elementos del episodio y no exige ordenar casillas ni descartar objetos.
-
-- Las llaves o piezas se utilizan mediante **[E]** sobre su mecanismo, no requieren arrastrar elementos desde el inventario.
+- Las llaves se usan con **[E]** sobre su puerta, sin arrastrar elementos.
 
 - El panel pausa la simulación y libera el cursor. Cerrarlo devuelve el control de la cámara.
 
@@ -348,16 +278,16 @@ Entrar en un escondite apaga la luz y salir no la enciende automáticamente. Dur
 
 **Estado final:** Información consultada y retorno a exploración sin modificar la posición del jugador.
 
-**Recursos utilizados:** Diario, inventario, objetivos y pantallas de interfaz.
+**Recursos utilizados:** Archivo de notas, lista de llaves y pantallas de interfaz.
 
-**Recompensa:** Comprender pistas y orientar el siguiente paso de investigación.
+**Recompensa:** Comprender las pistas y relacionarlas entre sí.
 
 **Penalización:** No aplica una penalización jugable directa.
 
-**Interacciones con otras mecánicas:** Investigación y resolución del acertijo.
+**Interacciones con otras mecánicas:** Investigación y resolución de puzles.
 
 **Casos límite:**  
 
-Un diario vacío muestra un mensaje claro. No se abre durante captura, golpe o escondite. Si ya hay un panel de lectura o acertijo, **[Tab]** no abre un segundo panel. Al restaurar una partida, el diario debe coincidir con la información incluida en el estado recuperado.
+Un archivo vacío muestra un mensaje claro. No se abre durante captura o escondite. Si ya hay un panel de lectura o de candado abierto, **[Tab]** no abre un segundo panel. Al reaparecer en un checkpoint, el archivo conserva lo descubierto hasta ese punto.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Jugabilidad]] · [[03 - Sistemas]] →
