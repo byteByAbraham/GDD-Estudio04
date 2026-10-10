@@ -10,12 +10,12 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 | ---------------------------- | ------------------------------------------------------------------------------- |
 | **Nombre del proyecto**      | Dark Mutant                                                                     |
 | **Nombre clave**             | MutantExp                                                                       |
-| **Versión del GDD**          | 0.2.0                                                                           |
+| **Versión del GDD**          | 0.3.0                                                                           |
 | **Estado del proyecto**      | Concepto                                                                        |
 | **Equipo**                   | García Abraham \| Gomez Diana \| Gael Fernandez \| Guadalupe Cuy \| Moises Pech |
 | **Responsable del proyecto** | Garcia Rodríguez Abraham Antonio                                                |
 | **Fecha de inicio**          | 25/09/2026                                                                      |
-| **Última actualización**     | 04/10/2026                                                                      |
+| **Última actualización**     | 09/10/2026                                                                      |
 | **Repositorio**              | https://github.com/byteByAbraham/GDD-Estudio04                                  |
 
 ## Identidad del videojuego
@@ -70,11 +70,12 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 
 **Respuesta:**
 Eres un padre que despierta encerrado en una cabaña, de noche en el bosque. Tu hijo, convertido en una criatura por un experimento fallido, recorre el bosque. Sostienes una linterna de batería limitada, exploras, te escondes y deduces la verdad para llegar al laboratorio.
+
 ## Estado actual
 
 - [x] Concepto definido
 - [x] Alcance inicial definido
-- [ ] Mecánica principal definida
+- [x] Mecánica principal definida
 - [ ] Prototipo funcional
 - [ ] Vertical slice
 - [ ] Producción

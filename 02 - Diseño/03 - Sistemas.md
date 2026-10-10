@@ -6,16 +6,16 @@ Los sistemas son conjuntos de reglas y componentes que trabajan juntos: combate,
 
 ## Inventario de sistemas
 
-| Sistema | Propósito | Dependencias | Estado |
-|---|---|---|---|
-| S01 - Jugador, cámara y entradas | Moverse, observar y aceptar solo acciones compatibles | Colisiones del escenario, estados de partida, configuración de entradas | Propuesto|
-| S02 - Interacción, inventario y diario | Registrar pistas y utilizar objetos clave | S01, identificadores de contenido, S07 | Propuesto|
-| S03 - Acertijos y progreso | Gestionar objetivos y condiciones de avance de la investigación | S02, eventos de objetivos, S04, S08 | Propuesto|
-| S04 - Fases nocturnas y lluvia | Modificar el ambiente según el progreso | S03, iluminación y clima, S05, S07 | Propuesto|
-| S05 - Criatura, percepción y captura | Crear amenazas coherentes con sigilo y defensa | Navegación del escenario, S01, S04, eventos de S06 | Propuesto|
-| S06 - Linterna y defensa | Iluminar, aplicar luz intensa y golpear | S01, visibilidad y colisiones, S05, S07 | Propuesto|
-| S07 - Interfaz, audio y señales narrativas | Comunicar acciones y sostener la tensión | Estados publicados por S01 a S06, contenido narrativo | Propuesto|
-| S08 - Gestión de partida y ajustes | Pausar, reintentar y gestionar el guardado que se defina | Estado estable de S01 a S07, archivos locales | Propuesto|
+| Sistema                                    | Propósito                                                       | Dependencias                                                            | Estado    |
+| ------------------------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------- | --------- |
+| S01 - Jugador, cámara y entradas           | Moverse, observar y aceptar solo acciones compatibles           | Colisiones del escenario, estados de partida, configuración de entradas | Propuesto |
+| S02 - Interacción, archivo y llaves        | Registrar pistas y utilizar objetos clave                       | S01, identificadores de contenido, S07                                  | Propuesto |
+| S03 - Acertijos y progreso                 | Gestionar la cadena de 4 puzles y los checkpoints               | S02, eventos de objetivos, S05, S08                                     | Propuesto |
+| S04 - Ambiente y lluvia                    | Mantener lluvia, iluminación y audio ambiental                  | Iluminación, audio, regiones interior/exterior, S05, S07                | Propuesto |
+| S05 - Criatura, percepción y captura       | Crear una amenaza coherente con el sigilo, sin combate          | Navegación del escenario, S01, S04, S06                                 | Propuesto |
+| S06 - Linterna y batería                   | Iluminar y gestionar la batería                                 | S01, visibilidad y colisiones, S05, S07                                 | Propuesto |
+| S07 - Interfaz, audio y señales narrativas | Comunicar acciones y sostener la tensión                        | Estados publicados por S01 a S06, contenido narrativo                   | Propuesto |
+| S08 - Gestión de partida y ajustes         | Pausar, reintentar desde el último checkpoint y guardar ajustes | Estado estable de S01 a S07, archivos locales                           | Propuesto |
 
 ### S01 - Jugador, cámara y entradas
 
@@ -25,7 +25,7 @@ Permitir explorar en primera persona y controlar qué acciones están disponible
 
 **Entradas:**  
 
-Dirección de movimiento, movimiento del mouse, carrera, postura, interacción, controles de linterna, apertura de paneles y pausa.
+Dirección de movimiento, movimiento del mouse, carrera, postura, interacción, linterna, apertura del archivo de notas, elección de diálogo y pausa.
 
 **Procesamiento / reglas:**
 
@@ -33,17 +33,17 @@ Dirección de movimiento, movimiento del mouse, carrera, postura, interacción, 
 
 - La dirección diagonal se normaliza y las colisiones impiden atravesar geometría. El recorrido se construye sin exigir saltos.
 
-- La cámara permite moverse de manera horizontal y vertical, la sensibilidad se ajusta desde opciones.
+- La cámara se mueve de manera horizontal y vertical, y la sensibilidad se ajusta desde opciones.
 
-- Las acciones de desplazamiento y postura se combinan con la exploración, la carrera requiere estar de pie.
-
-- La luz intensa obliga a caminar. El golpe cancela carrera y luz intensa y bloquea **[E]**, **[F]**, **[Ctrl]** y **[Tab]** durante su recuperación. El movimiento a velocidad de caminar y la cámara siguen disponibles durante el golpe.
+- La carrera requiere estar de pie y termina al agacharse.
 
 - Dentro de un escondite solo se admite cámara limitada, **[E]** para salir y **[Esc]** para pausa.
 
-- Una pantalla contextual desactiva entradas del mundo y libera el cursor. La captura desactiva todas las acciones salvo las opciones de reinicio o menú al terminar su presentación.
+- Una pantalla contextual (lectura, archivo, candado o diálogo) desactiva las entradas del mundo y libera el cursor.
 
-- **[Esc]** puede pausar durante una acción, al volver se conserva su tiempo restante, pero no se reanuda automáticamente la luz intensa.
+- La captura desactiva todas las acciones salvo las opciones de reintentar o menú al terminar su presentación.
+
+- **[Esc]** pausa la simulación. Al volver se conservan los tiempos restantes.
 
 - Perder el foco de la ventana pausa la simulación y libera las entradas mantenidas para evitar desplazamientos involuntarios.
 
@@ -53,7 +53,7 @@ Posición, orientación, postura, velocidad, señales de pasos y solicitudes de 
 
 **Estados posibles:**  
 
-Exploración de pie, exploración agachado, carrera, luz intensa, golpe, escondido, pantalla contextual, pausa y capturado. Postura y posición se mantienen como datos separados de la acción activa.
+Exploración de pie, exploración agachado, carrera, escondido, pantalla contextual, pausa y capturado. Postura y posición se mantienen como datos separados de la acción activa.
 
 **Dependencias:**  
 
@@ -61,11 +61,11 @@ Colisiones y posiciones transitables, estados globales de S08, controles y opcio
 
 **Interacciones:**  
 
-S02 recibe interacción, S05 recibe posición y ruido, S06 recibe defensa, S07 representa mensajes y ajustes, S08 bloquea acciones al pausar o restaurar.
+S02 recibe la interacción, S05 recibe posición y ruido de pasos, S06 recibe la orden de encender o apagar la linterna, S07 representa mensajes y ajustes, S08 bloquea acciones al pausar o reaparecer.
 
 **Datos que necesita:**  
 
-Velocidades, alturas de postura, sensibilidad, límites de cámara, asignaciones fijas de entradas y posiciones de entrada/salida de escondites.
+Velocidades, alturas de postura, sensibilidad, límites de cámara, asignaciones fijas de entradas y posiciones de entrada y salida de escondites.
 
 **Datos que genera:**  
 
@@ -73,23 +73,23 @@ Transformación del jugador, postura, acción activa y eventos de movimiento.
 
 **Riesgos:**  
 
-Entradas simultáneas que activen dos acciones incompatibles, colisiones defectuosas, cámara que atraviese paredes, obstáculos que impidan completar el recorrido.
+Entradas simultáneas que activen dos acciones incompatibles, colisiones defectuosas, cámara que atraviese paredes y obstáculos que impidan completar el recorrido.
 
 **Criterios de aceptación:**
 
 - Desplazarse en diagonal no supera la velocidad configurada.
 
-- Mantener carrera mientras se usa luz intensa produce movimiento a velocidad de caminar.
-
-- Una pared bloquea el desplazamiento y ponerse de pie bajo un techo bajo conserva la postura agachada.
+- Una pared bloquea el desplazamiento, y ponerse de pie bajo un techo bajo conserva la postura agachada.
 
 - Abrir un panel o pausar detiene movimiento, criatura y temporizadores del mundo.
 
 - Salir de un escondite utiliza su punto de salida y recupera la postura de entrada.
 
-- Perder el foco y volver a la ventana no produce movimiento ni defensa sin entrada del usuario.
+- Perder el foco y volver a la ventana no produce movimiento sin entrada del usuario.
 
-### S02 - Interacción, inventario y diario
+- Con una pantalla contextual abierta, las teclas de movimiento no mueven al jugador.
+
+### S02 - Interacción, archivo y llaves
 
 **Objetivo:**  
 
@@ -97,7 +97,7 @@ Permitir encontrar y conservar pistas, manipular puertas y utilizar objetos nece
 
 **Entradas:**  
 
-Objeto señalado por la cámara, solicitud **[E]**, selección en el diario y eventos de restauración.
+Objeto señalado por la cámara, solicitud **[E]**, selección en el archivo y estado restaurado desde un checkpoint.
 
 **Procesamiento / reglas:**
 
@@ -107,27 +107,31 @@ Objeto señalado por la cámara, solicitud **[E]**, selección en el diario y ev
 
 - La linterna está disponible desde el inicio, separada de los objetos de investigación.
 
-- No se duplica un objeto ya recogido. Los objetos clave no se pueden descartar, su capacidad basta para el contenido del episodio.
+- Las notas, imágenes y grabaciones se registran en el archivo. Las llaves se guardan en una lista breve y no se pueden descartar.
+
+- Las baterías se consumen al recogerlas: recargan la linterna y no ocupan espacio.
+
+- No se duplica un objeto ya recogido.
 
 - Los documentos pueden releerse. Su contenido debe ser legible a 1920 × 1080.
 
-- Abrir lectura, diario o panel de acertijo solicita una pantalla contextual a S08, que pausa el mundo. Solo hay una pantalla contextual abierta.
+- Abrir lectura, archivo o candado solicita una pantalla contextual a S08, que pausa el mundo. Solo hay una pantalla contextual abierta.
 
 **Salidas:**  
 
-Objetos registrados, documentos disponibles, acciones de puerta, eventos de pista obtenida y mensajes de requisito incumplido.
+Llaves registradas, notas disponibles, acciones de puerta, eventos de pista obtenida, baterías recogidas y mensajes de requisito incumplido.
 
 **Estados posibles:**  
 
-Sin objetivo, objetivo interactivo válido, requisito pendiente, lectura, diario, objeto recogido, objeto instalado.
+Sin interactivo, interactivo válido, requisito pendiente, lectura, archivo, objeto recogido y llave usada.
 
 **Dependencias:**  
 
-S01 para seleccionar y activar, catálogo local de elementos, S07 para presentación, S08 para pausa y restauración.
+S01 para seleccionar y activar, catálogo local de elementos, S06 para recargar batería, S07 para presentación y S08 para pausa y checkpoint.
 
 **Interacciones:**  
 
-S03 recibe objetos y eventos de progreso. S07 muestra información. S08 utiliza los registros de objetos e interactivos para reiniciar o recuperar el estado de partida según el método que se defina.
+S03 recibe llaves usadas y pistas obtenidas. S06 recibe las baterías recogidas. S07 muestra la información. S08 usa el registro de elementos para restaurar el último checkpoint.
 
 **Datos que necesita:**  
 
@@ -135,21 +139,21 @@ Identificadores únicos, nombres, tipos, textos, imágenes, requisitos, posicion
 
 **Datos que genera:**  
 
-Conjuntos de elementos recogidos, documentos conocidos, piezas instaladas y puertas abiertas.
+Conjunto de elementos recogidos, notas conocidas, llaves obtenidas y puertas abiertas.
 
 **Riesgos:**  
 
-Duplicación de objetos, ausencia de un objeto obligatorio, pistas ilegibles, información registrada que no corresponda al mundo restaurado.
+Duplicación de objetos, ausencia de un objeto obligatorio, pistas ilegibles y archivo que no corresponda al mundo restaurado.
 
 **Criterios de aceptación:**
 
-- E no alcanza elementos tras una pared ni fuera de los 2 metros.
+- **[E]** no alcanza elementos tras una pared ni fuera de los 2 metros.
 
-- Recoger dos veces el mismo identificador no duplica el inventario ni el diario.
+- Recoger dos veces el mismo identificador no duplica el archivo ni la lista de llaves.
 
 - Cada requisito incumplido produce un mensaje comprensible.
 
-- Al restaurar la partida, la presencia de objetos y documentos coincide con el estado recuperado.
+- Al reaparecer en un checkpoint, las notas, llaves y baterías coinciden con el estado guardado.
 
 ### S03 - Acertijos y progreso
 
@@ -164,7 +168,7 @@ Interacciones completadas, información descubierta, objetos utilizados cuando c
 **Procesamiento / reglas:**
 
 - Cada objetivo y acertijo tendrá requisitos, acciones válidas y resultados definidos cuando se desarrolle su contenido.
-- El sistema comprueba esos requisitos antes de marcar un objetivo o acertijo como completado.
+	- El sistema comprueba esos requisitos antes de marcar un objetivo o acertijo como completado.
 - Completar una interacción puede actualizar el objetivo, habilitar un elemento o permitir acceso a una zona, según el diseño de cada caso.
 - El contenido de pistas, nombres de objetos, soluciones y ubicaciones no se establece en esta ficha.
 - Si un acertijo se resuelve directamente en el escenario, utiliza las entradas de exploración correspondientes. Si emplea un panel contextual, utiliza las entradas de interfaz y pausa la simulación.
@@ -592,3 +596,7 @@ Reinicio con estados contradictorios, ubicación inválida del jugador, entradas
 | S08 - Partida | S01 a S07 | Pausa, restauración, progreso y ajustes persistentes |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mecánicas]] · [[04 - Controles]] →
+
+03-Sistemas
+
+03 - Sistemas

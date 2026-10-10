@@ -52,10 +52,10 @@ No es necesario contar con conocimientos avanzados para jugar. Se espera que el 
 ## Sesión de juego
 
 **Duración esperada de una sesión:**
-25 a 35 minutos
+5 a 10 minutos
 
 **Duración total estimada del juego:**
-2 a 2:30 horas para completar la experiencia principal.
+25 a 35 minutos para completar la experiencia principal.
 
 ## Modelo de distribución
 
@@ -67,6 +67,6 @@ El videojuego será desarrollado como un proyecto académico. Su distribución e
 - [x] Interfaz legible
 - [x] Rendimiento considerado
 - [x] Resoluciones consideradas
-- [ ] Guardado compatible
+- [x] Guardado compatible
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Visión del Juego]] · [[04 - Pilares de Diseño]] →

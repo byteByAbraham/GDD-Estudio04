@@ -30,14 +30,14 @@ Completa:
 
 ¿Por qué alguien querría jugar este videojuego?
 
-Porque combina una historia emocional con terror, exploración y sigilo en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabra que la criatura es su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
+Porque combina una historia emocional con terror, exploración y sigilo en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabrá que la criatura es su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
 
 ## Características principales
 
 Lista las características que definen la experiencia.
 
 1. Exploración nocturna bajo lluvia constante de un bosque con cabañas explorables y un laboratorio.
-2. Recorrer diferentes sitios donde encontrara mas información de lo sucedido y otros sucesos.
+2. La progresión de cada acceso se abre interpretando notas, imágenes, llaves y códigos, sin marcadores en pantalla
 3. Sigilo con linterna de batería limitada, escondites y una criatura.
 4. Narrativa ambiental mediante notas, dibujos y grabaciones.
 
