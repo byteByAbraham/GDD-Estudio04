@@ -14,11 +14,12 @@ Cada personaje importante debe tener una función clara dentro de la historia y/
 
 **Función narrativa:** Es el personaje a través del cual el jugador descubre lo ocurrido durante el experimento. Al principio, Vadrik cree que su hijo sigue a salvo en el laboratorio, por lo que interpreta las pistas que encuentra como posibles señales de ayuda de Jereth. Su investigación lo lleva a descubrir la verdadera identidad de la criatura.
 
-**Descripción física:** Pendiente aun 
+**Descripción física:** Hombre de aproximadamente 40 años, alto, de piel blanca y complexión media, sin una musculatura muy marcada. Viste ropa casual, ligeramente desgastada, y tiene una apariencia común. 
 
-**Personalidad:** Pendiente aun
+**Personalidad:** Es reservado, persistente y protector. La enfermedad de su hijo y la pérdida de su esposa lo han llevado a buscar una solución para Jereth. A pesar del miedo y la confusión, continúa avanzando porque cree que puede encontrarlo.
 
 **Motivaciones:** 
+- Encontrar a su hijo y asegurarse de que esté a salvo.
 - Descubrir que ocurrió durante el experimento. 
 - Investigar las acciones y las intenciones del científico
 
@@ -38,6 +39,9 @@ Cada personaje importante debe tener una función clara dentro de la historia y/
 **Arco del personaje:** Vadrik comienza confundido y desorientado, sin comprender por qué está encerrado en una cabaña. A medida que atraviesa el bosque y descubre los registros del laboratorio, reconstruye los acontecimientos y comprende las consecuencias del experimento. Su recorrido termina con una verdad que no necesariamente resuelve todas sus dudas.
 
 **Habilidades:**
+- Explorar e inspeccionar el entorno.
+- Resolver acertijos y encontrar objetos.
+- Interpretar pistas y documentos.
 
 **Debilidades:**
 - No tiene armas ni capacidad de combatir a la criatura.
@@ -70,7 +74,7 @@ Cada personaje importante debe tener una función clara dentro de la historia y/
 - Perseguirlo durante sus recorridos por las zonas principales.
 - Capturar al protagonista cuando logra alcanzarlo.
 
-**Conflicto:** pendiente aun
+**Conflicto:** Su transformación lo convierte en una amenaza para su propio padre. La incertidumbre sobre su conciencia mantiene el conflicto entre lo que Jereth fue y la criatura en la que se ha convertido.
 
 **Relaciones:** 
 - **Vadrik Dsang:** Su padre y la persona a la que puede reconocer de alguna manera, aunque esto no se confirma.
@@ -78,7 +82,10 @@ Cada personaje importante debe tener una función clara dentro de la historia y/
 
 **Arco del personaje:** Jereth pasa de ser un niño enfermo a convertirse en una criatura peligrosa tras el experimento. Sus apariciones durante el juego ofrecen señales ambiguas de su antigua identidad, pero nunca confirman completamente si conserva su conciencia.
 
-**Habilidades:** pendiente aun
+**Habilidades:** 
+- Detecta sonidos y movimientos del protagonista cuando se encuentra cerca.
+- Puede cambiar bruscamente de dirección y desplazarse de forma irregular debido a su mutación.
+- Emite gruñidos y fragmentos de voz que pueden confundirse con sonidos humanos.
 
 **Debilidades:** 
 - Puede perder de vista al protagonista si este consigue ocultarse.
@@ -103,9 +110,14 @@ Cada personaje importante debe tener una función clara dentro de la historia y/
 
 **Personalidad:** Calculador y reservado. Se muestra profesional cuando trata con Vadrik, pero sus documentos revelan una faceta más inquietante relacionada con sus investigaciones y la manera en que lleva a cabo los experimentos. (propuesta)
 
-**Motivaciones:** por definir aun
+**Motivaciones:** 
+- Obtener resultados de sus procedimientos sin considerar el sufrimiento del niño.
+- Llevar sus investigaciones más allá de los límites éticos.
 
-**Objetivos:** por definir aun
+**Objetivos:** 
+ - Someter a Jereth a procedimientos experimentales.
+- Registrar los resultados y las reacciones provocadas por sus experimentos.
+- Continuar sus investigaciones incluso cuando las consecuencias se vuelven peligrosas.
 
 **Conflicto:** El experimento provoca una transformación que Cooper no consigue controlar. La criatura escapa y sus acciones terminan volviéndose contra él. Cuando Vadrik llega al laboratorio, Cooper ya se encuentra en un estado deteriorado y finalmente muere a manos de la criatura.
 
