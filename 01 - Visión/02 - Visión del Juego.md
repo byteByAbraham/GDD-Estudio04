@@ -8,16 +8,16 @@ Aquí se define la **idea central** del videojuego. Esta sección funciona como 
 
 **El videojuego trata sobre:**
 
-- Un padre desesperado entrega a su hijo enfermo a un científico que promete tener la cura. El científico duerme al padre, experimenta con el niño y el proceso sale mal. El niño muta y ataca al científico antes de escapar al bosque. El padre despierta encerrado de noche en una cabaña y debe explorar el bosque, descubrir qué pasó y llegar al laboratorio, mientras la criatura lo acecha.
+- Un padre desesperado entrega a su hijo enfermo a un científico que promete tener la cura. El científico duerme al padre, experimenta con el niño y el proceso sale mal. El niño muta y ataca al científico antes de escapar al bosque. El padre despierta encerrado de noche en una cabaña, convencido de que su hijo sigue en el laboratorio. Debe cruzar el bosque, resolver los accesos y esquivar a una criatura cuya identidad ignora, hasta descubrir una verdad que lo cambia todo.
 
 ## Experiencia deseada
 
 Completa:
 
 - **Quiero que el jugador se sienta:**  Vulnerable, solo, observado y bajo tensión constante.
-- **Quiero que el jugador piense:**  Generar preguntas: ¿Mi hijo todavía está ahí? ¿Puedo confiar en lo que veo y escucho? Tengo que descubrir qué le pasó.
+- **Quiero que el jugador piense:** ¿Qué es lo que me acecha? ¿Lo que veo a lo lejos es real o estoy alucinando? ¿Puedo confiar en el científico? Tengo que llegar al laboratorio y encontrar a mi hijo.
 - **Quiero que el jugador haga:** Explorar el bosque bajo la lluvia, entrar a las cabañas y al laboratorio, interpretar notas, imágenes y grabaciones para abrir cada acceso, esconderse y escapar de la criatura.
-- **Quiero que el jugador recuerde:** La tristeza de la historia, la duda de si el niño sigue ahí o si la criatura solo lo imita, y el conflicto de no saber si logrará salvarlo o si ya lo perdió.
+- **Quiero que el jugador recuerde:** La tristeza de descubrir que la criatura era su hijo, y la sensación de haber estado cerca de él durante todo el recorrido sin saberlo.
 
 ## Fantasía del jugador
 
@@ -30,7 +30,7 @@ Completa:
 
 ¿Por qué alguien querría jugar este videojuego?
 
-Porque combina una historia emocional con terror, exploración y sigilo en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabrá que la criatura es su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
+Porque combina una historia emocional con terror, exploración y sigilo en primera persona. El jugador descubre la verdad al mismo tiempo que el padre. Esa verdad es el centro de la experiencia
 
 ## Características principales
 
@@ -45,7 +45,7 @@ Lista las características que definen la experiencia.
 
 ¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
 
-- El jugador nunca sabe si la criatura conserva algo de su hijo. Esa duda se refuerza con el encuentro a distancia donde el niño parece pedir ayuda. El avance depende de entender la historia, no de buscar objetos con una marca.
+- El jugador y el padre reconstruyen el oscuro historial del lugar y sus experimentos a través de notas, archivos y fotografías. Sin embargo, el padre ignora qué le ocurrió exactamente a su hijo y qué encontrará al llegar al laboratorio donde experimentaron con él. La lluvia constante y el sonido como mecánica de sigilo refuerzan la tensión en todo momento sin recurrir al combate.
 
 ## Límites del concepto
 
@@ -56,5 +56,7 @@ Lista las características que definen la experiencia.
 3. No es de mundo abierto y solo contiene lo necesario para la historia.
 4. No hay ciclo día/noche, todo ocurre de noche.
 5. No depende de jumpscares constantes.
+6. No hay combate ni defensa contra la criatura.
+7. No hay más de una criatura.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Ficha del Proyecto]] · [[03 - Público y Plataforma]] →
