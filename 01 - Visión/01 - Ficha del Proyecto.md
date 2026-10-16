@@ -10,12 +10,12 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 | ---------------------------- | ------------------------------------------------------------------------------- |
 | **Nombre del proyecto**      | Dark Mutant                                                                     |
 | **Nombre clave**             | MutantExp                                                                       |
-| **Versión del GDD**          | 0.3.0                                                                           |
-| **Estado del proyecto**      | Concepto                                                                        |
+| **Versión del GDD**          | 0.4.0                                                                           |
+| **Estado del proyecto**      | Preproducción                                                                   |
 | **Equipo**                   | García Abraham \| Gomez Diana \| Gael Fernandez \| Guadalupe Cuy \| Moises Pech |
 | **Responsable del proyecto** | Garcia Rodríguez Abraham Antonio                                                |
 | **Fecha de inicio**          | 25/09/2026                                                                      |
-| **Última actualización**     | 09/10/2026                                                                      |
+| **Última actualización**     | 16/10/2026                                                                      |
 | **Repositorio**              | https://github.com/byteByAbraham/GDD-Estudio04                                  |
 
 ## Identidad del videojuego
@@ -69,7 +69,7 @@ Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien qu
 > Describe el videojuego en **una o dos frases**. Debe explicar quién juega, qué hace y qué lo hace interesante.
 
 **Respuesta:**
-Eres un padre que despierta encerrado en una cabaña, de noche en el bosque. Tu hijo, convertido en una criatura por un experimento fallido, recorre el bosque. Sostienes una linterna de batería limitada, exploras, te escondes y deduces la verdad para llegar al laboratorio.
+Eres un padre que despierta encerrado, de noche y bajo la lluvia, en una cabaña del bosque. Convencido de que su hijo sigue en el laboratorio de un científico, exploras, te escondes de una criatura y resuelves pistas con una linterna de batería limitada, sin saber lo sucedió con su hijo.
 
 ## Estado actual
 
@@ -86,6 +86,6 @@ Eres un padre que despierta encerrado en una cabaña, de noche en el bosque. Tu 
 
 ¿Qué tendría que suceder para considerar que el videojuego cumplió su propósito?
 
-Realizar un hito intermedio del Vertical slice jugable entre 5 a 10 minutos. En el bosque con lluvia, cabaña incial, bosque, breve vistazo a la criatura y primer puzle.
+Presentar el 20 de noviembre una experiencia completa de 20 a 25 minutos, desde el escape de la cabaña inicial hasta el final abierto en el laboratorio, estable, sin errores bloqueantes y automatizado.
 
-> **Navegación:** [[00 - Índice]] · ← [[00 - Índice]] · [[02 - Visión del Juego]] →
+> **Navegación:** [[00 - Índice]] · ←  · [[02 - Visión del Juego]] →
