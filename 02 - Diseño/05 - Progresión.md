@@ -8,18 +8,15 @@ Explica cómo cambia la experiencia desde el inicio hasta el final. La progresi�
 
 Describe las etapas principales del juego.
 
-1. Inicio
-	El jugador empieza encerrado en una cabaña durante el día. Experimenta con los controles básicos mediante un pequeño tutorial. Se le asigna la misión de encontrar la salida de la cabaña, pero en el transcurso del tiempo el entorno se oscurece. Necesita buscar una linterna y resolver unos pequeños puzles para poder abrir la puerta principal e ingresar al bosque
-2. Introducción de sistemas
-	Salida al bosque al caer la noche completa. Se introduce la gestión de baterías, la barra de resistencia al correr y las mecánicas de sigilo/evasión para evitar a las criaturas nocturnas mientras explora las zonas colindantes.
-3. Desarrollo
-Exploración de cabañas secundarias  abandonadas para recolectar notas narrativas o componentes por que  noches se vuelven más peligrosas y los recursos más escasos.
-4. Dominio
-Ingreso a la instalaciones que el jugador ya domina la gestión de la luz y el sigilo , enfrentar puzles de energía más complejos mientras es acechado en pasillos estrechos con visibilidad reducida 
-5. Clímax
-Evasión final a la escases de baterías y la presencia la presencia constante de la amenaza.
-6. Final
-El jugador resuelve el puzle definitivo o activa el mecanismo principal del laboratorio, tomando una decisión clave basada en los elementos recolectados que determina la obtención del final a o el final b.
+
+| Etapa                         | Zona                     | Objetivo en pantalla              | Qué aprende o enfrenta el jugador                                                                 |
+| ----------------------------- | ------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **1. Inicio**                 | Cabaña 1                 | “Sal de la cabaña”                | Controles, interacción, linterna y lectura de notas. Explorar la cabaña para encontrar la salida. |
+| **2. Primer cruce**           | Bosque                   | “Llega a la siguiente cabaña”     | Batería, sigilo, escondites y primeras señales de la criatura (tarareo y pasos)                   |
+| **3. Cabaña 2**               | Cabaña 2 y exterior      | “Encuentra la llave de la cabaña” | Notas o pistas apunta a un lugar exterior. Debe salir bajo la lluvia con riesgo.                  |
+| **4. Cabaña 3**               | Cabaña 3                 | “Descubre el código del candado”  | Relacionar notas, imágenes, mensajes y documentos de zonas anteriores para deducir 4 dígitos.     |
+| **5. Laboratorio (acceso)**   | Exterior del laboratorio | “Restablece la energía”           | Encender 2 generadores.                                                                           |
+| **6. Laboratorio (interior)** | Interior                 | “Revisa el laboratorio”           | Documentos y objetos finales y escena de cierre ([[01 - Premisa y Trama]])                        |
 
 ## Progresión del jugador
 
@@ -28,7 +25,9 @@ Movimiento e interacción básica: Caminar, agacharse y examinar objetos dentro 
 
 Gestión de luz y recursos: Encender/apagar la linterna, monitorear la batería disponible y administrar el uso para no quedarse a oscuras.
 
-Evasión y sigilo: Reconocer patrones de sonido del enemigo, desplazarse en silencio y ocultarse en zonas oscuras o refugios.
+Evasión y sigilo: Reconocer patrones de sonido de la criatura, desplazarse en silencio y usar los escondites.
+
+Deducción: relacionar notas e imágenes de distintos lugares para resolver un código.
 
 Resolución de puzles bajo presión: Intercambiar fusibles, manipular paneles eléctricos y descifrar códigos mientras evita ser detectado.
 
@@ -39,31 +38,39 @@ Resolución de puzles bajo presión: Intercambiar fusibles, manipular paneles el
 
 - Vida: No aumenta de forma pasiva y solo tiene una vida  
 - Daño: El personaje no posee armas de fuego principal para dañar el enemigo 
-- Habilidades: **No tengo idea.**
-- Equipo: Obtención de la linterna 
-- Recursos: Baterías de mayor duración  y consumibles de energía.
-- Conocimiento: Documentos, mapa de laboratorio.
+- Habilidades: No hay habilidades
+- Equipo: La linterna está disponible desde el inicio
+- Recursos: Pilas que recargan la linterna ([[06 - Economía y Recursos]])
+- Conocimiento: Notas, imágenes, mensajes y archivos
 
 ## Desbloqueos
 
-| Desbloqueo        | Requisito                                        | Efecto                                                      |
-| ----------------- | ------------------------------------------------ | ----------------------------------------------------------- |
-| Linterna          | Completar el puzle de la cabaña inicial          | Permite iluminar entornos oscuros y avanzar hacia el bosque |
-| Pilas             | Explorar zonas                                   | Duplica  el tiempo de uso continuo de la linterna           |
-| Tarjeta de acceso | Explorar y resolver puzle en cabañas secundarias | Abre puertas                                                |
+| Desbloqueo            | Requisito                                       | Efecto                            |
+| --------------------- | ----------------------------------------------- | --------------------------------- |
+| Salida de la cabaña 1 | Encontrar la llave oculta y usarla en la puerta | Acceso al bosque y checkpoint     |
+| Cabaña 2              | Encontrar la llave exterior                     | Acceso a la cabaña 2 y checkpoint |
+| Cabaña 3              | Ingresar el código de 4 dígitos                 | Acceso a la cabaña 3 y checkpoint |
+| Laboratorio           | Encender los 2 generadores                      | Acceso al interior y checkpoint   |
+| Escena de cierre      | Interactuar con el objeto final del laboratorio | Final del juego                   |
 
 ## Curva de dificultad
 
 Describe cómo aumenta el desafío y qué nuevos elementos aparecen.
-+ La criatura se vuelve más agresiva, reaccionando más rápido al sonido e investigando zonas de luz constante.**Como que no pero lo dejo **
-+ Los puzles añaden límites de tiempo o requieren desplazarse entre múltiples habitaciones expuestas.
+
+La distancia entre zonas y el riesgo aumentan a lo largo del recorrido:
+
+- La cabaña 1 funciona como tutorial. La criatura no está presente en el interior.
+- La cabaña 2 obliga a salir a la intemperie a buscar la llave.
+- La cabaña 3 exige deducir un código con la criatura patrullando.
+- El laboratorio añade los generadores y poder entrar.
+
 ## Curva de aprendizaje
 
 ¿Qué debe dominar el jugador antes de introducir el siguiente concepto?
-+ Dominar el encendido/apagado y cambio de baterías antes de encontrarse con el primer enemigo en la noche.
-    
-+ Dominar el sigilo y la evasión en el bosque abierto antes de encerrarlo en los pasillos angostos del laboratorio.
-    
-* Dominar la lectura de mapas y códigos antes de presentar puzles con límite de tiempo.
+
+- Controles y linterna en la cabaña 1, antes del primer cruce.
+- Sigilo y escondites antes de la primera patrulla de la criatura.
+- Lectura y relación de notas antes del candado de 4 dígitos.
+- Descifrar los accesos con base a objetos interactivos.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Controles]] · [[06 - Economía y Recursos]] →
