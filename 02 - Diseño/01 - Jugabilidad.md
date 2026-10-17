@@ -10,59 +10,64 @@ Describe el ciclo que se repite durante la experiencia.
 
 **Ejemplo conceptual:**
 
-`Explorar → Encontrar desafío → Resolver → Obtener recompensa → Mejorar → Explorar`
+`Leer objetivo → Explorar → Encontrar pistas → Resolver el acceso → Checkpoint → Cruzar el bosque con riesgo → Nuevo objetivo`
 
 **Bucle del proyecto:**
-Explorar →  Resolver puzle → obtener recurso → Explorar  
+El jugador recibe un objetivo breve, explora buscando notas y objetos que le indiquen cómo cumplirlo, resuelve el acceso (llave, código o generadores), se guarda un checkpoint y cruza el bosque evitando a la criatura hasta el siguiente objetivo.
+
 ## Acciones principales del jugador
 
-| Acción               | Propósito                                                           | Resultado                                                            |
-| -------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Explora / investigar | Descubrir pista sobre la historia y ubicación cabañas y laboratorio | Acceso a nuevas áreas y recolección de suministros clave             |
-| Gestión linterna     | Mejora la visibilidad y evitar el peligro durante la noche          | Consumo de las baterías para su supervivencia en el entrono nocturno |
-| Esconderse           | Esquivar a la amenaza que acecha en la oscuridad                    | Mantenerte vivo para seguir explorando                               |
+| Acción               | Propósito                                                  | Resultado                                                            |
+| -------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- |
+| Explora / investigar | Encontrar notas, dibujos, llaves y baterías                | Pistas para resolver cada acceso y avance de la historia             |
+| Gestión linterna     | Mejora la visibilidad y evitar el peligro durante la noche | Consumo de las baterías para su supervivencia en el entrono nocturno |
+| Esconderse           | Esquivar a la amenaza que acecha en la oscuridad           | Mantenerte vivo para seguir explorando                               |
+| Elegir en diálogos   | Seleccionar la respuesta al dialogo                        | Cambiar la interacción y respuesta                                   |
 
 ## Experiencia segundo a segundo
 
 ¿Qué hace el jugador durante los primeros minutos?
-El jugador despertara en una cabaña por el día aprender básico de movimiento cámara, interactuar e encendiendo su linterna por primera vez  mienta busca pista para poder salir de la cabaña 
+El jugador despierta encerrado en una cabaña, de noche y bajo la lluvia. Aprende a mirar, caminar, interactuar y encender la linterna. El objetivo en pantalla le indica que debe encontrar la forma de salir, y interactuar con diferentes objetos.
 ## Experiencia minuto a minuto
 
 ¿Qué actividades se repiten durante una sesión?
-Durante la fase de día, el jugador buscara suministro, batería y notas informativas en la cabañas cercanas. Durante la noche el jugador gestionara suministro de luz y energía, resolver puzles bajo presión del tiempo y evadir el peligro de la noche.   
+Leer el objetivo, buscar pistas, resolver el acceso, cruzar el bosque con riesgo, esconderse cuando la criatura se acerca y recoger baterías. Una persecución dura de 20 a 40 segundos y va seguida de 60 a 90 segundos sin amenaza activa.
 
 ## Experiencia a largo plazo
 
 ¿Qué hace que el jugador quiera continuar?
-El deseo de desentrañar el misterio del laboratorio y el origen de la amenaza, junto con la tensión constante de descubrir los dos finales posibles según las decisiones tomadas y los elementos clave recuperados a lo largo del juego.
+Entender qué ocurrió y qué es lo que acecha al jugador. Cada nota aporta una parte de la historia y, al final, al llegar al laboratorio cierra el hilo de la historia ([[01 - Premisa y Trama]]).
 
 ## Condición de victoria
 
 ¿Qué debe lograr el jugador para avanzar o terminar?
-+ **Para avanzar:** Sobrevive a los ciclos nocturnos y reunir las llaves/tarjetas y encender el generador para  para ingresar al laboratorio. 
-+ **Para terminar:** Tomar la decisión determinada que desencadena el final A o el Final B
++ Resolver los cuatro accesos, entrar al laboratorio, investigar el lugar hasta descubrir la verdad y llegar a la escena final sobre lo ocurrido con su hijo.
 ## Condición de derrota
 
 ¿Qué situaciones provocan fracaso?
 * Quedarse completamente a oscura sin baterías en presencia de la criatura. 
-* Se capturado o atacado por el enemigo hasta agotar la salud.
-* No llegar a un refugio o zona segura  a tiempo.
+* Ser capturado por la criatura.
+* El jugador reaparece en el último checkpoint.
+* No hay barra de vida.
 ## Ritmo
 
 Describe cómo alternan:
 
-- Exploración: Búsqueda por misiones durante el día entre el bosque o cabañas abandonadas.
-- Acción: Huida rápida ante avistamiento directos del enemigo
-- Descanso: Momentos breves dentro del refugio o escondites seguros.
-- Desafío: Resolver puzle de circuitos  en las instalaciones mientas la batería de la linterna se agota  
-- Recompensa:  Hallazgo de documentos confidenciales o  herramientas de acceso.
-- Historia: Lectura de registros en el laboratorio o en las cabañas que revelan la narrativa 
+- **Exploración:** recorrido del bosque y de las cabañas bajo la lluvia.
+- **Acción:** huida breve cuando la criatura persigue al jugador.
+- **Descanso:** tramos sin amenaza tras perder a la criatura o esconderse.
+- **Desafío:** puzles de acceso, con la criatura patrullando.
+- **Recompensa:** notas, objetos y baterías.
+- **Historia:** documentos y objetos encontrados en cada lugar.
 
 ## Principios de interacción
 
 ¿Qué reglas debe seguir el juego para que las acciones del jugador sean claras, consistentes y predecibles?
-* Visibilidad clara de recurso: El indicador de batería de la linterna y barra de resistencia.
-* Audio posicional: Los sonidos de pasos , gruñidos , clima y puertas deben dar al jugador una indicación espacial de 3D.
-* Causa y efecto : Si una superficie o cabaña está marcado en zona segura el enemigo no podrá ingresar a menos que el jugador deje la puerta abierta.
+* Una sola tecla para interactuar (**[E]**), y el mensaje contextual siempre coincide con lo que hará.
+- El objetivo en pantalla dice qué hacer, y las notas y los objetos dicen cómo.
+- Toda pista necesaria para cumplir un objetivo existe dentro del juego.
+- Indicador discreto de batería.
+- Audio posicional: pasos, tarareo y lluvia dan información espacial.
+- No hay zonas seguras: solo los escondites ofrecen protección.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Pilares de Diseño]] · [[02 - Mecánicas]] →
