@@ -52,10 +52,10 @@ No es necesario contar con conocimientos avanzados para jugar. Se espera que el 
 ## Sesión de juego
 
 **Duración esperada de una sesión:**
-5 a 10 minutos
+3 a 5 minutos
 
 **Duración total estimada del juego:**
-25 a 35 minutos para completar la experiencia principal.
+20 a 25 minutos para completar la experiencia principal.
 
 ## Modelo de distribución
 

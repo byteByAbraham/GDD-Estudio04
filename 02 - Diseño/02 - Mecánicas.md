@@ -102,7 +102,7 @@ Alejarse del campo visual de la criatura, reducir el ruido al agacharse y utiliz
 
 - La cabaña inicial funciona como espacio protegido. La criatura no puede entrar ni atacar a través de sus paredes.
 
-- La lluvia es constante y dificulta orientarse y escuchar a la criatura. Reduce el alcance de sus sentidos en exteriores, por lo que ofrece oportunidades para moverse sin ser detectado.
+- La lluvia es constante dificulta orientarse y escuchar a la criatura. Reduce el alcance de sus sentidos en exteriores, por lo que ofrece oportunidades para moverse sin ser detectado.
 - La criatura emite un tarareo apagado cuando está cerca, que funciona como aviso de proximidad. El ruido de un generador encendido también la atrae.
 
 **Entrada:**  
