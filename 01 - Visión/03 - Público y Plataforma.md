@@ -1,5 +1,3 @@
-
-
 # Público y Plataforma
 
 ## Descripción de la sección
@@ -8,37 +6,29 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 
 ## Público objetivo
 
-**Edad aproximada:**
-Mayores de 18 años
+**Edad aproximada:** De 18 años en adelante.
 
-**Experiencia esperada:**
-Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia, exploración y resolución de acertijos, pero no requiere experiencia avanzada.
+**Experiencia esperada:** Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia y exploración pero no requiere experiencia avanzada.
 
-**Intereses relevantes:**
+**Intereses relevantes:** Videojuegos de terror psicológico, supervivencia, misterio, exploración, sigilo e historias con giros inesperados.
 
-- Videojuegos de terror y suspenso.
-- Historias narrativas y misteriosas.
-- Juegos en primera persona.
-- Exploración de bosques y lugares abandonados.
-- Resolución de acertijos y búsqueda de pistas.
-- Contenido audiovisual de terror, misterio y suspenso.
-
-**Conocimientos previos necesarios:**
-No es necesario contar con conocimientos avanzados para jugar. Se espera que el jugador tenga una familiaridad básica con los videojuegos, especialmente con el movimiento y la interacción dentro de un entorno en primera persona. Las mecánicas de investigación, acertijos, supervivencia y sigilo serán enseñadas progresivamente durante el juego.
+**Conocimientos previos necesarios:** Manejo básico de videojuegos en primera persona, uso de teclado y ratón, exploración de escenarios e interacción con objetos.
 
 ## Plataforma
 
-| Elemento                | Decisión               |
-| ----------------------- | ---------------------- |
-| Plataforma principal    | PC (Windows)           |
-| Plataformas secundarias | Por el momento ninguna |
-| Método de entrada       | Teclado / Mouse        |
-| Resolución objetivo     | 1920 × 1080            |
-| Relación de aspecto     | 16:9                   |
-| Rendimiento objetivo    | 60 FPS                 |
-| Conexión requerida      | Sí                     |
+| Elemento                | Decisión             |
+| ----------------------- | --------------------- |
+| Plataforma principal    | PC (Windows)          |
+| Plataformas secundarias | Ninguna               |
+| Método de entrada      | Teclado y mouse       |
+| Resolución objetivo    | 1920 × 1080 píxeles |
+| Relación de aspecto    | 16:9                  |
+| Rendimiento objetivo    | 60 FPS               |
+| Conexión requerida     | No                    |
 
 ## Restricciones de plataforma
+
+Documenta limitaciones de hardware, controles, memoria, almacenamiento, distribución o conectividad.
 
 **Hardware:** El videojuego requerirá un equipo capaz de ejecutar escenarios 3D, modelos de personajes, iluminación y efectos ambientales sin afectar considerablemente el rendimiento.
 
@@ -48,25 +38,20 @@ No es necesario contar con conocimientos avanzados para jugar. Se espera que el 
 
 **Conectividad:** El videojuego requerirá conexión a Internet para acceder a determinadas funciones y recursos necesarios para el funcionamiento del prototipo.
 
-
 ## Sesión de juego
 
-**Duración esperada de una sesión:**
-3 a 5 minutos
+**Duración esperada de una sesión:** 10 a 15 minutos.
 
-**Duración total estimada del juego:**
-20 a 25 minutos para completar la experiencia principal.
+**Duración total estimada del juego:** 30-35 minutos.
 
 ## Modelo de distribución
 
-El videojuego será desarrollado como un proyecto académico. Su distribución estará limitada a profesores, estudiantes y personas relacionadas con la evaluación o presentación del proyecto.
+El videojuego será desarrollado como un prototipo académico.
 
 ## Consideraciones
 
-- [x] Controles adaptados a la plataforma
-- [x] Interfaz legible
-- [x] Rendimiento considerado
-- [x] Resoluciones consideradas
-- [x] Guardado compatible
-
-> **Navegación:** [[00 - Índice]] · ← [[02 - Visión del Juego]] · [[04 - Pilares de Diseño]] →
+- [X] Controles adaptados a la plataforma
+- [X] Interfaz legible
+- [ ] Rendimiento considerado
+- [X] Resoluciones consideradas
+- [X] Guardado compatible
