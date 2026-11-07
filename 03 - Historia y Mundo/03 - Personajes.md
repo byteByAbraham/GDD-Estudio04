@@ -1,162 +1,85 @@
 # Personajes
 
-## Descripción de la sección
+## Protagonista: Vadrik D.sang
 
-Cada personaje importante debe tener una función clara dentro de la historia y/o la jugabilidad.
+| Campo                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rol**                       | Protagonista principal y padre de Jereth D.sang                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Función jugable**          | El jugador controla a Vadrik al explorar el bosque, las cabañas y el laboratorio. Busca llaves y pistas, administra la batería de la linterna y se esconde o huye para sobrevivir.                                                                                                                                                                                                                                                       |
+| **Función narrativa**        | Permite descubrir la historia desde la perspectiva de un padre que cree que su hijo está a salvo. Su investigación revela el engaño de Cooper y la verdadera identidad de la criatura mutante.                                                                                                                                                                                                                                          |
+| **Descripción física**      | Hombre de aproximadamente 40 años, de piel clara y complexión media, sin musculatura marcada. Tiene cabello castaño, ondulado y desordenado, barba corta y bigote. Usa lentes rectangulares de montura oscura y presenta un rostro cansado, con ojeras y líneas de expresión. Viste una chaqueta gris verdosa con varios bolsillos, camisa clara sobre una camiseta, pantalones cargo cafés, cinturón y botas marrones desgastadas. |
+| **Personalidad**              | Reservado, persistente y protector. Su preocupación por Jereth lo mantiene en movimiento a pesar del miedo y la confusión. Es observador, pero su confianza inicial en Cooper y su esperanza de encontrar a su hijo a salvo condicionan cómo interpreta lo que descubre.                                                                                                                                                                |
+| **Motivación**               | Reunirse con Jereth y asegurarse de que esté bien.                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Objetivos**                 | Salir de la cabaña, atravesar el bosque y llegar al laboratorio para encontrar a su hijo, sobreviviendo a los peligros del recorrido.                                                                                                                                                                                                                                                                                                     |
+| **Conflicto**                 | Busca a Jereth sin saber que es la criatura mutante que lo persigue. Las evidencias contradicen sus expectativas y las alucinaciones alteran su percepción, hasta obligarlo a enfrentar las consecuencias de haber confiado en Cooper.                                                                                                                                                                                                    |
+| **Relaciones:**               | **Jereth D.sang** : Su hijo, transformado en la criatura que lo persigue.<br />  **Dr. Cooper:** El científico en quien confió y cuya investigación está relacionada con la transformación de Jereth.                                                                                                                                                                                                                     |
+| **Arco del personaje**        | Comienza desorientado, pero convencido de que Jereth permanece a salvo. Gradualmente pierde la confianza en Cooper y descubre que su hijo fue transformado de manera irreversible, sin conciencia ni humanidad. Su destino queda sin confirmar.                                                                                                                                                                                            |
+| **Habilidades**               | Observar e inspeccionar escenarios, encontrar objetos, relacionar pistas y documentos, utilizar la linterna, activar mecanismos y buscar oportunidades para esconderse o escapar.                                                                                                                                                                                                                                                          |
+| **Debilidades**               | No tiene armas ni capacidad de combatir a la criatura. deepende de una linterna con batería limitada y si la criatura lo captura, muere y debe retomar la partida desde el último punto de control.                                                                                                                                                                                                                                      |
+| **Frases o tono de diálogo** | Su tono es serio, preocupado y contenido. Sus frases expresan confusión, culpa y necesidad de respuestas.                                                                                                                                                                                                                                                                                                                                 |
 
-## Plantilla de personaje
+Referencias Visuales:
 
-### Nombre: Vadrik D.sang
+### Nombre: Jereth D.sang (Versión humana)
 
-**Rol:** Protagonista principal y padre de Jereth D.sang
+| Campos                              | Descripción                                                                                                                                                                                                                                   |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rol**                       | Hijo de Vadrik Dsang y paciente del Dr. Cooper antes de su transformación.                                                                                                                                                                    |
+| **Función jugable**          | No es un personaje controlable. Su versión humana aparece en fotografías, recuerdos y en la aparición que Vadrik cree ver durante el recorrido.                                                                                             |
+| **Función narrativa**        | Representa el vínculo que impulsa la búsqueda de Vadrik y permite comprender quién era Jereth antes del experimento.                                                                                                                        |
+| **Descripción física**      | Niño de complexión delgada y piel clara, con pecas en las mejillas y la nariz. Tiene ojos cafés, cabello castaño oscuro, ondulado y desordenado, con mechones sobre la frente. Su rostro presenta ojeras y una expresión seria y cansada. |
+| **Personalidad**              | Reservado y afectuoso con su padre. La enfermedad lo vuelve más dependiente de su compañía y protección, aunque conserva la curiosidad propia de su edad.                                                                                  |
+| **Motivación**               | Sentirse mejor y permanecer junto a su padre durante el tratamiento.                                                                                                                                                                           |
+| **Objetivos**                 | Recuperarse de su enfermedad y regresar a su vida cotidiana con Vadrik.                                                                                                                                                                        |
+| **Conflicto**                 | Padece una enfermedad para la que no se conoce un tratamiento en esa época y queda expuesto a los experimentos de Cooper sin comprender sus verdaderas intenciones.                                                                           |
+| **Relaciones:**               | Vadrik Dsang es su padre y principal figura de protección. El Dr. Cooper es el científico encargado del supuesto tratamiento que termina utilizándolo como sujeto experimental.****                                                         |
+| **Arco del personaje**        | Pasa de ser un niño enfermo con una posibilidad de tratamiento a convertirse en víctima de un procedimiento irreversible. Su transformación destruye su conciencia y humanidad.                                                             |
+| **Habilidades**               | Antes del experimento, puede comunicarse, observar y expresar sus necesidades y emociones. No posee habilidades especiales.                                                                                                                    |
+| **Debilidades**               | Su enfermedad, fragilidad física y dependencia de los adultos lo dejan sin medios para protegerse del engaño de Cooper.                                                                                                                      |
+| **Frases o tono de diálogo** | Infantil, tranquilo y vulnerable. Sus intervenciones reflejan confianza en su padre e incertidumbre ante el tratamiento.                                                                                                                       |
 
-**Función jugable:** El jugador controla a Vadrik durante la exploración del bosque, las cabañas y el laboratorio. Debe resolver acertijos, interpretar pistas, administrar la batería de su linterna y esconderse de la criatura para avanzar.
+Referencias Visuales:
 
-**Función narrativa:** Es el personaje a través del cual el jugador descubre lo ocurrido durante el experimento. Al principio, Vadrik cree que su hijo sigue a salvo en el laboratorio, por lo que interpreta las pistas que encuentra como posibles señales de ayuda de Jereth. Su investigación lo lleva a descubrir la verdadera identidad de la criatura.
+### Antagonista: Jereth D.sang (Versión Criatura Mutante)
 
-**Descripción física:** Hombre de aproximadamente 40 años, alto, de piel blanca y complexión media, sin una musculatura muy marcada. Viste ropa casual, ligeramente desgastada, y tiene una apariencia común. 
+| Campo                          | Descripción                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Rol**                  | Antagonista principal jugable. Es Jereth Dsang después de su transformación en una criatura mutante.                                                                                                                                                                                                                                                                                                                   |
+| **Función jugable**     | Es la única criatura que persigue al jugador. Aparece en las áreas principales y obliga a Vadrik a utilizar los escondites disponibles para evitar ser detectado. Su presencia genera tensión durante la exploración y dificulta el avance hacia los objetivos.                                                                                                                                                      |
+| **Función narrativa**   | Jereth representa las consecuencias del experimento realizado por el Dr. Cooper. Su identidad permanece oculta hasta que Vadrik descubre los registros del laboratorio, cambiando el significado de los encuentros anteriores.                                                                                                                                                                                           |
+| **Descripción física** | Cuerpo extremadamente delgado, deformado y encorvado, con extremidades desproporcionadamente largas. Presenta piel pálida y rojiza, cavidades entre los tejidos y una espalda de estructura irregular. Tiene varios ojos distribuidos de forma asimétrica en el rostro y la parte superior del cuerpo, una boca amplia con dientes afilados, cabello oscuro y largo, y manos con dedos alargados terminados en garras. |
+| **Personalidad**         | Carece de personalidad humana, conciencia y razonamiento. Su comportamiento es instintivo y agresivo, sin distinguir vínculos afectivos ni reconocer a su padre.                                                                                                                                                                                                                                                        |
+| **Motivación**          | No posee una motivación consciente. Reacciona por instinto ante los estímulos del entorno.                                                                                                                                                                                                                                                                                                                             |
+| **Objetivo**             | Detectar y perseguir a Vadrik cuando entra en su rango de percepción, perseguirlo durante sus recorridos por las zonas principales y capturar al protagonista cuando logra alcanzarlo.                                                                                                                                                                                                                                  |
+| **Conflicto**            | Se opone al avance de Vadrik sin comprender quién es ni la relación que existía entre ambos. Su existencia representa el resultado irreversible del experimento.                                                                                                                                                                                                                                                      |
+| **Relaciones**           | Es el hijo de Vadrik, pero no lo reconoce. Fue transformado por el Dr. Cooper y no responde a sus órdenes ni está bajo su control.                                                                                                                                                                                                                                                                                     |
+| **Arco del personaje**   | Su transformación ocurre antes del inicio del juego. Durante la partida se revela progresivamente su presencia y, finalmente, su identidad. No recupera su conciencia ni su humanidad; su destino queda abierto.                                                                                                                                                                                                        |
+| **Habilidades**          | Patrullar, detectar al jugador mediante señales visuales y sonoras, investigar su última posición conocida, perseguirlo y atraparlo.                                                                                                                                                                                                                                                                                  |
+| **Debilidades**          | Puede perder el rastro cuando el jugador interrumpe el contacto visual y consigue ocultarse sin ser detectado. No puede ser derrotado mediante combate.                                                                                                                                                                                                                                                                  |
+| **Tono**                 | No mantiene conversaciones convencionales. Se comunica mediante respiraciones, gruñidos y sonidos distorsionados.                                                                                                                                                                                                                                                                                                       |
 
-**Personalidad:** Es reservado, persistente y protector. La enfermedad de su hijo y la pérdida de su esposa lo han llevado a buscar una solución para Jereth. A pesar del miedo y la confusión, continúa avanzando porque cree que puede encontrarlo.
+Referencias visuales:
 
-**Motivaciones:** 
-- Encontrar a su hijo y asegurarse de que esté a salvo.
-- Descubrir que ocurrió durante el experimento. 
-- Investigar las acciones y las intenciones del científico
+### Personaje secundario:  Dr.Cooper
 
-**Objetivos:**
-- Escapar de la cabaña en la que despierta encerrado.
-- Explorar el bosque y encontrar evidencias relacionadas con el experimento.
-- Resolver los acertijos necesarios para avanzar.
-- Descubrir cómo llegar al laboratorio.
-- Sobrevivir a los encuentros con la criatura y descubrir la verdad sobre su hijo.
+| Campo                          | Descripción                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Rol**                  | Científico responsable del experimento que provocó la transformación de Jereth.                                                                                                                                                                                                                                                                                   |
+| **Función jugable**     | Aparece físicamente únicamente en el laboratorio, durante la parte final del juego. No acompaña al jugador durante la exploración de las cabañas.                                                                                                                                                                                                               |
+| **Función narrativa**   | Origina el conflicto al ofrecer un supuesto tratamiento y ocultar sus verdaderos propósitos. Sus investigaciones permiten reconstruir lo ocurrido y descubrir la verdad sobre Jereth.                                                                                                                                                                               |
+| **Descripción física** | Hombre maduro de piel clara y complexión media. Tiene cabello ondulado y desordenado, castaño con canas, barba corta entrecana y lentes rectangulares oscuros. Su rostro presenta arrugas pronunciadas y una expresión severa. Viste una bata clara, desgastada y manchada de sangre, sobre una camisa oscura con corbata, pantalones oscuros y zapatos de cuero. |
+| **Personalidad**         | Reservado, calculador y manipulador. Proyecta seguridad para obtener la confianza de Vadrik, pero antepone sus investigaciones al bienestar de sus pacientes. Su obsesión lo lleva a justificar procedimientos cada vez más peligrosos.                                                                                                                            |
+| **Motivación**          | Forzar la evolución humana y demostrar que sus investigaciones pueden superar los límites del cuerpo, sin aceptar los fracasos como una razón para detenerse.                                                                                                                                                                                                     |
+| **Objetivo**             | Conseguir un resultado exitoso mediante sus experimentos, utilizando a Jereth bajo la promesa de tratar su enfermedad.                                                                                                                                                                                                                                               |
+| **Conflicto**            | El experimento provoca una transformación que Cooper no consigue controlar. La criatura escapa y sus acciones terminan volviéndose contra él. Cuando Vadrik llega al laboratorio, Cooper ya se encuentra herido.                                                                                                                                                  |
+| **Relaciones**           | **Vadrik Dsang:** Lo lleva a la cabaña para continuar con los experimentos, sin que Vadrik comprenda inicialmente todo lo que está ocurriendo.**Jereth Dsang:** Es el niño sometido a los procedimientos experimentales que provocaron su transformación.                                                                                            |
+| **Arco del personaje**   | La participación de Cooper se revela gradualmente mediante los documentos encontrados por Vadrik. Al llegar al laboratorio, el jugador descubre la magnitud de sus investigaciones.                                                                                                                                                                                 |
+| **Habilidades**          | Conocimientos científicos, manejo de equipo de laboratorio, realización de procedimientos experimentales y documentación de resultados. Utiliza su autoridad profesional para persuadir y ocultar sus intenciones.                                                                                                                                                |
+| **Debilidades**          | Su obsesión, falta de empatía y exceso de confianza le impiden reconocer límites y detener sus investigaciones. No logra controlar las consecuencias de sus experimentos.                                                                                                                                                                                         |
+| **Tono**                 | Su tono es profesional, serio y seguro de sí mismo. Sus diálogos son  breves, ya que su aparición física se limita a la parte final del juego.                                                                                                                                                                                                                   |
 
-**Conflicto:** Vadrik busca a su hijo sin saber que la criatura que lo persigue es Jereth. Mientras intenta llegar al laboratorio, debe sobrevivir a la amenaza y comprender las señales que encuentra. Al descubrir la verdad, se enfrenta a las consecuencias de haber confiado en el experimento como una posible solución para la enfermedad de su hijo.
-
-**Relaciones:** 
-- **Jereth D.sang** : Su hijo, transformado en la criatura que lo persigue. 
-- **Dr. Cooper:** El científico en quien confió y cuya investigación está relacionada con la transformación de Jereth.
-
-**Arco del personaje:** Vadrik comienza confundido y desorientado, sin comprender por qué está encerrado en una cabaña. A medida que atraviesa el bosque y descubre los registros del laboratorio, reconstruye los acontecimientos y comprende las consecuencias del experimento. Su recorrido termina con una verdad que no necesariamente resuelve todas sus dudas.
-
-**Habilidades:**
-- Explorar e inspeccionar el entorno.
-- Resolver acertijos y encontrar objetos.
-- Interpretar pistas y documentos.
-
-**Debilidades:**
-- No tiene armas ni capacidad de combatir a la criatura.
-- Depende de una linterna con batería limitada
-- Si la criatura lo captura, muere y debe retomar la partida desde el último punto de control.
-
-
-**Frases o tono de diálogo:** Su tono es serio, preocupado y contenido. Sus frases expresan confusión, culpa y necesidad de respuestas.
-
-**Referencias visuales:** Ropa media dañada, colores apagados, aspecto cansado, cabello ligeramente desordenado y una linterna como elemento visual recurrente. (propuesta)
-
-
-
-### Nombre: Jereth D.sang
-
-**Rol:** Antagonista principal y criatura resultante del experimento, es hijo de Vadrik D.sang.
-
-**Función jugable:** Es la única criatura que persigue al jugador. Aparece en las áreas principales y obliga a Vadrik a utilizar los escondites disponibles para evitar ser detectado. Su presencia genera tensión durante la exploración y dificulta el avance hacia los objetivos.
-
-**Función narrativa:** Jereth representa las consecuencias del experimento realizado por el Dr. Cooper. Aunque Vadrik desconoce su identidad durante casi todo el recorrido, la criatura es su hijo transformado y sus apariciones y los sonidos que emite solo genera dudas sobre si conserva algún recuerdo o parte de su conciencia. 
-
-**Descripción física:** Antes del experimento, Jereth era un niño enfermo. Después del procedimiento, su cuerpo presenta deformaciones y rasgos anormales que dificultan reconocerlo, su postura, sus movimientos y su silueta transmiten una sensación inquietante. (propuesta) 
-
-**Personalidad:** Agresivo, impredecible y silencioso. Su comportamiento está dominado por impulsos que parecen ajenos a su identidad anterior.
-
-**Motivaciones:** Jereth ya no actúa por motivaciones humanas reconocibles. Su comportamiento está dominado por los efectos de la mutación y por impulsos que no comprende ni controla. No se sabe si conserva algún recuerdo de su vida anterior o si los sonidos que emite son simples imitaciones de su comportamiento pasado.
-
-**Objetivos:**
-- Detectar y perseguir a Vadrik cuando entra en su rango de percepción.
-- Perseguirlo durante sus recorridos por las zonas principales.
-- Capturar al protagonista cuando logra alcanzarlo.
-
-**Conflicto:** Su transformación lo convierte en una amenaza para su propio padre. La incertidumbre sobre su conciencia mantiene el conflicto entre lo que Jereth fue y la criatura en la que se ha convertido.
-
-**Relaciones:** 
-- **Vadrik Dsang:** Su padre y la persona a la que puede reconocer de alguna manera, aunque esto no se confirma.
-- **Dr. Cooper:** El científico cuyo experimento provocó su transformación.
-
-**Arco del personaje:** Jereth pasa de ser un niño enfermo a convertirse en una criatura peligrosa tras el experimento. Sus apariciones durante el juego ofrecen señales ambiguas de su antigua identidad, pero nunca confirman completamente si conserva su conciencia.
-
-**Habilidades:** 
-- Detecta sonidos y movimientos del protagonista cuando se encuentra cerca.
-- Puede cambiar bruscamente de dirección y desplazarse de forma irregular debido a su mutación.
-- Emite gruñidos y fragmentos de voz que pueden confundirse con sonidos humanos.
-
-**Debilidades:** 
-- Puede perder de vista al protagonista si este consigue ocultarse.
-- No puede atacar directamente a Vadrik mientras este permanece oculto y no es detectado.
-
-**Frases o tono de diálogo:** No mantiene conversaciones convencionales. Se comunica mediante respiraciones, gruñidos, sonidos distorsionados y fragmentos de voz que podrían pertenecer al niño.
-
-**Referencias visuales:** Silueta deformada, movimientos poco naturales, rostro parcialmente reconocible y extremidades con proporciones anormales.
-
-
-
-
-### Nombre: Dr. Cooper
-
-**Rol:** Científico responsable del experimento que provocó la transformación de Jereth.
-
-**Función jugable:**  Aparece físicamente únicamente en el laboratorio, durante la parte final del juego. No acompaña al jugador durante la exploración de las cabañas. Su presencia se anticipa mediante los archivos y documentos que Vadrik encuentra a lo largo del recorrido. (propuesta)
-
-**Función narrativa:** Cooper es el científico a quien Vadrik acudió buscando una posible solución para la enfermedad de Jereth. Sus investigaciones provocaron la transformación del niño. A través de los documentos del laboratorio, el jugador descubre progresivamente los procedimientos realizados y las consecuencias del experimento. Cuando Vadrik finalmente llega al laboratorio, encuentra a Cooper en un estado deteriorado. La historia del científico termina cuando la criatura lo mata.
-
-**Descripción física:** Hombre adulto de 55 años, con apariencia profesional y vestimenta propia de un científico. Utiliza una bata de laboratorio y presenta una apariencia seria y reservada.(propuesta)
-
-**Personalidad:** Calculador y reservado. Se muestra profesional cuando trata con Vadrik, pero sus documentos revelan una faceta más inquietante relacionada con sus investigaciones y la manera en que lleva a cabo los experimentos. (propuesta)
-
-**Motivaciones:** 
-- Obtener resultados de sus procedimientos sin considerar el sufrimiento del niño.
-- Llevar sus investigaciones más allá de los límites éticos.
-
-**Objetivos:** 
- - Someter a Jereth a procedimientos experimentales.
-- Registrar los resultados y las reacciones provocadas por sus experimentos.
-- Continuar sus investigaciones incluso cuando las consecuencias se vuelven peligrosas.
-
-**Conflicto:** El experimento provoca una transformación que Cooper no consigue controlar. La criatura escapa y sus acciones terminan volviéndose contra él. Cuando Vadrik llega al laboratorio, Cooper ya se encuentra en un estado deteriorado y finalmente muere a manos de la criatura.
-
-**Relaciones:** 
-- **Vadrik Dsang:** Lo lleva a la cabaña para continuar con los experimentos, sin que Vadrik comprenda inicialmente todo lo que está ocurriendo.
-- **Jereth Dsang:** Es el niño sometido a los procedimientos experimentales que provocaron su transformación.
-- 
-**Arco del personaje:** La participación de Cooper se revela gradualmente mediante los documentos encontrados por Vadrik. Al llegar al laboratorio, el jugador descubre la magnitud de sus investigaciones. 
-
-**Habilidades:** 
-- Conocimientos científicos y médicos.
-- Diseño y realización de procedimientos experimentales.
-- Análisis y registro de resultados.
-- Manejo de equipos científicos del laboratorio.
-
-**Debilidades:** 
-- Pierde el control de la situación cuando se enfrenta a la criatura.
-- Sus experimentos generan consecuencias que no puede controlar.
-- Sus investigaciones quedan documentadas en archivos que permiten descubrir la verdad.
-
-**Frases o tono de diálogo:** **:** Su tono es profesional, serio y seguro de sí mismo. Sus diálogos son  breves, ya que su aparición física se limita a la parte final del juego.
-
-**Referencias visuales:** Bata de laboratorio, ropa formal, cabello arreglado y apariencia profesional. (propuesta)
-
-
-
-## Personajes
-
-### Protagonista: Vadrik D.sang
-
-### Antagonista: Jereth D.sang
-
-### Personajes secundarios: Dr.Cooper 
+Referencias visuales:
 
 ## NPC
 
-Documenta qué NPC existen, qué hacen y cómo interactúan con el jugador.
-
 El juego no incluye NPC ni personajes secundarios que acompañen al protagonista. La experiencia se centra en Vadrik, la criatura y la información que dejó el Dr. Cooper
-
-
-> **Navegación:** [[00 - Índice]] · ← [[02 - Mundo]] · [[04 - Diálogos y Narrativa]] →
