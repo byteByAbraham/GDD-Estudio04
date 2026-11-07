@@ -8,55 +8,59 @@ Aquí se define la **idea central** del videojuego. Esta sección funciona como 
 
 **El videojuego trata sobre:**
 
-Un padre desesperado que busca salvar la vida de su hijo de una enfermedad incurable. Ante la desesperación, acepta llevarlo con un científico que afirma haber desarrollado un tratamiento experimental. El experimento sale mal, el cuerpo del niño sobrevive, pero su conciencia desaparece y algo desconocido toma el control de su cuerpo.
+Vadrik Dsang, un padre desesperado por salvar a su hijo Jereth Dsang de una enfermedad incurable, decide confiar en el Dr. Cooper, un científico que asegura haber desarrollado un tratamiento experimental, sin sospechar las verdaderas intenciones que oculta. Sin embargo, el experimento fracasa y transforma a Jereth en una criatura mutante que pierde por completo su humanidad, conciencia y control sobre sí misma.
 
-En un sitio con cabañas y un laboratorio en medio del bosque, el padre deberá investigar durante el día las pistas que dejó el alma de su hijo y descubrir qué ocurrió realmente. Durante la noche, tendrá que sobrevivir a la criatura que controla el cuerpo del niño.
-
-
-> Explica la fantasía principal que el jugador debe experimentar.
+En un bosque aislado, rodeado de cabañas y un laboratorio, Vadrik deberá investigar lo ocurrido, descubrir los oscuros secretos del Dr. Cooper y sobrevivir a una aterradora criatura mutante que lo acecha constantemente.
 
 ## Experiencia deseada
 
 Completa:
 
-- **Quiero que el jugador se sienta:**  Vulnerable, observado, confundido y bajo tensión constante.
-- **Quiero que el jugador piense:**  Generar dudas: ¿Mi hijo todavía está ahí? ¿Puedo confiar en esta voz?. Tengo que investigar que le sucedió a mi hijo.
-- **Quiero que el jugador haga:** Explorar las cabañas y el laboratorio, investigar pistas, resolver acertijos, interpretar mensajes, esconderse y escapar de la criatura.
-- **Quiero que el jugador recuerde:** La sensación de tristeza, el no saber si la persona que lo está llamando durante la noche realmente es su hijo y el conflicto de no saber si lo salvara o que no pueda recuperarlo.
+- **Quiero que el jugador se sienta:** Vulnerable, inquieto y constantemente bajo tensión, con miedo a lo que pueda encontrar mientras descubre la verdad.
+- **Quiero que el jugador piense:** ¿Qué está ocurriendo realmente en este lugar? ¿Puedo confiar en lo que veo? ¿Qué secretos oculta el Dr. Cooper?
+- **Quiero que el jugador haga:** Explorar el entorno, encontrar llaves, descubrir notas que generen intriga y utilizar el sigilo para evitar a la criatura mientras avanza hacia el laboratorio.
+- **Quiero que el jugador recuerde:** La tensión de ser perseguido, los oscuros secretos del científico y el impacto de descubrir la verdadera identidad de la criatura.
 
 ## Fantasía del jugador
 
-> [!question] Pregunta clave
-> ¿Qué fantasía estamos permitiendo cumplir al jugador?
-
-El jugador experimenta la fantasía de ser un padre investigador y superviviente que debe descubrir qué ocurrió con su hijo mientras intenta protegerlo y sobrevivir a una criatura.
-Es una persona vulnerable que debe utilizar su inteligencia, observación y capacidad de adaptación para sobrevivir.
+El jugador experimenta la desesperación de un padre que busca descubrir qué ocurrió con su hijo, mientras investiga los secretos de un lugar desconocido y lucha por sobrevivir a una criatura mutante. Es una persona vulnerable que debe utilizar su observación, inteligencia y capacidad de adaptación para enfrentar los peligros que lo rodean.
 
 ## Propuesta de valor
 
 ¿Por qué alguien querría jugar este videojuego?
 
-Porque combina una historia emocional con terror, investigación y supervivencia en primera persona. La experiencia se centra en una relación padre e hijo que se transforma en el principal elemento de tensión. El jugador sabe que la criatura alguna vez fue su hijo, pero nunca está completamente seguro de cuándo está escuchando al niño y cuándo está siendo engañado.
+Porque ofrece una experiencia de terror y supervivencia que combina exploración, sigilo y una historia llena de misterio, donde el jugador deberá descubrir los oscuros secretos de un científico mientras enfrenta la constante amenaza de una criatura mutante, manteniendo la tensión y la incertidumbre durante toda la partida.
 
 ## Características principales
 
 Lista las características que definen la experiencia.
 
-1. 
-2. 
-3. 
-4. 
-5. 
+* Terror y supervivencia en un ambiente oscuro y amenazante.
+* Exploración de un bosque aislado, cabañas y un laboratorio.
+* Sigilo para esconderse y evitar a la criatura mutante.
+* Investigación mediante notas, fotografías y expedientes.
+* Búsqueda de llaves para desbloquear la entrada a las demás cabañas y generadores.
+* Noche permanente, lluvia constante y sonidos que generan tensión.
+* Administración de la batería de la linterna para sobrevivir.
 
 ## Diferenciadores
 
 ¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
 
+El videojuego se diferencia por una historia donde el protagonista desconoce la verdadera identidad de la criatura mutante que lo persigue. A través de notas inquietantes, expedientes de experimentos y alucinaciones que alteran su percepción de la realidad, el jugador descubre poco a poco los secretos del Dr. Cooper, hasta llegar a una revelación que cambia por completo la manera en que interpreta lo ocurrido durante su recorrido.
+
 ## Límites del concepto
 
 ¿Qué cosas **NO** es este videojuego?
 
-> Esta sección es especialmente importante para evitar que el proyecto crezca sin control.
+* No es un videojuego de mundo abierto.
 
+No incluye combate ni uso de armas.
 
-> **Navegación:** [[00 - Índice]] · ← [[01 - Ficha del Proyecto]] · [[03 - Público y Plataforma]] →
+* No cuenta con modo multijugador.
+* No tiene ciclos de día y noche.
+* No incluye sistemas de crafteo ni construcción.
+* No permite la personalización de personajes.
+* No cuenta con exploración libre sin objetivos.
+* No incluye decisiones que modifiquen el desarrollo de la historia.
+* No está enfocado en la acción, sino en el terror, la exploración y el sigilo.

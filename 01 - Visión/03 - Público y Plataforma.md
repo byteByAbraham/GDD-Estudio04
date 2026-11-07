@@ -6,48 +6,52 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 
 ## Público objetivo
 
-**Edad aproximada:**
+**Edad aproximada:** De 18 años en adelante.
 
-**Experiencia esperada:**  
-> Casual, intermedia, avanzada.
+**Experiencia esperada:** Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia y exploración pero no requiere experiencia avanzada.
 
-**Intereses relevantes:**
+**Intereses relevantes:** Videojuegos de terror psicológico, supervivencia, misterio, exploración, sigilo e historias con giros inesperados.
 
-**Conocimientos previos necesarios:**
+**Conocimientos previos necesarios:** Manejo básico de videojuegos en primera persona, uso de teclado y ratón, exploración de escenarios e interacción con objetos.
 
 ## Plataforma
 
-| Elemento | Decisión |
-|---|---|
-| Plataforma principal | |
-| Plataformas secundarias | |
-| Método de entrada | Teclado / Mouse / Control / Pantalla táctil |
-| Resolución objetivo | |
-| Relación de aspecto | |
-| Rendimiento objetivo | FPS |
-| Conexión requerida | Sí / No |
+| Elemento                | Decisión             |
+| ----------------------- | --------------------- |
+| Plataforma principal    | PC (Windows)          |
+| Plataformas secundarias | Ninguna               |
+| Método de entrada      | Teclado y mouse       |
+| Resolución objetivo    | 1920 × 1080 píxeles |
+| Relación de aspecto    | 16:9                  |
+| Rendimiento objetivo    | 60 FPS               |
+| Conexión requerida     | No                    |
 
 ## Restricciones de plataforma
 
 Documenta limitaciones de hardware, controles, memoria, almacenamiento, distribución o conectividad.
 
+**Hardware:** El videojuego requerirá un equipo capaz de ejecutar escenarios 3D, modelos de personajes, iluminación y efectos ambientales sin afectar considerablemente el rendimiento.
+
+**Memoria:** Se controlará el uso de memoria para evitar cargas excesivas de escenarios, texturas, modelos 3D y recursos visuales.
+
+**Controles:** El diseño estará pensado para teclado y mouse, utilizados para el movimiento, interacción y exploración del escenario, por lo que no se contempla como requisito el uso de controles alternativos.
+
+**Conectividad:** El videojuego requerirá conexión a Internet para acceder a determinadas funciones y recursos necesarios para el funcionamiento del prototipo.
+
 ## Sesión de juego
 
-**Duración esperada de una sesión:**
+**Duración esperada de una sesión:** 10 a 15 minutos.
 
-**Duración total estimada del juego:**
+**Duración total estimada del juego:** 30-35 minutos.
 
 ## Modelo de distribución
 
-> Gratuito, pago único, educativo, prototipo académico, etc.
+El videojuego será desarrollado como un prototipo académico.
 
 ## Consideraciones
 
-- [ ] Controles adaptados a la plataforma
-- [ ] Interfaz legible
+- [X] Controles adaptados a la plataforma
+- [X] Interfaz legible
 - [ ] Rendimiento considerado
-- [ ] Resoluciones consideradas
-- [ ] Guardado compatible
-
-
-> **Navegación:** [[00 - Índice]] · ← [[02 - Visión del Juego]] · [[04 - Pilares de Diseño]] →
+- [X] Resoluciones consideradas
+- [X] Guardado compatible
