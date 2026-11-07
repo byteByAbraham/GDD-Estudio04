@@ -8,69 +8,55 @@ Explica cómo cambia la experiencia desde el inicio hasta el final. La progresi�
 
 Describe las etapas principales del juego.
 
-
-| Etapa                         | Zona                     | Objetivo en pantalla              | Qué aprende o enfrenta el jugador                                                                 |
-| ----------------------------- | ------------------------ | --------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **1. Inicio**                 | Cabaña 1                 | “Sal de la cabaña”                | Controles, interacción, linterna y lectura de notas. Explorar la cabaña para encontrar la salida. |
-| **2. Primer cruce**           | Bosque                   | “Llega a la siguiente cabaña”     | Batería, sigilo, escondites y primeras señales de la criatura (tarareo y pasos)                   |
-| **3. Cabaña 2**               | Cabaña 2 y exterior      | “Encuentra la llave de la cabaña” | Notas o pistas apunta a un lugar exterior. Debe salir bajo la lluvia con riesgo.                  |
-| **4. Cabaña 3**               | Cabaña 3                 | “Descubre el código del candado”  | Relacionar notas, imágenes, mensajes y documentos de zonas anteriores para deducir 4 dígitos.     |
-| **5. Laboratorio (acceso)**   | Exterior del laboratorio | “Restablece la energía”           | Encender 2 generadores.                                                                           |
-| **6. Laboratorio (interior)** | Interior                 | “Revisa el laboratorio”           | Documentos y objetos finales y escena de cierre ([[01 - Premisa y Trama]])                        |
+| Etapa                                      | Zona                     | Objetivo en pantalla                                            | Qué aprende o enfrenta el jugador                                                                                                               |
+| ------------------------------------------ | ------------------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **1. Inicio**                        | Primera cabaña          | "Encuentra la forma de salir".                                  | Aprende a moverse, interactuar con objetos y buscar la llave para salir.                                                                         |
+| **2.Primer recorrido**               | Bosque y segunda cabaña | "Encuentra la llave y entra a la segunda cabaña".              | Utiliza la linterna para explorar el bosque y busca pistas dentro de la cabaña, aparecen las primeras señales de la criatura (tarareo y pasos) |
+| **3. Avance de la investigación**  | Bosque y tercera cabaña | "Encuentra la llave y explora la tercera cabaña".              | Relaciona la información descubierta y se enfrenta nuevamente al peligro durante los trayectos, utilizando el sigilo, el escondite o la huida.  |
+| **4. Restablecimiento de energía** | Exterior del laboratorio | "Localiza y activa los dos generadores".                        | Explora el exterior y se expone al peligro para restablecer la energía y habilitar la entrada al laboratorio.                                   |
+| **5. Revelación final**            | Interior del laboratorio | "Investiga el laboratorio y descubre qué ocurrió con Jereth". | Examina los expedientes y descubre la verdad sobre los experimentos del Dr. Cooper y la identidad de la criatura mutante.                        |
 
 ## Progresión del jugador
 
-¿Qué aprende el jugador y en qué orden?
-Movimiento e interacción básica: Caminar, agacharse y examinar objetos dentro de la cabaña inicial.
+**Movimiento e interacción:** Aprende a desplazarse, observar el entorno y usar la tecla **E** para interactuar con objetos.
 
-Gestión de luz y recursos: Encender/apagar la linterna, monitorear la batería disponible y administrar el uso para no quedarse a oscuras.
+**Búsqueda de llaves:** Aprende a revisar los escenarios para encontrar las llaves que le permiten salir de la primera cabaña y entrar a las siguientes.
 
-Evasión y sigilo: Reconocer patrones de sonido de la criatura, desplazarse en silencio y usar los escondites.
+**Uso de la linterna y las pilas:** Aprende a orientarse en el bosque, apagar la linterna para conservar carga y recoger pilas para recuperar batería.
 
-Deducción: relacionar notas e imágenes de distintos lugares para resolver un código.
+**Supervivencia:** Aprende a reconocer la presencia de la criatura mutante, avanzar con sigilo, esconderse y huir cuando es descubierto.
 
-Resolución de puzles bajo presión: Intercambiar fusibles, manipular paneles eléctricos y descifrar códigos mientras evita ser detectado.
+**Investigación:** Aprende a relacionar las pistas y la información que descubre para comprender lo ocurrido.
 
+**Activación de generadores:** Aplica lo aprendido para explorar el exterior del laboratorio y activar los dos generadores que permiten entrar.
+
+**Comprensión de la historia:** Relaciona la información de los expedientes del laboratorio y descubre la verdad sobre Jereth y el Dr. Cooper.
 
 ## Progresión del personaje
 
-¿Qué mejora el personaje?
-
-- Vida: No aumenta de forma pasiva y solo tiene una vida  
-- Daño: El personaje no posee armas de fuego principal para dañar el enemigo 
-- Habilidades: No hay habilidades
-- Equipo: La linterna está disponible desde el inicio
-- Recursos: Pilas que recargan la linterna ([[06 - Economía y Recursos]])
-- Conocimiento: Notas, imágenes, mensajes y archivos
+Vadrik no obtiene nuevas habilidades ni mejoras de estadísticas o equipo. Su progresión se centra en el conocimiento: comienza desorientado y, conforme investiga, comprende lo ocurrido con su hijo y descubre las verdaderas intenciones del Dr. Cooper.
 
 ## Desbloqueos
 
-| Desbloqueo            | Requisito                                       | Efecto                            |
-| --------------------- | ----------------------------------------------- | --------------------------------- |
-| Salida de la cabaña 1 | Encontrar la llave oculta y usarla en la puerta | Acceso al bosque y checkpoint     |
-| Cabaña 2              | Encontrar la llave exterior                     | Acceso a la cabaña 2 y checkpoint |
-| Cabaña 3              | Ingresar el código de 4 dígitos                 | Acceso a la cabaña 3 y checkpoint |
-| Laboratorio           | Encender los 2 generadores                      | Acceso al interior y checkpoint   |
-| Escena de cierre      | Interactuar con el objeto final del laboratorio | Final del juego                   |
+| Desbloqueo               | Requisito                                  | Efecto                                                                     |
+| ------------------------ | ------------------------------------------ | -------------------------------------------------------------------------- |
+| Salida de la cabaña 1   | Encontrar y utilizar la llave del interior | Permite salir al bosque                                                    |
+| Acceso a la cabaña 2    | Encontrar su llave y entrar                | Permite explorar el interior y guarda un checkpoint.                       |
+| Acceso a la cabaña 3    | Encontrar su llave y entrar                | Permite continuar la investigación y guarda un nuevo checkpoint           |
+| Entrada al laboratorio   | Activar los dos generadores del exterior   | Restablece la energía y habilita la entrada                               |
+| Revelación de la verdad | Examinar los expedientes del laboratorio   | Permite descubrir lo ocurrido con Jereth y los experimentos del Dr. Cooper |
 
 ## Curva de dificultad
 
-Describe cómo aumenta el desafío y qué nuevos elementos aparecen.
-
-La distancia entre zonas y el riesgo aumentan a lo largo del recorrido:
-
-- La cabaña 1 funciona como tutorial. La criatura no está presente en el interior.
-- La cabaña 2 obliga a salir a la intemperie a buscar la llave.
-- La cabaña 3 exige deducir un código con la criatura patrullando.
-- El laboratorio añade los generadores y poder entrar.
+La distancia entre zonas y el riesgo aumentan a lo largo del recorrido: al inicio, el jugador aprende los controles y busca la llave dentro de la primera cabaña. Después, debe recorrer el bosque, explorar áreas más amplias y encontrar las siguientes llaves mientras evita a la criatura mutante. Los trayectos exigen mayor atención al entorno y a los lugares donde puede esconderse. Finalmente, debe localizar y activar los dos generadores del exterior del laboratorio, permaneciendo expuesto al peligro hasta conseguir entrar.
 
 ## Curva de aprendizaje
 
-¿Qué debe dominar el jugador antes de introducir el siguiente concepto?
+* Dominar el movimiento y la interacción con objetos dentro de la primera cabaña antes de salir al bosque.
+* Comprender cómo buscar y utilizar las llaves antes de acceder a las siguientes cabañas.
+* Aprender a orientarse en el bosque con la linterna antes de recorrer trayectos más largos.
+* Reconocer las señales de la criatura mutante y aprender a esconderse o huir antes de enfrentar zonas de mayor riesgo.
+* Combinar la exploración y el sigilo antes de buscar y activar los dos generadores del exterior del laboratorio.
 
-- Controles y linterna en la cabaña 1, antes del primer cruce.
-- Sigilo y escondites antes de la primera patrulla de la criatura.
-- Lectura y relación de notas antes del candado de 4 dígitos.
-- Descifrar los accesos con base a objetos interactivos.
 
 > **Navegación:** [[00 - Índice]] · ← [[04 - Controles]] · [[06 - Economía y Recursos]] →

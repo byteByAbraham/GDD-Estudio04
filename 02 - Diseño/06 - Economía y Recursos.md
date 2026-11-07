@@ -6,43 +6,64 @@ Documenta cualquier recurso cuantificable: dinero, vida, energía, munición, ex
 
 ## Recursos
 
-| Recurso                | Obtención                                        | Uso                            | Límite                                  | Pérdida                                    |
-| ---------------------- | ------------------------------------------------ | ------------------------------ | --------------------------------------- | ------------------------------------------ |
-| Batería de la linterna | Inicia al 100%. Se recarga con pilas             | Mantener la linterna encendida | 100%                                    | Baja 0.3% por segundo con la luz encendida |
-| Pila                   | 4 repartidas por el mapa, se recogen con **[E]** | Recarga 40% de la batería      | Se consume al recogerla y no se acumula | No aplica                                  |
-| Linterna               | Disponible desde el inicio                       | Iluminar el entorno            | 1 unidad                                | No se puede perder                         |
+| Recurso                 | Obtención                                                               | Uso                                                                  | Límite                                      | Pérdida                                                            |
+| ----------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
+| Batería de la linterna | Comienza al 100 % y se recarga al recoger pilas                          | Mantener encendida la linterna para iluminar el entorno              | 100 % de carga                               | Disminuye un 0.3 % por segundo mientras la linterna está encendida |
+| Pila                    | Hay 4 repartidas por el mapa; se recogen con **[E]**               | Cada una recupera un 40 % de batería, sin superar el 100 %          | 4 en toda la partida; no se almacenan        | Se consumen inmediatamente al recogerlas                            |
+| Linterna                | Disponible desde el inicio                                               | Iluminar el bosque y reconocer caminos y objetos                     | 1 unidad                                     | No se pierde; deja de iluminar cuando se agota la batería          |
+| Notas                   | Aparecen durante el recorrido y se leen al interactuar con **[E]** | Generar suspenso e intriga                                           | Cantidad fija distribuida por los escenarios | No se consumen al leerlas                                           |
+| Expedientes             | Se encuentran dentro del laboratorio y se examinan con E                 | Revelar información sobre los experimentos y lo ocurrido con Jereth | Cantidad fija dentro del laboratorio         | No se consumen al examinarlos                                       |
 
 ## Fuentes y sumideros
 
-**Fuentes:** las 4 pilas, repartidas por el bosque, las cabañas y el laboratorio.
+**Fuentes:**
 
-**Sumideros:** el consumo de la linterna mientras está encendida.
+* La linterna comienza con un 100 % de batería.
+* Las cuatro pilas del mapa recuperan un 40 % de carga cada una.
+* Las llaves se obtienen explorando los escenarios.
+* Las notas y los expedientes aportan información durante el recorrido y en el laboratorio.
+
+**Sumideros:**
+
+* La linterna consume un 0.3 % de batería por segundo mientras está encendida.
+* Las pilas se consumen inmediatamente al recogerlas.
+
+- Las llaves, notas y expedientes no tienen un consumo definido.
 
 ## Reglas
 
-- **Límites:** la batería nunca supera el 100%. Si el jugador recoge una pila con la batería casi llena, se completa hasta 100% y la pila se consume.
+#### Vida y salud
 
-- **Sin acumulación:** las pilas se usan al recogerlas. No hay inventario de pilas.
+* **Vulnerabilidad:** Vadrik no cuenta con una barra de salud; ser atrapado por la criatura mutante provoca la muerte.
+* **Recuperación:** no existen botiquines, curación ni regeneración de salud.
+* **Reaparición:** al morir, el jugador regresa al último checkpoint.
+* **Sin mejoras:** la resistencia del personaje no aumenta durante la partida.
 
-- **Consumo:** la linterna apagada no consume. Pausar o abrir el archivo de notas tampoco.
+#### Recursos
 
-- **Agotamiento:** al llegar a 0%, la linterna se apaga y queda una luz ambiental mínima para que la partida siga siendo jugable.
+* **Límites:** la batería nunca supera el 100 %. Cada pila recupera un 40 %; la carga sobrante se pierde.
+* **Sin acumulación:** las cuatro pilas del mapa se consumen al recogerlas y no se almacenan en un inventario.
+* **Consumo:** la linterna gasta un 0.3 % de batería mientras está encendida; apagada no consume.
+* **Agotamiento:** al llegar al 0 %, deja de iluminar, pero se mantiene una luz ambiental mínima para continuar.
+* **Sin regeneración:** las pilas no reaparecen ni se intercambian.
 
-- **Garantía de diseño:** siempre hay una pila alcanzable antes del siguiente puzle.
+#### Llaves y cabañas
 
-- **Checkpoint:** al reaparecer, la batería queda al menos en 30%.
+* **Correspondencia:** cada llave permite abrir únicamente su acceso correspondiente.
+* **Permanencia:** una vez abierto un acceso, permanece disponible durante el recorrido.
+* **Checkpoints:** entrar a una cabaña guarda el progreso. Al morir, el jugador vuelve al último checkpoint con al menos un 30 % de batería.
 
-- **Sin regeneración:** las pilas no reaparecen ni se intercambian.
+##### Laboratorio
+
+* **Acceso:** la entrada se habilita únicamente después de activar los dos generadores del exterior.
+* **Activación:** cada generador se enciende por separado mediante E.
+* **Confirmación:** luces y sonidos permiten distinguir los generadores encendidos de los apagados.
+* **Permanencia:** un generador activado permanece encendido durante ese intento.
+* **Investigación:** los expedientes del interior revelan la información final sobre los experimentos.
 
 ## Balance
 
-¿Qué comportamiento queremos incentivar?
-Que el jugador decida cuándo encender la linterna y cuándo avanzar a oscuras para ahorrar batería.
+Se busca incentivar que el jugador observe antes de actuar, avance con precaución y decida cuándo investigar, continuar o buscar refugio. La atención al entorno y el uso cuidadoso de los recursos deben favorecer el progreso y reducir los riesgos.
 
 ¿Qué comportamiento queremos evitar?
-Que mantenga la luz siempre encendida sin consecuencias, o que se quede sin luz sin forma de recuperarla.
-
-**Valor de referencia:** con 4 pilas, el jugador dispone de unos 14 minutos de luz continua. Es un valor provisional que se ajusta en las pruebas de calidad.
-
-
-> **Navegación:** [[00 - Índice]] · ← [[05 - Progresión]] · [[07 - Reglas y Estados del Juego]] →
+Se busca evitar que el jugador avance corriendo sin observar, interactúe al azar o desperdicie recursos. También que repita intentos sin comprender los riesgos ni aprovechar lo aprendido durante el recorrido.
