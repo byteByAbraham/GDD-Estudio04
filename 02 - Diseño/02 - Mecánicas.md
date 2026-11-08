@@ -1,146 +1,253 @@
 # Mecánicas
 
-## Descripción de la sección
-
-Una mecánica es una regla o interacción mediante la cual el jugador puede actuar dentro del sistema del juego.
-
-Documenta cada mecánica con suficiente detalle para que otro integrante pueda implementarla.
-
 ## Mecánicas principales
 
-### Mecánica 01 - Explorar e investigar el entorno
+### Mecánica 01- Movimiento y exploración en primera persona
 
-**Propósito:**  
+**Propósito:** permitir que el jugador recorra el bosque, las cabañas y el laboratorio para reconocer caminos y localizar elementos necesarios para avanzar.
 
-Permitir que el jugador descubra información sobre el experimento mediante la observación, la lectura y el uso de objetos. La investigación proporciona razones para abandonar la seguridad de las cabañas.
+**Activación:** comienza cuando el jugador obtiene el control de Vadrik y utiliza los controles de movimiento y cámara.
 
-**Activación:**  
+**Reglas:**
 
-Acercarse a un elemento interactivo, apuntar al mismo con el centro de la cámara y pulsar la entrada de interacción. Si la interacción corresponde a un acertijo, utilizar las acciones que se definan para ese elemento.
+- La cámara se controla en primera persona y determina hacia dónde observa e interactúa el jugador.
+- El jugador puede caminar, correr y agacharse.
+- Al intentar levantarse, se comprueba si existe un obstáculo sobre el personaje. Si no hay espacio, permanece agachado.
+- El desplazamiento incorpora balanceo de cámara y movimiento al caminar.
+- Durante las persecuciones se incorporan temblores de adrenalina.
+- El movimiento produce sonidos que se relacionan con el sistema de percepción de la criatura mutante.
+- El movimiento se deshabilita durante la pausa y los estados que impiden controlar a Vadrik.
 
-**Reglas:**  
+**Entrada:**
 
-- Solo se puede interactuar con un elemento a la vez y sin una pared u obstáculo entre la cámara y el elemento interactivo.
+| Tecla o control                        | Acción                         |
+| -------------------------------------- | ------------------------------- |
+| **W**                            | Avanzar                         |
+| **S**                            | Retroceder                      |
+| **A**                            | Desplazarse a la izquierda      |
+| **D**                            | Desplazarse a la derecha        |
+| **Mouse**                        | Orientar la cámara             |
+| **Shift izquierdo + movimiento** | Correr                          |
+| **Ctrl izquierdo**               | Agacharse o intentar levantarse |
 
-- El mensaje contextual indica la acción disponible a realizar: leer, recoger, abrir, examinar o utilizar.
+**Estado inicial:** Vadrik se encuentra en una zona que el jugador todavía no ha explorado completamente.
 
-- Los documentos, imágenes y dibujos se registran en el archivo de notas. Las llaves se guardan en una lista breve de llaves. Cada elemento tiene un identificador único y solo se incorpora una vez.
+**Estado final:** cambia su ubicación, orientación o postura según los controles y el espacio disponible.
 
-- Resolver un puzle abre el acceso a la siguiente zona y guarda un checkpoint. La pista, la solución y la ubicación de cada puzle están en [[03 - Sistemas]], sistema S03.
+**Recursos utilizados:** espacio transitable del escenario. No se especifica un sistema de resistencia para correr.
 
-- Si una interacción no cumple sus requisitos, se informa al jugador sin marcarla como completada.
+**Recompensa:** descubrir rutas y elementos necesarios para avanzar.
 
-- Las pantallas de lectura y archivo pausan la simulación. Los acertijos que utilicen un panel contextual seguirán la misma regla; las interacciones realizadas directamente en el escenario no pausan por sí solas.
+**Penalización:** el desplazamiento puede producir ruido o exponer al jugador.
 
-**Entrada:**  
+**Interacciones con otras mecánicas:** interacción, linterna, sigilo, ruido y persecución.
 
-- **[E]** para interactuar, clic izquierdo para seleccionar opciones y botones de interfaz
+**Casos límite:**
 
-- **[Esc]** para cerrar una pantalla contextual 
+- Si hay un techo u obstáculo encima, no se permite abandonar la postura agachada.
+- Los obstáculos sólidos impiden continuar el desplazamiento en esa dirección.
+- Al abrir una interfaz que utiliza el cursor, el control de cámara debe coordinarse con dicha interfaz.
+- El movimiento se deshabilita durante la pausa y los estados que impiden controlar a Vadrik.
 
-- **[Tab]** para consultar el archivo de notas.
+### Mecánica 02 - Interactuar con objetos y recoger llaves
 
-**Estado inicial:**  
+**Propósito:** permitir que el jugador utilice elementos del escenario y encuentre las llaves necesarias para acceder a las cabañas.
 
-Jugador en exploración con un elemento interactivo disponible. La información aún no se ha registrado o la interacción permanece pendiente.
+**Activación:** localizar una llave, apuntar hacia ella y presionar E; después, interactuar con su acceso correspondiente.
 
-**Estado final:**  
+**Reglas:**
 
-Información registrada, objeto incorporado o mecanismo actualizado. Si se completa un requisito de investigación, también se actualiza el objetivo correspondiente.
+- Cada llave está asociada a un acceso determinado.
+- Al recogerla, el sistema registra que se ha cumplido el requisito correspondiente.
+- No existe una pantalla de inventario ni selección manual de llaves.
+- Al interactuar con el acceso, se comprueba si su llave ya fue recogida.
+- El estado del acceso se relaciona con los objetivos y la persistencia.
 
-**Recursos utilizados:**  
+**Entrada:**
 
-Elementos interactivos, lista de llaves, archivo de notas, interfaz contextual cuando corresponda y estados de progreso. No se utilizan monedas, fabricación ni objetos consumibles de investigación
+| Tecla o control | Acción                           |
+| --------------- | --------------------------------- |
+| Mouse           | Apuntar hacia el objeto           |
+| E               | Ejecutar la interacción indicada |
 
-**Recompensa:**  
+**Estado inicial:** objeto disponible o acceso cerrado.
 
-Información sobre el experimento, acceso a la siguiente zona y avance de la historia.
+**Estado final:** objeto utilizado, llave registrada o acceso abierto si se cumple el requisito.
 
-**Penalización:**  
+**Recursos utilizados:** llave específica y estado de progreso asociado.
 
-No cumplir los requisitos de una interacción impide completar esa acción. Las consecuencias de fallar un acertijo se definirán para cada caso. La exploración fuera de las cabañas expone al jugador a la criatura.
+**Recompensa:** entrar a una nueva cabaña y continuar la exploración.
 
-**Interacciones con otras mecánicas:**
+**Penalización:** el acceso permanece cerrado mientras no se encuentre la llave correcta.
 
-El desplazamiento permite alcanzar las pistas, la linterna facilita verlas, el sigilo permite investigar zonas con riesgo.
+**Interacciones con otras mecánicas:** exploración, lectura, generadores, objetivos y checkpoints.
 
-**Casos límite:**  
+**Casos límite:**
 
-- Releer una pista no duplica registros ni vuelve a ejecutar eventos de progreso.
+- Interactuar sin la llave requerida no abre el acceso.
+- Una misma llave no debe registrarse varias veces.
+- Al restaurar una partida, el estado de la llave debe ser coherente con el acceso correspondiente.
 
-- Si dos objetos están próximos, se selecciona el primero alcanzado por el centro de la cámara; su nombre aparece en pantalla.
+### Mecánica 03 - Leer notas y expedientes del entorno
 
-- Un objeto obligatorio no puede descartarse ni quedar fuera del recorrido accesible.
+Propósito: presentar información narrativa y generar intriga mediante documentos, notas y fotos colocados en los escenarios.
 
-- Cerrar una interfaz no marca una interacción o acertijo como resuelto si sus requisitos no se han cumplido.
+Activación: apuntar hacia una nota o expediente y presionar E.
 
-- Tras reaparecer en un checkpoint, objetos, notas, llaves y puertas coinciden con el estado guardado al resolver el último puzle.
+Reglas:
 
-### Mecánica 02 - Evitar a la criatura y utilizar escondites
+- El contenido se presenta mediante una interfaz de lectura.
+- Los documentos se examinan directamente en el escenario.
+- No se recogen ni se almacenan en un inventario.
+- No existe un archivo para consultar notas descubiertas.
+- Para volver a leer un documento, el jugador debe interactuar nuevamente con él en su ubicación.
+- Las notas generan suspenso; los expedientes permiten conocer los experimentos y reconstruir lo ocurrido.
 
-**Propósito:**  
+**Entrada**
+
+| Tecla o control                | Acción        |
+| ------------------------------ | -------------- |
+| E                              | Abrir lectura  |
+| Esc (propuesta, por confirmar) | Cerrar lectura |
+
+Estado inicial: documento disponible en el escenario y lectura cerrada.
+
+Estado final: contenido visualizado y regreso a la exploración al cerrar la lectura.
+
+Recursos utilizados: notas y expedientes; no se consumen.
+
+Recompensa: obtener información sobre el lugar, los experimentos y los personajes.
+
+Penalización: no se especifica una penalización directa.
+
+Interacciones con otras mecánicas: exploración, interacción y narrativa
+
+### Mecánica 04 - Utilizar la linterna y administrar la batería
+
+**Propósito**: iluminar el entorno y hacer que el jugador controle una carga limitada.
+
+**Activación:** utilizar el control de encendido o interactuar con una pila.
+
+**Reglas:**
+
+- La linterna inicia con un 100 % de batería.
+- Consume un 0.3 % por segundo mientras está encendida.
+- Apagada no consume carga.
+- Al llegar al 0 %, deja de iluminar, pero permanece una iluminación ambiental mínima para continuar.
+- Hay cuatro pilas distribuidas por el mapa.
+- Cada pila recupera un 40 % de carga sin superar el 100 %.
+- Las pilas se utilizan inmediatamente; no se almacenan.
+
+**Entrada:**
+
+| Tecla o control | Acción                              |
+| --------------- | ------------------------------------ |
+| F               | Encender o apagar la linterna        |
+| Mouse           | Orientar la luz junto con la cámara |
+| E               | Recoger y utilizar una pila          |
+
+**Estado inicial:** linterna encendida o apagada con una carga determinada.
+
+**Estado final:** iluminación y carga actualizadas por consumo o recarga.
+
+**Recompensa:** reconocer caminos, obstáculos y objetos.
+
+**Penalización:** consumo de carga y exposición mediante la iluminación.
+
+**Interacciones con otras mecánicas:** exploración, interacción, detección, HUD y guardado.
+
+**Casos límite:**
+
+- Con carga agotada no puede mantenerse encendida.
+- La recarga sobrante se pierde y la pila se consume.
+- Agotar la batería no provoca una derrota inmediata.
+
+### Mecánica 05 - Sigilo y utilización de escondites
+
+**Propósito:** evitar la detección mediante la postura, el movimiento y los elementos del entorno.
+
+**Activación:** desplazarse por una zona peligrosa, agacharse o utilizar un escondite.
+
+**Reglas:**
+
+- La criatura mutante responde a señales visuales y sonoras.
+- Los obstáculos pueden interrumpir la visión directa.
+- Agacharse no vuelve invisible al jugador.
+- Los sonidos permiten advertir la cercanía de la amenaza.
+
+**Entrada:**
+
+| Tecla o control | Acción                                         |
+| --------------- | ---------------------------------------------- |
+| W, A, S, D      | Desplazarse                                    |
+| Ctrl izquierdo  | Agacharse o levantarse si hay espacio          |
+| Mouse           | Observar la amenaza y las rutas                |
+| E               | Utilizar un escondite cuando aparezca el aviso |
+
+**Estado inicial:** jugador expuesto o próximo a la amenaza.
+
+**Estado final:** jugador oculto, desplazándose sin detección o descubierto.
+
+**Recursos utilizados:** obstáculos y escondites.
+
+**Recompensa:** atravesar una zona sin iniciar una persecución.
+
+**Penalización:** una exposición o un ruido detectable puede revelar al jugador.
+### Mecánica 03 - Evitar a la criatura y utilizar escondites
+
+**Propósito:**
 
 Construir tensión mediante la vulnerabilidad del padre y permitir que la observación del entorno sea una herramienta de supervivencia.
 
-**Activación:**  
+**Activación:**
 
 Alejarse del campo visual de la criatura, reducir el ruido al agacharse y utilizar un escondite señalado como interactivo.
 
 **Reglas:**
 
 - La detección depende de visibilidad, distancia y ruido. Agacharse reduce el ruido y retrasa la confirmación visual, no vuelve invisible al jugador.
-
 - Una pared o cobertura sólida bloquea la visión. La oscuridad y la lluvia reducen la visibilidad, pero no garantizan seguridad.
-
 - Correr y encender un generador generan señales que pueden atraer a la criatura.
-
 - Para esconderse, el jugador debe estar a 2 metros o menos de un escondite libre y pulsar E.
-
 - Entrar en un escondite coloca al jugador en una posición definida, apaga la linterna y desactiva el movimiento. La cámara conserva un giro limitado.
-
 - Al salir, la linterna permanece apagada hasta que el jugador la encienda con F.
-
 - La cabaña inicial funciona como espacio protegido. La criatura no puede entrar ni atacar a través de sus paredes.
-
 - La lluvia es constante dificulta orientarse y escuchar a la criatura. Reduce el alcance de sus sentidos en exteriores, por lo que ofrece oportunidades para moverse sin ser detectado.
 - La criatura emite un tarareo apagado cuando está cerca, que funciona como aviso de proximidad. El ruido de un generador encendido también la atrae.
 
-**Entrada:**  
+**Entrada:**
 
 **[W, A, S y D]** para moverse, **[Ctrl]** izquierdo para alternar agachado, **[E]** para entrar o salir del escondite, **[Mouse]** para observar.
 
-**Estado inicial:**  
+**Estado inicial:**
 
 Jugador expuesto, desplazándose o perseguido. Criatura patrullando, investigando o persiguiendo.
 
-**Estado final:**  
+**Estado final:**
 
 Jugador fuera de la vista o dentro de un escondite. La criatura pasa a buscar si pierde el contacto, o continúa hacia el escondite si observó la entrada.
 
-**Recursos utilizados:**  
+**Recursos utilizados:**
 
 Coberturas, puntos de escondite, rutas de escape, percepción de la criatura y sonidos del jugador.
 
-**Recompensa:**  
+**Recompensa:**
 
 Evitar la captura y obtener una oportunidad para continuar la investigación.
 
-**Penalización:**  
+**Penalización:**
 
 Ser visto puede provocar persecución; ser escuchado puede atraer a la criatura a investigar el origen del ruido. Ser encontrado permite que la criatura se acerque y ataque.
 
-**Interacciones con otras mecánicas:**  
+**Interacciones con otras mecánicas:**
 
 La carrera permite crear distancia, aunque produce ruido. La linterna facilita ver, pero puede revelar una posición. Los escondites permiten romper el contacto.
 
 **Casos límite:**
 
 - Un escondite no es válido si está bloqueado o su posición de salida no es utilizable, el nivel debe garantizar al menos una salida libre.
-
 - No se puede entrar a un escondite durante la captura o una pantalla de lectura.
-
 - Salir no concede invulnerabilidad. Se coloca al jugador en un punto de salida que no atraviese paredes.
-
 - Si se solicita ponerse de pie bajo un obstáculo, el jugador continúa agachado hasta disponer de espacio.
 
 ### Mecánica 03 - Linterna y batería
@@ -152,15 +259,10 @@ La carrera permite crear distancia, aunque produce ruido. La linterna facilita v
 **Reglas:**
 
 - La linterna inicia al 100% y consume 0.3% por segundo mientras está encendida. Apagada no consume.
-
 - Cada batería recogida recarga 40%, hasta un máximo de 100%.
-
 - Al llegar a 0%, la linterna se apaga y queda una luz ambiental mínima para no dejar la partida sin salida.
-
 - La criatura puede notar el haz si lo percibe, y eso la atrae a investigar el origen.
-
 - Entrar a un escondite apaga la linterna, y al salir se enciende con **[F]**.
-
 - Hay 4 baterías en el mapa y siempre una alcanzable antes del siguiente puzle.
 
 **Entrada:** **[F]**, **[E]** y movimiento del mouse.
@@ -177,10 +279,9 @@ La carrera permite crear distancia, aunque produce ruido. La linterna facilita v
 
 **Interacciones con otras mecánicas:** Investigación, sigilo y exploración. La linterna facilita ver pistas, pero puede revelar la posición al jugador.
 
-**Casos límite:**  
+**Casos límite:**
 
-Pausar o abrir el archivo no consume batería. Al reaparecer en un checkpoint, la batería tiene un mínimo del 30%. La lluvia no afecta a la linterna. 
-
+Pausar o abrir el archivo no consume batería. Al reaparecer en un checkpoint, la batería tiene un mínimo del 30%. La lluvia no afecta a la linterna.
 
 ## Mecánicas secundarias
 
@@ -188,27 +289,23 @@ Las siguientes mecánicas complementan el núcleo y utilizan la misma ficha para
 
 ### Mecánica secundaria 01 - Desplazamiento y carrera
 
-**Propósito:**  
+**Propósito:**
 
 Recorrer el mapa, alcanzar pistas y escapar de una persecución.
 
-**Activación:**  
+**Activación:**
 
 Pulsar las **teclas de dirección** y mantener **[Shift izquierdo]** para correr mientras el jugador está de pie.
 
 **Reglas:**
 
 - Velocidades iniciales: caminar 2.5 m/s, correr 4.5 m/s y agachado 1.2 m/s.
-
 - El movimiento diagonal tiene la misma velocidad máxima que el movimiento en línea recta.
-
 - La carrera se limita al estado de pie y termina al agacharse.
-
 - La carrera no utiliza una barra de resistencia en el alcance inicial. Su costo es el ruido y la dificultad para observar pistas.
-
 - Las colisiones delimitan el recorrido. El nivel permite transitar sin una acción de salto.
 
-**Entrada:**  
+**Entrada:**
 
 **[W, A, S y D]**. **[Shift izquierdo]** mantenido, **[Mouse]** para orientar la cámara.
 
@@ -224,7 +321,7 @@ Pulsar las **teclas de dirección** y mantener **[Shift izquierdo]** para correr
 
 **Interacciones con otras mecánicas:** Investigación, sigilo y acceso a escondites.
 
-**Casos límite:**  
+**Casos límite:**
 
 En pausa, captura, escondite o pantalla contextual no hay desplazamiento. Soltar las teclas o perder el foco de la ventana detiene el movimiento. No se modifica la velocidad por la tasa de fotogramas.
 
@@ -234,7 +331,7 @@ En pausa, captura, escondite o pantalla contextual no hay desplazamiento. Soltar
 
 **Activación:** Alternar entre de pie y agachado.
 
-**Reglas:**  
+**Reglas:**
 
 Reduce la altura de la cámara y la velocidad a 1.2 m/s. No permite correr y no elimina la detección visual. Solo puede recuperarse la postura de pie si existe espacio sobre el jugador.
 
@@ -252,7 +349,7 @@ Reduce la altura de la cámara y la velocidad a 1.2 m/s. No permite correr y no 
 
 **Interacciones con otras mecánicas:** Sigilo, desplazamiento, uso de cobertura y linterna.
 
-**Casos límite:**  
+**Casos límite:**
 
 No cambia la postura durante captura, escondite o pantalla contextual. Si se entra agachado a un escondite, se recupera esa postura al salir.
 
@@ -265,11 +362,8 @@ No cambia la postura durante captura, escondite o pantalla contextual. Si se ent
 **Reglas:**
 
 - El archivo muestra únicamente notas, imágenes y mensajes, y las llaves obtenidas. No muestra objetivos.
-
 - Los documentos conservan su texto e imagen después de recogerse. Las voces no se etiquetan como auténticas o falsas.
-
 - Las llaves se usan con **[E]** sobre su puerta, sin arrastrar elementos.
-
 - El panel pausa la simulación y libera el cursor. Cerrarlo devuelve el control de la cámara.
 
 **Entrada:** **[Tab]** para abrir o cerrar, **[Clic izquierdo]** para seleccionar, **[Esc]** para cerrar.
@@ -286,7 +380,7 @@ No cambia la postura durante captura, escondite o pantalla contextual. Si se ent
 
 **Interacciones con otras mecánicas:** Investigación y resolución de puzles.
 
-**Casos límite:**  
+**Casos límite:**
 
 Un archivo vacío muestra un mensaje claro. No se abre durante captura o escondite. Si ya hay un panel de lectura o de candado abierto, **[Tab]** no abre un segundo panel. Al reaparecer en un checkpoint, el archivo conserva lo descubierto hasta ese punto.
 

@@ -1,31 +1,22 @@
 # Jugabilidad
 
-## Descripción de la sección
+## Bucle principal del juego
 
-La jugabilidad explica **qué hace el jugador, qué recibe a cambio y cómo evoluciona la experiencia**.
+**Bucle principal de Dark Mutant:**
 
-## Bucle principal de juego
-
-Describe el ciclo que se repite durante la experiencia.
-
-**Bucle principal de Dark Mutant:** 
-
-`Recibir objetivo → Buscar llaves → Entrar a las cabañas→ Guardar checkpoint → Llegar al laboratorio → Activar generadores → Área final.`
-
-**Bucle del proyecto:**
-El jugador recibe un objetivo breve, explora el entorno y busca las llaves necesarias para entrar a las cabañas e investigarlas. Durante los trayectos por el bosque, utiliza la linterna, recoge pilas y evita a la criatura mutante. Las notas que aparecen generan suspenso, mientras cada acceso a una cabaña guarda un checkpoint. Finalmente, activa los dos generadores del exterior del laboratorio y entra para descubrir la verdad.
+`Recibir objetivo → Explorar y buscar llaves → Evitar a la criatura mutante → Entrar a las cabañas → Investigar y guardar checkpoint → Repetir hasta llegar al laboratorio → Activar los dos generadores exteriores → Entrar y examinar los expedientes → Descubrir la verdad`
 
 ## Acciones principales del jugador
 
-| Acción                                 | Propósito                                                                                                        | Resultado                                                                                                                                                    |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Explorar el bosque y buscar llaves      | Recorrer el entorno para encontrar las llaves que permiten entrar a las cabañas y explorarlas en busca de pistas | llaves que permiten entrar a las cabañas y explorarlas en busca de pistasAvanzar hacia el laboratorio y descubrir información sobre lo ocurrido con Jereth |
-| Utilizar y administrar la linterna      | Iluminar caminos e interiores oscuros, controlando su uso para conservar batería                                 | Reconocer el entorno y localizar objetos necesarios para avanzar                                                                                             |
-| Recoger pilas con **E**           | Recuperar la carga de la linterna                                                                                 | Restaurar un 40 % de batería, hasta un máximo del 100 %, consumiendo la pila inmediatamente                                                                |
-| Avanzar con sigilo, esconderse y huir   | Evitar ser detectado por la criatura mutante y escapar cuando comienza una persecución                           | Sobrevivir a los encuentros y continuar la investigación                                                                                                    |
-| Localizar y activar los dos generadores | Explorar el laboratorio para restablecer la energía mientras se permanece atento al peligro                      | Habilitar el acceso al área final y descubrir la verdad sobre los experimentos                                                                              |
-| Examinar los expedientes                | Investigar los registros del Dr. Cooper                                                                           | Descubrir la verdad sobre los experimentos y Jereth                                                                                                          |
-| Elegir respuestas en diálogos          | Seleccionar cómo responde Vadrik ante una pregunta o situación                                                  | Obtener una respuesta diferente en la conversación, sin modificar el rumbo ni el final de la historia                                                       |
+| Acción                                 | Propósito                                                                                                        | Resultado                                                                                              |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Explorar el bosque y buscar llaves      | Recorrer el entorno para encontrar las llaves que permiten entrar a las cabañas y explorarlas en busca de pistas | llaves que permiten entrar a las cabañas y explorarlas en busca de pistas.                            |
+| Utilizar y administrar la linterna      | Iluminar caminos e interiores oscuros, controlando su uso para conservar batería                                 | Reconocer el entorno y localizar objetos necesarios para avanzar                                       |
+| Recoger pilas con **E**           | Recuperar la carga de la linterna                                                                                 | Restaurar un 40 % de batería, hasta un máximo del 100 %, consumiendo la pila inmediatamente          |
+| Avanzar con sigilo, esconderse y huir   | Evitar ser detectado por la criatura mutante y escapar cuando comienza una persecución                           | Sobrevivir a los encuentros y continuar la investigación                                              |
+| Localizar y activar los dos generadores | Explorar el laboratorio para restablecer la energía mientras se permanece atento al peligro                      | Habilitar el acceso al área final y descubrir la verdad sobre los experimentos                        |
+| Examinar los expedientes                | Investigar los registros del Dr. Cooper                                                                           | Descubrir la verdad sobre los experimentos y Jereth                                                    |
+| Elegir respuestas en diálogos          | Seleccionar cómo responde Vadrik ante una pregunta o situación                                                  | Obtener una respuesta diferente en la conversación, sin modificar el rumbo ni el final de la historia |
 
 ## Experiencia segundo a segundo
 
@@ -59,8 +50,6 @@ Describe cómo alternan:
 - **Historia:** Descubrir información entre los momentos de peligro, aumentando el misterio hasta llegar a la verdad en el laboratorio.
 
 ## Principios de interacción
-
-¿Qué reglas debe seguir el juego para que las acciones del jugador sean claras, consistentes y predecibles?
 
 * Usar la tecla **E** para interactuar con objetos, recoger llaves y leer notas o expedientes.
 * Mantener visible el objetivo actual y actualizarlo conforme el jugador avance.
