@@ -2,8 +2,6 @@
 
 ## Descripción de la sección
 
-Aquí se define la **idea central** del videojuego. Esta sección funciona como brújula: cuando aparezca una nueva idea, el equipo puede comprobar si realmente pertenece al juego.
-
 ## Concepto central
 
 **El videojuego trata sobre:**
@@ -27,13 +25,9 @@ El jugador experimenta la desesperación de un padre que busca descubrir qué oc
 
 ## Propuesta de valor
 
-¿Por qué alguien querría jugar este videojuego?
-
-Porque ofrece una experiencia de terror y supervivencia que combina exploración, sigilo y una historia llena de misterio, donde el jugador deberá descubrir los oscuros secretos de un científico mientras enfrenta la constante amenaza de una criatura mutante, manteniendo la tensión y la incertidumbre durante toda la partida.
+La propuesta de valor es ofrecer una experiencia de terror y supervivencia que combina exploración, sigilo y una historia llena de misterio, donde el jugador deberá descubrir los oscuros secretos de un científico mientras enfrenta la constante amenaza de una criatura mutante, manteniendo la tensión y la incertidumbre durante toda la partida.
 
 ## Características principales
-
-Lista las características que definen la experiencia.
 
 * Terror y supervivencia en un ambiente oscuro y amenazante.
 * Exploración de un bosque aislado, cabañas y un laboratorio.
@@ -45,18 +39,12 @@ Lista las características que definen la experiencia.
 
 ## Diferenciadores
 
-¿Qué hace que este videojuego sea reconocible frente a otros del mismo género?
-
 El videojuego se diferencia por una historia donde el protagonista desconoce la verdadera identidad de la criatura mutante que lo persigue. A través de notas inquietantes, expedientes de experimentos y alucinaciones que alteran su percepción de la realidad, el jugador descubre poco a poco los secretos del Dr. Cooper, hasta llegar a una revelación que cambia por completo la manera en que interpreta lo ocurrido durante su recorrido.
 
 ## Límites del concepto
 
-¿Qué cosas **NO** es este videojuego?
-
 * No es un videojuego de mundo abierto.
-
-No incluye combate ni uso de armas.
-
+* No incluye combate ni uso de armas.
 * No cuenta con modo multijugador.
 * No tiene ciclos de día y noche.
 * No incluye sistemas de crafteo ni construcción.
