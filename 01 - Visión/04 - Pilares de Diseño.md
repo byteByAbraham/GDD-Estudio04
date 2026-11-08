@@ -1,9 +1,5 @@
 # Pilares de Diseño
 
-## Descripción de la sección
-
-Los pilares son los principios que deben mantenerse durante todo el desarrollo. Cuando dos ideas entren en conflicto, los pilares ayudan a decidir cuál encaja mejor con la identidad del juego.
-
 ## Pilar 1 — Sobrevivir desde la vulnerabilidad
 
 **Descripción:** El jugador debe sentirse en desventaja ante la criatura mutante y depender de su observación y sigilo para sobrevivir.

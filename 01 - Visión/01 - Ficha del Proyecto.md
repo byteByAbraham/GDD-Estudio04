@@ -1,22 +1,18 @@
 # Ficha del Proyecto
 
-## Descripción de la sección
-
-Esta ficha identifica el proyecto de forma rápida. Debe permitir que alguien que nunca haya visto el videojuego entienda qué proyecto es y cuál es su estado actual.
-
 ## Información general
 
-| Campo                              | Información                                                                     |
-| ---------------------------------- | -------------------------------------------------------------------------------- |
-| **Nombre del proyecto**      | Proyecto Cabañas                                                                |
-| **Nombre clave**             | Echo                                                                             |
-| **Versión del GDD**         | 0.6.0                                                                            |
-| **Estado del proyecto**      | Concepto                                                                         |
-| **Equipo**                   | García Abraham \| Gomez Diana \| Gael Fernandez \| Guadalupe Cuy \| Moises Pech |
-| **Responsable del proyecto** | Garcia Rodríguez Abraham Antonio                                                |
-| **Fecha de inicio**          | 25/09/2026                                                                       |
-| **Última actualización**   | 06/11/2026                                                                       |
-| **Repositorio**              | https://github.com/byteByAbraham/GDD-Estudio04                                   |
+| Campo                              | Información                                                                                                                                                               |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nombre del proyecto**      | Proyecto Cabañas                                                                                                                                                          |
+| **Nombre clave**             | Echo                                                                                                                                                                       |
+| **Versión del GDD**         | 0.6.0                                                                                                                                                                      |
+| **Estado del proyecto**      | Concepto                                                                                                                                                                   |
+| **Equipo**                   | García Rodríguez Abraham Antonio<br />Gomez Juarez Diana Lizbeth <br />Fernandez Andrade Ian Gael<br />Cuy Chavez Guadalupe Del Rosario<br />Pech Lopez Moises De Jesús |
+| **Responsable del proyecto** | Garcia Rodríguez Abraham Antonio                                                                                                                                          |
+| **Fecha de inicio**          | 25/09/2026                                                                                                                                                                 |
+| **Última actualización**   | 07/11/2026                                                                                                                                                                 |
+| **Repositorio**              | https://github.com/byteByAbraham/GDD-Estudio04                                                                                                                             |
 
 ## Identidad del videojuego
 
@@ -68,7 +64,5 @@ Un videojuego de terror y supervivencia en primera persona donde el jugador cont
 - [ ] Versión final
 
 ## Criterio de éxito del proyecto
-
-¿Qué tendría que suceder para considerar que el videojuego cumplió su propósito?
 
 Realizar una demostración funcional del Vertical Slice que transmita la tensión de la narrativa y permita experimentar las mecánicas principales de investigación, sigilo y resolución de acertijos en un entorno de oscuridad permanente.
