@@ -1,9 +1,5 @@
 # Guardado y Configuración
 
-## Descripción de la sección
-
-Define cómo se conserva el progreso y qué opciones puede modificar el jugador.
-
 ## Guardado
 
 **Tipo:** Automático mediante checkpoints.
@@ -28,8 +24,4 @@ Define cómo se conserva el progreso y qué opciones puede modificar el jugador.
 
 ## Restablecimiento
 
-¿Qué opciones pueden volver a valores predeterminados?
-
 No se contempla el restablecimiento de opciones, ya que el juego no incluye ajustes de configuración.
-
-> **Navegación:** [[00 - Índice]] · ← [[03 - Accesibilidad]] · [[01 - Arquitectura Técnica]] →

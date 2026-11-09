@@ -1,9 +1,5 @@
 # UI y Menús
 
-## Descripción de la sección
-
-Define la estructura funcional de las interfaces y menús.
-
 ## Mapa de navegación
 
 ```text
@@ -27,13 +23,11 @@ Después de la victoria
 └── Salir
 ```
 
-
-
 ## Pantallas
 
 ### Menú principal
 
-**Propósito: Propósito:** Permitir el acceso al juego. 
+**Propósito: Propósito:** Permitir el acceso al juego.
 
 **Elementos:** Título del juego, botones Jugar y  Salir.
 
@@ -71,15 +65,10 @@ Después de la victoria
 
 **Acciones disponibles:** Regresar al menú principal o cerrar el juego.
 
-
 ### Confirmaciones
 
-Documenta acciones destructivas o irreversibles y cómo se confirman.
-
-| Acción                             | Mensaje de confirmación                                                             | Opciones                  |
-| ---------------------------------- | ----------------------------------------------------------------------------------- | ------------------------- |
-| Reiniciar desde el checkpoint      | «¿Reiniciar desde el último checkpoint? Perderás el avance posterior al guardado».  | Reiniciar / Cancelar      |
-| Volver al menú durante la partida  | «¿Volver al menú principal? El progreso posterior al último checkpoint se perderá». | Volver al menú / Cancelar |
-| Cerrar el juego durante la partida | «¿Salir del juego? El progreso posterior al último checkpoint se perderá».          | Salir / Cancelar          |
-
-> **Navegación:** [[00 - Índice]] · ← [[01 - UX y Flujo del Jugador]] · [[03 - Accesibilidad]] →
+| Acción                            | Mensaje de confirmación                                                                  | Opciones                   |
+| ---------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------- |
+| Reiniciar desde el checkpoint      | «¿Reiniciar desde el último checkpoint? Perderás el avance posterior al guardado».   | Reiniciar / Cancelar       |
+| Volver al menú durante la partida | «¿Volver al menú principal? El progreso posterior al último checkpoint se perderá». | Volver al menú / Cancelar |
+| Cerrar el juego durante la partida | «¿Salir del juego? El progreso posterior al último checkpoint se perderá».           | Salir / Cancelar           |
