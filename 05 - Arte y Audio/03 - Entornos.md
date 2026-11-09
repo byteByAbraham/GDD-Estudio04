@@ -1,9 +1,5 @@
 # Entornos
 
-## Descripción de la sección
-
-Define la estética y necesidades visuales de escenarios, fondos, objetos y elementos ambientales.
-
 ## Zonas
 
 | Zona                     | Estilo                                                        | Elementos                                                                      | Función                                                                         |
@@ -15,8 +11,6 @@ Define la estética y necesidades visuales de escenarios, fondos, objetos y elem
 
 ## Modularidad
 
-¿Qué elementos pueden reutilizarse?
-
 * Árboles y vegetación para distribuir el bosque.
 * Componentes de las cabañas, como puertas, ventanas y superficies de madera.
 * Secciones del cercado del laboratorio.
@@ -25,8 +19,6 @@ Define la estética y necesidades visuales de escenarios, fondos, objetos y elem
 * Modelos base de notas y expedientes, cambiando sus imágenes y textos.
 
 ## Iluminación
-
-Describe iluminación global, fuentes de luz y cambios durante el juego.
 
 La iluminación global es nocturna y tenue, con predominio de azul oscuro. Permite distinguir el relieve del terreno y las siluetas cercanas, mientras el fondo permanece en penumbra.
 
@@ -42,16 +34,11 @@ La distribución de luces interiores y los cambios visuales al activar los gener
 
 Lista los modelos, sprites, texturas, materiales y efectos necesarios.
 
-
-| Tipo de recurso    | Recursos                                                                                             |
-| ------------------ | ---------------------------------------------------------------------------------------------------- |
-| Modelos 3D         | Árboles, terreno, cabañas, laboratorio, cercado, puertas, generadores, llaves, linterna y pilas.     |
+| Tipo de recurso    | Recursos                                                                                              |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| Modelos 3D         | Árboles, terreno, cabañas, laboratorio, cercado, puertas, generadores, llaves, linterna y pilas.    |
 | Objetos narrativos | Notas, expedientes y fotografías colocados en el escenario.                                          |
 | Texturas           | Corteza, suelo, madera envejecida, piedra, vegetación, musgo, concreto deteriorado, metal y papel.   |
 | Materiales         | Superficies mates y desgastadas, metal oxidado y acabados húmedos con reflejos discretos.            |
-| Imágenes           | Diseños de notas, expedientes y fotografías utilizados como texturas.                                |
+| Imágenes          | Diseños de notas, expedientes y fotografías utilizados como texturas.                               |
 | Efectos            | Lluvia y efectos visuales de peligro asociados a la proximidad y persecución de la criatura mutante. |
-
-
-
-> **Navegación:** [[00 - Índice]] · ← [[02 - Personajes y Animación]] · [[04 - Interfaz Visual]] →

@@ -1,9 +1,5 @@
 # Interfaz Visual
 
-## Descripción de la sección
-
-Documenta la información que el juego muestra al jugador y las reglas visuales de la interfaz.
-
 ## HUD
 
 Elementos:
@@ -16,15 +12,11 @@ Elementos:
 
 ## Jerarquía visual
 
-¿Qué información debe verse primero, segundo y tercero?
-
 1. **Peligro e interacción:** las señales de amenaza y los avisos de interacción deben reconocerse rápidamente para reaccionar o actuar.
 2. **Objetivo actual:** debe permanecer visible y ser fácil de consultar para orientar el avance.
 3. **Recursos y confirmaciones:** el nivel de batería y los avisos de checkpoint ocupan un lugar secundario. La alerta de batería baja destaca cuando requiere atención.
 
 ## Estados
-
-Documenta estados normales, advertencias, daño, éxito, error y bloqueo.
 
 | Estado                  | Representación visual                                                                                        |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------- |
