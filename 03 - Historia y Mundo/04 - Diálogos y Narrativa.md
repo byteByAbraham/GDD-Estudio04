@@ -2,9 +2,7 @@
 
 ## Descripción de la sección
 
-Define cómo se presenta la historia al jugador y cómo funcionan los diálogos.
-
-## Métodos narrativos
+Métodos narrativos
 
 | Método         | Aplicación                                                                                     |
 | --------------- | ----------------------------------------------------------------------------------------------- |
@@ -30,7 +28,6 @@ Define cómo se presenta la historia al jugador y cómo funcionan los diálogos.
 
 **Consecuencias:** El encuentro altera la percepción de Vadrik y aumenta la tensión de su búsqueda, sin revelar todavía la verdadera identidad de la criatura mutante ni cambiar el desenlace.
 
-
 ### Escena / Conversación 2 — Encuentro final con el Dr. Cooper
 
 **Participantes:** Vadrik Dsang y el Dr. Cooper.
@@ -45,7 +42,7 @@ Define cómo se presenta la historia al jugador y cómo funcionan los diálogos.
 
 ## Tono
 
-El lenguaje es directo, serio y sin humor. Vadrik expresa preocupación, confusión y necesidad de respuestas. El encuentro con la alucinación de Jereth combina familiaridad e inquietud, manteniendo la duda sobre lo que sucede. Cooper utiliza un lenguaje formal y científico, con intervenciones breves acordes con su estado. 
+El lenguaje es directo, serio y sin humor. Vadrik expresa preocupación, confusión y necesidad de respuestas. El encuentro con la alucinación de Jereth combina familiaridad e inquietud, manteniendo la duda sobre lo que sucede. Cooper utiliza un lenguaje formal y científico, con intervenciones breves acordes con su estado.
 
 ## Decisiones narrativas
 
