@@ -6,597 +6,306 @@ Los sistemas son conjuntos de reglas y componentes que trabajan juntos: combate,
 
 ## Inventario de sistemas
 
-| Sistema                                    | Propósito                                                       | Dependencias                                                            | Estado    |
-| ------------------------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------- | --------- |
-| S01 - Jugador, cámara y entradas           | Moverse, observar y aceptar solo acciones compatibles           | Colisiones del escenario, estados de partida, configuración de entradas | Propuesto |
-| S02 - Interacción, archivo y llaves        | Registrar pistas y utilizar objetos clave                       | S01, identificadores de contenido, S07                                  | Propuesto |
-| S03 - Acertijos y progreso                 | Gestionar la cadena de 4 puzles y los checkpoints               | S02, eventos de objetivos, S05, S08                                     | Propuesto |
-| S04 - Ambiente y lluvia                    | Mantener lluvia, iluminación y audio ambiental                  | Iluminación, audio, regiones interior/exterior, S05, S07                | Propuesto |
-| S05 - Criatura, percepción y captura       | Crear una amenaza coherente con el sigilo, sin combate          | Navegación del escenario, S01, S04, S06                                 | Propuesto |
-| S06 - Linterna y batería                   | Iluminar y gestionar la batería                                 | S01, visibilidad y colisiones, S05, S07                                 | Propuesto |
-| S07 - Interfaz, audio y señales narrativas | Comunicar acciones y sostener la tensión                        | Estados publicados por S01 a S06, contenido narrativo                   | Propuesto |
-| S08 - Gestión de partida y ajustes         | Pausar, reintentar desde el último checkpoint y guardar ajustes | Estado estable de S01 a S07, archivos locales                           | Propuesto |
+| Sistema | Propósito | Dependencias | Estado |
+|---|---|---|---|
+| S01 - Jugador, cámara y entradas | Moverse, observar y aceptar solo las acciones permitidas en cada situación | Colisiones, S09 | Implementado |
+| S02 - Interacción e inventario | Usar objetos, leer documentos y guardar el equipo | S01, S08 | Implementado (falta la linterna en el inventario) |
+| S03 - Progresión, accesos y checkpoints | Controlar objetivos, puertas, generadores, panel de código y puntos de guardado | S02, S09 | En integración (faltan la palanca y conectar el panel) |
+| S04 - Ambiente nocturno y lluvia | Mantener la noche, la lluvia constante, la oscuridad interior y el audio ambiental | S05, S08 | Implementado (falta que la lluvia empiece desde el inicio) |
+| S05 - Criatura: percepción, estados y captura | Crear una amenaza justa y coherente con el sigilo, sin combate | NavMesh, S01, S04, S06 | Implementado |
+| S06 - Linterna y batería | Iluminar con un costo de batería y de riesgo | S01, S02, S05 | Implementado |
+| S07 - Narrativa y diálogos | Contar la historia con la introducción, los documentos, los diálogos y la escena final | S02, S03, S08 | Pendiente (el sistema de diálogos existe; faltan las escenas) |
+| S08 - Interfaz y señales | Comunicar acciones, estado y peligro con texto, imagen y sonido | S01 a S07 | Implementado |
+| S09 - Gestión de partida, guardado y ajustes | Pausar, reintentar desde el checkpoint, guardar y cargar | S01 a S08 | Implementado |
+
+## Estados globales del juego
+
+Todos los sistemas consultan el estado global (`GameStateManager`) para saber qué acciones están permitidas.
+
+| Estado | Cuándo ocurre | Movimiento | Criatura | Tiempo |
+|---|---|---|---|---|
+| Jugando | Exploración normal | Sí | Activa | Corre |
+| Pausa | Esc o pérdida del foco de la ventana | No | Detenida | Detenido |
+| Lectura | Documento, inventario, panel de código o diálogo abierto | No | Detenida | Detenido |
+| Capturado | La criatura atrapa al jugador | No | Detenida | Pantalla de captura |
+| Victoria | Termina la escena final | No | Detenida | Créditos |
 
 ### S01 - Jugador, cámara y entradas
 
-**Objetivo:**  
-
-Permitir explorar en primera persona y controlar qué acciones están disponibles según la situación del jugador.
-
-**Entradas:**  
-
-Dirección de movimiento, movimiento del mouse, carrera, postura, interacción, linterna, apertura del archivo de notas, elección de diálogo y pausa.
-
-**Procesamiento / reglas:**
-
-- El movimiento se calcula respecto a la orientación horizontal de la cámara. Velocidades iniciales: caminar 2.5 m/s, correr 4.5 m/s y agachado 1.2 m/s.
-
-- La dirección diagonal se normaliza y las colisiones impiden atravesar geometría. El recorrido se construye sin exigir saltos.
-
-- La cámara se mueve de manera horizontal y vertical, y la sensibilidad se ajusta desde opciones.
-
-- La carrera requiere estar de pie y termina al agacharse.
-
-- Dentro de un escondite solo se admite cámara limitada, **[E]** para salir y **[Esc]** para pausa.
-
-- Una pantalla contextual (lectura, archivo, candado o diálogo) desactiva las entradas del mundo y libera el cursor.
-
-- La captura desactiva todas las acciones salvo las opciones de reintentar o menú al terminar su presentación.
-
-- **[Esc]** pausa la simulación. Al volver se conservan los tiempos restantes.
-
-- Perder el foco de la ventana pausa la simulación y libera las entradas mantenidas para evitar desplazamientos involuntarios.
-
-**Salidas:**  
-
-Posición, orientación, postura, velocidad, señales de pasos y solicitudes de acciones válidas.
-
-**Estados posibles:**  
-
-Exploración de pie, exploración agachado, carrera, escondido, pantalla contextual, pausa y capturado. Postura y posición se mantienen como datos separados de la acción activa.
-
-**Dependencias:**  
-
-Colisiones y posiciones transitables, estados globales de S08, controles y opciones de S07.
-
-**Interacciones:**  
-
-S02 recibe la interacción, S05 recibe posición y ruido de pasos, S06 recibe la orden de encender o apagar la linterna, S07 representa mensajes y ajustes, S08 bloquea acciones al pausar o reaparecer.
-
-**Datos que necesita:**  
-
-Velocidades, alturas de postura, sensibilidad, límites de cámara, asignaciones fijas de entradas y posiciones de entrada y salida de escondites.
-
-**Datos que genera:**  
-
-Transformación del jugador, postura, acción activa y eventos de movimiento.
-
-**Riesgos:**  
-
-Entradas simultáneas que activen dos acciones incompatibles, colisiones defectuosas, cámara que atraviese paredes y obstáculos que impidan completar el recorrido.
-
-**Criterios de aceptación:**
-
-- Desplazarse en diagonal no supera la velocidad configurada.
-
-- Una pared bloquea el desplazamiento, y ponerse de pie bajo un techo bajo conserva la postura agachada.
-
-- Abrir un panel o pausar detiene movimiento, criatura y temporizadores del mundo.
-
-- Salir de un escondite utiliza su punto de salida y recupera la postura de entrada.
-
-- Perder el foco y volver a la ventana no produce movimiento sin entrada del usuario.
-
-- Con una pantalla contextual abierta, las teclas de movimiento no mueven al jugador.
-
-### S02 - Interacción, archivo y llaves
-
-**Objetivo:**  
-
-Permitir encontrar y conservar pistas, manipular puertas y utilizar objetos necesarios para la investigación.
-
-**Entradas:**  
-
-Objeto señalado por la cámara, solicitud **[E]**, selección en el archivo y estado restaurado desde un checkpoint.
-
-**Procesamiento / reglas:**
-
-- Se selecciona el primer interactivo alcanzado por el centro de la cámara a un máximo de 2 metros, respetando obstáculos.
-
-- Cada interactivo contiene un identificador, tipo, mensaje contextual, requisitos y resultado. Los requisitos se comprueban al pulsar **[E]**, no solo al mostrar el mensaje.
-
-- La linterna está disponible desde el inicio, separada de los objetos de investigación.
-
-- Las notas, imágenes y grabaciones se registran en el archivo. Las llaves se guardan en una lista breve y no se pueden descartar.
-
-- Las baterías se consumen al recogerlas: recargan la linterna y no ocupan espacio.
-
-- No se duplica un objeto ya recogido.
-
-- Los documentos pueden releerse. Su contenido debe ser legible a 1920 × 1080.
-
-- Abrir lectura, archivo o candado solicita una pantalla contextual a S08, que pausa el mundo. Solo hay una pantalla contextual abierta.
-
-**Salidas:**  
-
-Llaves registradas, notas disponibles, acciones de puerta, eventos de pista obtenida, baterías recogidas y mensajes de requisito incumplido.
-
-**Estados posibles:**  
-
-Sin interactivo, interactivo válido, requisito pendiente, lectura, archivo, objeto recogido y llave usada.
-
-**Dependencias:**  
-
-S01 para seleccionar y activar, catálogo local de elementos, S06 para recargar batería, S07 para presentación y S08 para pausa y checkpoint.
-
-**Interacciones:**  
-
-S03 recibe llaves usadas y pistas obtenidas. S06 recibe las baterías recogidas. S07 muestra la información. S08 usa el registro de elementos para restaurar el último checkpoint.
-
-**Datos que necesita:**  
-
-Identificadores únicos, nombres, tipos, textos, imágenes, requisitos, posiciones y estado inicial de cada elemento.
-
-**Datos que genera:**  
-
-Conjunto de elementos recogidos, notas conocidas, llaves obtenidas y puertas abiertas.
-
-**Riesgos:**  
-
-Duplicación de objetos, ausencia de un objeto obligatorio, pistas ilegibles y archivo que no corresponda al mundo restaurado.
-
-**Criterios de aceptación:**
-
-- **[E]** no alcanza elementos tras una pared ni fuera de los 2 metros.
-
-- Recoger dos veces el mismo identificador no duplica el archivo ni la lista de llaves.
-
-- Cada requisito incumplido produce un mensaje comprensible.
-
-- Al reaparecer en un checkpoint, las notas, llaves y baterías coinciden con el estado guardado.
-
-### S03 - Acertijos y progreso
-
-**Objetivo:**
-
-Gestionar los objetivos y las condiciones de avance de la investigación, incluidos los acertijos que se diseñen para el juego.
-
-**Entradas:**
-
-Interacciones completadas, información descubierta, objetos utilizados cuando corresponda, resultados de acertijos, eventos narrativos y estado recuperado de partida.
-
-**Procesamiento / reglas:**
-
-- Cada objetivo y acertijo tendrá requisitos, acciones válidas y resultados definidos cuando se desarrolle su contenido.
-	- El sistema comprueba esos requisitos antes de marcar un objetivo o acertijo como completado.
-- Completar una interacción puede actualizar el objetivo, habilitar un elemento o permitir acceso a una zona, según el diseño de cada caso.
-- El contenido de pistas, nombres de objetos, soluciones y ubicaciones no se establece en esta ficha.
-- Si un acertijo se resuelve directamente en el escenario, utiliza las entradas de exploración correspondientes. Si emplea un panel contextual, utiliza las entradas de interfaz y pausa la simulación.
-- Una acción incorrecta no marca el acertijo como resuelto. Su retroalimentación y posibles consecuencias se definirán para cada acertijo.
-- Los eventos de progreso se registran para impedir que una interacción repetida duplique recompensas o vuelva a ejecutar una transición ya realizada.
-- Se propone vincular el paso de noche a noche con lluvia a un evento de avance de la investigación. El evento concreto y su ubicación quedan pendientes de definición.
-- Esperar o permanecer escondido no completa un objetivo de investigación por sí solo.
-
-**Salidas:**
-
-Objetivos actualizados, interacciones o acertijos completados, cambios habilitados en el entorno y eventos de avance para otros sistemas.
-
-**Estados posibles:**
-
-Objetivo pendiente, objetivo en progreso, requisito cumplido, interacción o acertijo resuelto y objetivo completado.
-
-**Dependencias:**
-
-S02 para información, objetos e interacciones; S04 para la transición de clima; S07 para comunicar objetivos; S08 para reiniciar o recuperar el estado de partida.
-
-**Interacciones:**
-
-Recibe resultados de S02, comunica avances a S07 y solicita a S04 el cambio de fase cuando se cumpla el evento definido. S08 aplica el estado de progreso correspondiente al reiniciar o continuar.
-
-**Datos que necesita:**
-
-Definición de objetivos, requisitos, acciones válidas, condiciones de resolución, consecuencias, mensajes y eventos asociados. Los identificadores definitivos se asignarán al crear el contenido.
-
-**Datos que genera:**
-
-Estado de objetivos, requisitos cumplidos, interacciones completadas, acertijos resueltos y eventos de progreso ejecutados.
-
-**Riesgos:**
-
-Requisitos imposibles de cumplir, falta de información para resolver un acertijo, eventos duplicados y diferencias entre el progreso registrado y el estado del entorno.
-
-**Criterios de aceptación:**
-
-- Un objetivo solo se completa al cumplir sus requisitos definidos.
-- La información necesaria para resolver un acertijo está disponible dentro del juego.
-- Una acción incorrecta no registra una resolución válida.
-- Repetir una interacción completada no duplica sus efectos.
-- El mensaje del objetivo coincide con el progreso actual.
-- El cambio a lluvia responde al evento de investigación configurado, sin depender de un acertijo o una ubicación todavía no definidos.
-
-### S04 - Fases nocturnas y lluvia
-
-**Objetivo:**  
-
-Cambiar las condiciones de percepción y el ambiente del recorrido sin añadir un ciclo horario completo.
-
-**Entradas:**  
-
-Evento de avance de la investigación definido en S03, fase actual o recuperada, pausa, configuración de efectos y volumen.
-
-**Procesamiento / reglas:**
-
-- Fases: noche sin lluvia y noche con lluvia. La primera permite aprender la ruta y reconocer señales, la segunda dificulta orientación y escucha.
-
-- El efecto visual y sonoro aumenta gradualmente. La criatura conserva posición y estado, no se teletransporta ni se reinicia por el clima.
-
-- La lluvia reduce la visibilidad del bosque y enmascara sonidos. S05 aplica menores alcances de visión y oído en exteriores, dentro de edificios conserva los valores de la fase sin lluvia.
-
-- Se identifica si emisor y receptor están en exteriores para aplicar la reducción sonora. Si alguno está en un interior, se utilizan los valores sin reducción.
-
-- Los interiores mantienen el sonido de lluvia atenuado.
-
-- La lluvia no modifica acertijos, reserva de linterna, velocidad del jugador ni transitabilidad del escenario.
-
-- La fase no se revierte durante el episodio. Si se recupera una partida en fase de lluvia, se aplica el clima de ese estado sin repetir un evento de transición ya completado.
-
-- Se limita la densidad y distancia de partículas. La opción de efectos reducidos conserva la información del clima y disminuye partículas y destellos.
-
-**Salidas:**  
-
-Fase actual, valores de ambiente, intensidad de lluvia y modificadores de percepción exterior.
-
-**Estados posibles:**  
-
-Noche sin lluvia, transición visual a lluvia, noche con lluvia estable. La transición visual pertenece a la fase de lluvia a efectos de progreso y guardado.
-
-**Dependencias:**  
-
-S03 para el evento, iluminación, audio y regiones interiores/exteriores, S08 para restauración.
-
-**Interacciones:**  
-
-S05 utiliza los modificadores de percepción, S07 reproduce ambiente y señales, S08 restablece la fase correspondiente al estado de partida y pausa el avance de los efectos.
-
-**Datos que necesita:**  
-
-Perfiles de iluminación y sonido, intensidad máxima de lluvia, duración de transición, regiones del escenario, calidad de efectos.
-
-**Datos que genera:**  
-
-Fase y valores de ambiente activos.
-
-**Riesgos:**  
-
-Pérdida de rendimiento por partículas, interiores mojados visualmente, sonidos esenciales completamente ocultos, recorrido demasiado oscuro.
-
-**Criterios de aceptación:**
-
-- La lluvia comienza una sola vez cuando se cumple el evento de investigación definido.
-
-- La transición es gradual, utiliza la duración configurada y se detiene al pausar.
-
-- La criatura conserva posición y persecución al cambiar el clima, salvo que pierda contacto por las reglas de percepción.
-
-- El perfil exterior reduce los sentidos de S05 y el interior mantiene sus valores base.
-
-- Se mide el objetivo de 60 FPS en el equipo de referencia que acuerde el equipo, se ajusta la densidad de lluvia si el objetivo no se alcanza.
-
-### S05 - Criatura, percepción y captura
-
-**Objetivo:**  
-
-Producir una amenaza que patrulle, reaccione a señales y permita escapar mediante reglas comprensibles.
-
-**Entradas:**  
-
-Posición visible del jugador, ruidos, haz de linterna, escondite observado, interrupciones de S06, fase del clima, regiones protegidas.
-
-**Procesamiento / reglas:**
-
-- La criatura utiliza rutas transitables y puntos de patrulla definidos. El primer encuentro se sitúa fuera del refugio inicial.
-
-- Solo persigue una posición confirmada visualmente. Los ruidos producen investigación de su punto de origen, sin revelar una ubicación posterior.
-
-- La luz de la linterna puede atraer su atención cuando perciba el haz; esa señal permite investigar su origen y no revela automáticamente la posición posterior del jugador.
-
-- La cobertura sólida bloquea visión y ataques. La exposición visual vuelve a cero al romperse la línea de visión.
-
-- Radios iniciales de ruido exterior sin lluvia/con lluvia: caminar 5/3 metros, correr 12/8, agachado 2/1 y golpe 10/6. Un golpe fallido también produce ruido. La visión continúa requiriendo un recorrido despejado.
-
-- Los avisos se limitan a uno por segundo para evitar reiniciar continuamente la misma reacción.
-
-- Velocidades propuestas: patrulla 1.5 m/s y persecución 4 m/s. El jugador puede crear distancia corriendo, a cambio de producir ruido.
-
-- Al perder visión durante 2 segundos, se dirige a la última posición confirmada. Al alcanzarla, busca durante 8 segundos y luego retoma patrulla si no recibe nuevas señales.
-
-- A 1.2 metros del jugador y con línea de ataque despejada inicia una preparación visible de 0.6 segundos. La captura se aplica al terminar únicamente si sigue en alcance y no fue interrumpida.
-
-- Una interrupción cancela la preparación de ataque. La criatura conserva la última información observada y vuelve a actuar al terminar el efecto, necesita contacto visible para actualizar la posición del jugador.
-
-- La resistencia de 5 segundos comienza al terminar cualquier interrupción. Durante ella no puede recibir otra interrupción de luz o golpe.
-
-- La cabaña inicial funciona como espacio protegido y bloquea navegación y ataques de la criatura. Si el jugador entra, esta investiga la última posición exterior y luego sigue las reglas de búsqueda.
-
-**Salidas:**  
-
-Desplazamiento, orientación, animación, señales de presencia, persecución y captura.
-
-**Estados posibles:**  
-
-Patrulla, investigar señal, persecución, búsqueda, comprobar escondite, preparar ataque, interrumpida, capturar. La resistencia es un temporizador independiente, no una nueva persecución.
-
-**Dependencias:**  
-
-Rutas y colisiones del escenario, S01 para posición y postura, S04 para percepción, S06 para interrupciones, S08 para pausa y reinicio.
-
-**Interacciones:**  
-
-S07 reproduce pasos, reacciones y aviso de ataque. S08 recibe captura y ofrece reinicio. S06 consulta visibilidad, alcance y resistencia.
-
-**Datos que necesita:**  
-
-Puntos de patrulla, posiciones investigadas, visión, tiempos y radios de ruido, entradas de escondite, regiones protegidas, velocidad, posición inicial definida para el estado de partida que se restablezca.
-
-**Datos que genera:**  
-
-Estado actual, última posición conocida, progreso de confirmación visual y temporizadores de búsqueda, interrupción y resistencia.
-
-**Riesgos:**  
-
-Percepción a través de paredes, persecución sin información observable, atascos de navegación, ataques sin aviso, interrupciones infinitas por alternar luz y golpe.
-
-**Criterios de aceptación:**
-
-- No detecta visualmente ni captura al jugador detrás de una pared sólida.
-
-- Agacharse en campo visual no garantiza invisibilidad.
-
-- Perder contacto antes de esconderse no informa mágicamente la nueva ubicación.
-
-- La criatura no entra ni ataca dentro de los espacios protegidos.
-
-- Un golpe o una exposición válida cancelan la preparación de captura si la criatura no está resistiendo.
-
-- Alternar luz y golpe durante resistencia no permite encadenar interrupciones.
-
-- En pausa no avanzan movimiento, percepción ni ataque.
-
-### S06 - Linterna y defensa
-
-**Objetivo:**  
-
-Concentrar iluminación y defensa en una herramienta que siempre esté disponible, con límites sobre su capacidad de detener a la criatura.
-
-**Entradas:**  
-
-**[F]**, **[clic derecho]** mantenido, **[clic izquierdo]** pulsado, dirección de cámara, estado del jugador, visibilidad y resistencia de la criatura.
-
-**Procesamiento / reglas:**
-
-| Parámetro propuesto | Valor inicial |
+| Campo | Contenido |
 |---|---|
-| Reserva máxima / inicial | 100 unidades |
-| Consumo de luz intensa | 25 unidades por segundo |
-| Espera para recuperar reserva | 3 segundos desde el último uso de luz intensa |
-| Recuperación | 20 unidades por segundo, hasta 100 |
-| Alcance de defensa luminosa | 8 metros |
-| Cono de defensa luminosa | 15° de apertura total, centrado en la cámara |
-| Exposición continua necesaria | 1.2 segundos |
-| Interrupción por luz | 2 segundos |
-| Alcance de golpe | 1.5 metros |
-| Preparación del golpe | 0.2 segundos |
-| Recuperación del golpe | 1.5 segundos desde su inicio |
-| Interrupción por golpe | 1 segundo |
-| Retroceso máximo | 0.5 metros, limitado por geometría |
-| Resistencia compartida | 5 segundos después de terminar la interrupción |
-
-- La luz normal no consume reserva y no interrumpe. La reserva solo limita la acción de luz intensa.
-
-- La luz intensa exige exposición sobre la parte superior del cuerpo o la cabeza, sin obstáculos. Romper el contacto, agotar la reserva o encontrar resistencia elimina la exposición acumulada.
-
-- Si se inicia con **[F]** apagada, se ilumina durante el uso y se restaura el estado anterior al soltar. Agotar la reserva deja encendida la luz normal para conservar visibilidad.
-
-- Agotar la reserva exige una nueva pulsación de botón derecho, recuperar reserva no reactiva el haz por mantenerlo pulsado.
-
-- La recuperación continúa al explorar, golpear o esconderse, siempre que hayan transcurrido 3 segundos sin luz intensa. En pausa o captura no avanza.
-
-- Un golpe se aplica una sola vez al objetivo frontal más cercano dentro del alcance y sin obstáculos, al terminar su preparación. Pulsaciones durante recuperación se descartan y no se acumulan.
-
-- El golpe cancela la luz intensa y no consume reserva. La criatura recibe interrupción solo si no está resistiendo.
-
-- El retroceso se limita al espacio libre. La interrupción sigue aplicándose aunque no sea posible desplazarla.
-
-- Una defensa válida se resuelve antes de una captura coincidente. Fuera de esas condiciones, la captura continúa según S05.
-
-- Esconderse apaga la iluminación y bloquea defensa. Pausar corta la exposición de luz intensa, conserva la reserva y congela los tiempos restantes del golpe.
-
-**Salidas:**  
-
-Haz normal o intenso, reserva, evento de golpe, solicitud de interrupción y retroalimentación de impacto o resistencia.
-
-**Estados posibles:**  
-
-Luz normal apagada/encendida, luz intensa, reserva agotada, golpe en preparación/recuperación, defensa bloqueada por estado del jugador.
-
-**Dependencias:**  
-
-S01 para entradas compatibles, geometría y dirección de cámara, S05 para aplicar efectos, S07 para representación.
-
-**Interacciones:**  
-
-S05 recibe avisos de luz, ruido y defensa. S07 muestra la reserva y las reacciones. S08 establece el estado de la herramienta de acuerdo con las reglas de reinicio o recuperación de partida que se definan.
-
-**Datos que necesita:**  
-
-Parámetros de la tabla, estado anterior de iluminación, objetivo visible, estado de resistencia y bloqueo de entradas.
-
-**Datos que genera:**  
-
-Reserva restante, tiempo de recuperación, exposición acumulada y tiempos de golpe.
-
-**Riesgos:**  
-
-Luz que atraviese obstáculos, golpe que impacte varias veces, recuperación que se active dentro de pausa, balance que vuelva inútil la herramienta o elimine el miedo.
-
-**Criterios de aceptación:**
-
-- Sin usar defensa, la iluminación normal sigue disponible durante toda la partida.
-
-- Cuatro segundos continuos de luz intensa agotan 100 unidades desde reserva completa.
-
-- Tras 3 segundos sin luz intensa, la reserva recupera 20 unidades por segundo sin superar 100.
-
-- Una exposición válida de 1.2 segundos provoca una interrupción de 2 segundos, interrumpir el haz antes impide ese resultado.
-
-- Cada golpe tiene un único impacto y no se repite por mantener el botón pulsado.
-
-- Luz y golpe respetan los mismos 5 segundos de resistencia.
-
-- Una defensa no afecta a la criatura detrás de una pared.
-
-- Agotar la reserva no deja al jugador sin iluminación normal ni reactiva defensa sin nueva pulsación.
-
-### S07 - Interfaz, audio y señales narrativas
-
-**Objetivo:**  
-
-Comunicar acciones, progreso y amenazas mientras mantiene la incertidumbre sobre la voz del hijo.
-
-**Entradas:**  
-
-Objetivo actual, interactivo seleccionado, reserva de linterna, estados observables de la criatura, eventos narrativos, clima, configuración.
-
-**Procesamiento / reglas:**
-
-- La interfaz de exploración muestra un punto central discreto, mensaje contextual cuando corresponde, objetivo breve y reserva defensiva al usar luz intensa o mientras se recupera.
-
-- La interfaz no muestra la posición de una criatura fuera de la vista ni un indicador que confirme si una voz pertenece al hijo o a la criatura.
-
-- Pasos, sonidos de persecución, gesto de resistencia y preparación de ataque comunican amenazas próximas. La captura siempre tiene la preparación definida por S05.
-
-- Los documentos y paneles usan texto legible, contraste suficiente y navegación con mouse. Los cambios importantes incluyen texto o símbolo y no dependen solo del color.
-
-- Opciones iniciales: sensibilidad, invertir eje vertical, volumen general/ambiente/voces, subtítulos, tamaño de texto y efectos reducidos. Las asignaciones de teclas y botones son fijas, según Controles.
-
-**Salidas:**  
-
-Mensajes, paneles, objetivo, indicador de reserva, subtítulos, sonidos y opciones aplicadas.
-
-**Estados posibles:**  
-
-Exploración, interacción disponible, lectura/diario/acertijo, pausa, captura, cierre del episodio, opciones.
-
-**Dependencias:**  
-
-Estados de S01 a S06, contenido local aprobado por narrativa y arte, administración de pantallas de S08.
-
-**Interacciones:**  
-
-Muestra requisitos de S02, progreso de S03, ambiente de S04 y señales de S05/S06. Envía ajustes a S01, S04 y S08.
-
-**Datos que necesita:**  
-
-Textos, iconos, subtítulos, sonidos, identificadores de eventos, condiciones de activación y opciones del usuario.
-
-**Datos que genera:**  
-
-Eventos narrativos reproducidos, selección de panel y ajustes modificados.
-
-**Riesgos:**  
-
-Textos difíciles de leer, demasiados indicadores que anticipen el peligro, voces repetidas, sonidos esenciales tapados por lluvia, eventos que revelen prematuramente el misterio.
-
-**Criterios de aceptación:**
-
-- El mensaje contextual coincide con la acción que **[E]** puede ejecutar.
-
-- Documentos, objetivos y paneles se leen a la resolución objetivo sin recortes.
-
-- La lluvia permite oír la preparación de ataque cuando la criatura está a distancia de captura.
-
-- Un evento narrativo no se repite continuamente al cruzar su zona, si se recupera una partida, se respetan los eventos registrados en su estado.
-
-- Cambiar sensibilidad o volumen aplica el resultado sin reiniciar la partida.
-
-### S08 - Gestión de partida y ajustes
-
-**Objetivo:**
-
-Administrar los menús, la pausa, el reinicio tras captura y la persistencia local de los ajustes. Gestionar el guardado de progreso según el método que defina el equipo.
-
-**Entradas:**
-
-Nueva partida, pausa, captura, solicitud de reintento, retorno al menú, cambios de ajustes y solicitud de guardar o continuar cuando esas funciones estén habilitadas.
-
-**Procesamiento / reglas:**
-
-- El método de guardado y reinicio de progreso está pendiente de definición. Esta ficha no establece ubicaciones, cantidad de guardados ni eventos concretos que los generen.
-- Nueva partida utiliza los estados iniciales establecidos para jugador, entorno, investigación y criatura.
-- Pausa, lectura, diario y paneles contextuales congelan la simulación, los tiempos de IA, defensa y clima. La interfaz continúa respondiendo.
-- Tras una captura se ofrecen «Reintentar» y «Menú principal». Reintentar utiliza el estado de partida establecido por las reglas de reinicio que se definan.
-- Al reiniciar o recuperar una partida, jugador, objetos, documentos, mecanismos, clima y progreso deben corresponder al mismo estado, sin datos parciales de una partida anterior.
-- El jugador no vuelve al mundo dentro de una pared ni bajo un ataque inevitable causado por una posición de reinicio inválida.
-- Los ajustes de sensibilidad, audio y presentación se almacenan localmente y por separado del progreso. Las asignaciones de controles permanecen fijas.
-- Si se incorpora guardado de progreso, su formato debe conservar los datos necesarios para recuperar un estado coherente y manejar errores de archivo.
-- «Continuar» solo estará disponible cuando exista una función de guardado y un estado válido recuperable. La interfaz debe comunicar qué progreso se conserva al salir, de acuerdo con el método elegido.
-- Todas las funciones previstas se ejecutan sin conexión a Internet.
-
-**Salidas:**
-
-Estado global de partida, pausa o reinicio; ajustes persistentes; datos de progreso recuperables cuando se implemente su guardado; mensajes de menú o error.
-
-**Estados posibles:**
-
-Menú principal, jugando, pantalla contextual, pausa, capturado, reiniciando y recuperando partida cuando exista un guardado válido.
-
-**Dependencias:**
-
-Estados de S01 a S07, configuración inicial del juego, acceso a archivos locales para ajustes y método de guardado de progreso cuando se defina.
-
-**Interacciones:**
-
-Congela o restablece los otros sistemas. S07 presenta menús y mensajes. S03 proporciona el progreso y recibe el estado correspondiente al reinicio o recuperación.
-
-**Datos que necesita:**
-
-Estados iniciales del juego, reglas de pausa y reinicio, ajustes del usuario y datos de progreso requeridos por el método de guardado que se elija.
-
-**Datos que genera:**
-
-Estado global de partida, ajustes locales y datos persistentes de progreso cuando esa función esté habilitada.
-
-**Riesgos:**
-
-Reinicio con estados contradictorios, ubicación inválida del jugador, entradas mantenidas que se reanuden automáticamente y archivos de ajustes o progreso inválidos.
-
-**Criterios de aceptación:**
-
-- Pausar detiene la simulación y permite utilizar el menú.
-- Tras una captura, «Reintentar» y «Menú principal» producen sus acciones correspondientes.
-- Reiniciar establece de forma coherente el estado del jugador, criatura, entorno e investigación.
-- Cerrar una pantalla no activa por accidente un golpe o una interacción.
-- Los ajustes persisten después de cerrar y abrir el juego, sin permitir reasignar controles.
-- Si se implementa guardado de progreso, se puede guardar y continuar sin conexión; un archivo inválido muestra un mensaje y no bloquea el menú.
+| Objetivo | Permitir explorar en primera persona y limitar las acciones según la situación del jugador. |
+| Entradas | Movimiento (W A S D), mouse, Shift, C, E, F, Tab y Esc, leídos con el Input System (`PlayerInputActions`). |
+| Salidas | Posición, orientación, postura, ruido de pasos y solicitudes de interacción. |
+| Estados posibles | De pie, agachado, corriendo, escondido, bloqueado (pausa, lectura o captura). |
+| Datos que necesita | Velocidades, alturas, sensibilidad del mouse, invertir eje Y y estado global. |
+| Datos que genera | Posición y rotación para el guardado; eventos de ruido para S05. |
+| Riesgos | Atravesar paredes o quedar atorado; recibir entradas con una pantalla abierta. |
+
+**Reglas y parámetros**
+
+| Regla | Valor |
+|---|---|
+| Velocidad caminando / corriendo / agachado | 2.5 / 4.5 / 1.2 m/s |
+| Diagonal | Misma velocidad máxima que en línea recta |
+| Correr | Solo de pie; agacharse lo termina |
+| Altura de pie / agachado | 1.8 m / 1.1 m; no se levanta si hay un techo encima |
+| Gravedad | −20 m/s² (Character Controller) |
+| Salto | No existe |
+| En un escondite | Solo giro de cámara, E para salir y Esc para pausa |
+| Perder el foco de la ventana | Pausa el juego |
+
+### S02 - Interacción e inventario
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Permitir usar los objetos del escenario y guardar el equipo y los documentos obtenidos. |
+| Entradas | E sobre un objeto a 2 m o menos; Tab para el inventario. |
+| Salidas | Objeto guardado, documento leído, puerta o mecanismo actualizado y mensaje en pantalla. |
+| Estados posibles | Sin objetivo, objeto apuntado, pantalla de lectura abierta, inventario abierto. |
+| Datos que necesita | Identificador único de cada objeto, su tipo y sus requisitos (llave, fusible o energía). |
+| Datos que genera | Banderas `pickup:<id>`, listas de llaves y documentos. |
+| Riesgos | Registrar un objeto dos veces; que un objeto obligatorio quede inaccesible. |
+
+**Objetos interactivos**
+
+| Objeto | Acción con E | Dónde se guarda |
+|---|---|---|
+| Linterna | Equipo inicial | Inventario |
+| Pila | Recoger (se usa al instante, +40 %) | No se guarda |
+| Llave | Recoger | Inventario |
+| Fusible | Recoger | Inventario |
+| Nota, archivo o imagen | Leer | Documentos |
+| Puerta | Abrir o cerrar; pide su llave si está cerrada | — |
+| Escondite (armario, cama o casillero) | Entrar o salir | — |
+| Caseta de generador | Colocar fusible y bajar la palanca | — |
+| Panel de código | Abrir el teclado numérico | — |
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Detección del objeto | Raycast desde el centro de la cámara, 2 m, sin obstáculos |
+| Aviso | Muestra el nombre y la acción: leer, recoger, abrir, colocar, activar o esconderse |
+| Requisito faltante | Mensaje como «Está cerrada con llave» o «Falta un fusible», sin completar la acción |
+| Duplicados | Cada objeto se registra una sola vez |
+| Inventario | Pestañas Inventario y Documentos; Q / E cambian de pestaña y F examina |
+
+### S03 - Progresión, accesos y checkpoints
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Guiar al jugador por la secuencia de objetivos y recordar lo que ya desbloqueó. |
+| Entradas | Llaves y fusibles usados, palancas bajadas, código correcto, zonas alcanzadas y diálogos terminados. |
+| Salidas | Objetivo en pantalla actualizado, puertas desbloqueadas, energía restablecida y checkpoint guardado. |
+| Estados posibles | Objetivo en curso, objetivo completado, zona bloqueada, zona desbloqueada. |
+| Datos que necesita | Orden de objetivos, llave que abre cada puerta y código del panel. |
+| Datos que genera | Banderas `door.unlocked:<id>`, `door.open:<id>`, generadores encendidos, objetivo actual. |
+| Riesgos | Que el jugador quede sin poder avanzar o retroceda en la progresión tras una captura. |
+
+**Secuencia de progresión**
+
+| Paso | Objetivo en pantalla | Requisito | Dónde se obtiene | Checkpoint |
+|---|---|---|---|---|
+| 1 | Encuentra la forma de salir | Llave de la cabaña 1 | Dentro de la cabaña 1 | Inicio de partida |
+| 2 | Encuentra la llave y entra a la segunda cabaña | Llave de la cabaña 2 | Perdida en el bosque | Al entrar a la cabaña 2 |
+| 3 | Busca la forma de entrar a la tercera cabaña | Llave de la cabaña 3 y primer fusible | Dentro de la cabaña 2 | — |
+| 4 | Explora la tercera cabaña | Segundo fusible y código de la pizarra | Dentro de la cabaña 3 | Al entrar a la cabaña 3 |
+| 5 | Restablece la energía del laboratorio | Dos fusibles colocados y dos palancas bajadas | Casetas de generadores | Al encender los dos generadores |
+| 6 | Abre la puerta del laboratorio | Código de 4 dígitos | Pizarra de la cabaña 3 | Al entrar al laboratorio |
+| 7 | Descubre la verdad | Hablar con el Dr. Cooper y leer el archivo de Jereth | Laboratorio y oficina del Dr. Cooper | — |
+
+La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la cabaña 3, y no bloquea la progresión.
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Fusibles | Cualquiera de los dos funciona en cualquier caseta |
+| Generador | E coloca el fusible y E baja la palanca; hace ruido a 8 m |
+| Energía | Con los dos generadores encendidos, se activa el panel de código |
+| Panel de código | 4 dígitos, sin límite de intentos |
+| No retroceder | Las puertas desbloqueadas, los generadores y los objetivos completados no se pierden |
+| Checkpoint | Guarda posición, batería, objetivo, banderas, llaves y documentos |
+
+### S04 - Ambiente nocturno y lluvia
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Mantener una atmósfera oscura y lluviosa que limite la percepción del jugador y de la criatura. |
+| Entradas | Posición del jugador (interior o exterior) y ajustes de audio. |
+| Salidas | Lluvia visual, sonido de lluvia, modificador de ruido y de visión para S05. |
+| Estados posibles | Exterior bajo la lluvia, interior a cubierto. |
+| Datos que necesita | Zonas de refugio (`WeatherShelterZone`) en cada cabaña y en el laboratorio. |
+| Datos que genera | Indicador «bajo la lluvia» para el ruido y la visión de la criatura. |
+| Riesgos | Que la oscuridad impida orientarse; caída de FPS por las partículas de lluvia. |
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Noche | Permanente durante toda la partida (skybox nocturno y posprocesado `VP_Mundo`) |
+| Lluvia | Constante desde el inicio |
+| Interior de las cabañas | Sin luz; la linterna es la única fuente para ver los objetos |
+| Dentro de un refugio | El sonido de la lluvia se atenúa y deja de reducir el ruido del jugador |
+| Efecto en el ruido | Con lluvia, los pasos se oyen a 3 / 8 / 1 m (caminar / correr / agachado) en lugar de 5 / 12 / 2 m |
+| Efecto en la visión de la criatura | Con lluvia, su alcance baja de 10 m a 7 m |
+
+### S05 - Criatura: percepción, estados y captura
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Crear la única amenaza del juego: peligrosa, pero justa y evitable con sigilo. |
+| Entradas | Posición y postura del jugador, ruidos, haz de la linterna, escondites y zonas protegidas. |
+| Salidas | Estado de la criatura, desplazamiento, sonidos de respiración y captura. |
+| Estados posibles | Patrulla, investigación, persecución, búsqueda y captura. |
+| Datos que necesita | Puntos de patrulla, NavMesh, zona protegida de la cabaña 1. |
+| Datos que genera | Evento de captura para S09; estado actual para el audio de S08. |
+| Riesgos | Detección injusta a través de paredes; quedarse atorada en el NavMesh. |
+
+**Percepción**
+
+| Sentido | Alcance | Detalle |
+|---|---|---|
+| Vista | Cono de 70°, 10 m (7 m con lluvia) | La confirma tras 0.8 s de pie o 1.2 s agachado; las paredes la bloquean |
+| Linterna | 8 m | Detecta el haz encendido |
+| Oído | Radio del ruido | Pasos (5 / 12 / 2 m) y generador (8 m) |
+
+**Estados**
+
+| Estado | Comportamiento | Cambia a |
+|---|---|---|
+| Patrulla | Recorre puntos fijos y espera 2 s en cada uno | Investigación (ruido) o Persecución (ve al jugador o su linterna) |
+| Investigación | Va al origen del ruido y espera 4 s | Persecución o Búsqueda |
+| Persecución | Sigue al jugador por el NavMesh | Captura (a 3 m durante 0.6 s) o Búsqueda (lo pierde 3 s o se esconde) |
+| Búsqueda | Revisa un radio de 3 m durante 6 s | Patrulla o Persecución |
+| Captura | Termina el intento | Reaparición en el último checkpoint |
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Patrulla | Cerca de la cabaña 2, la cabaña 3, el laboratorio y una zona junto a la cabaña 1 |
+| Zona protegida | Nunca entra a la cabaña 1 |
+| Escondites | Entrar cancela la detección y la captura en curso; no revisa escondites |
+| Diálogos y lectura | No puede capturar al jugador mientras hay una pantalla abierta |
+| Aviso | Respiración distinta en patrulla, investigación y persecución |
+
+### S06 - Linterna y batería
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Dar visión en la oscuridad con un costo de batería y de riesgo. |
+| Entradas | F, pilas recogidas y estado del escondite. |
+| Salidas | Haz encendido o apagado, porcentaje de batería y señal de luz para S05. |
+| Estados posibles | Encendida, apagada, sin batería, bloqueada (en un escondite). |
+| Datos que necesita | Consumo, recarga y mínimo al reaparecer. |
+| Datos que genera | Porcentaje de batería para el HUD y el guardado. |
+| Riesgos | Que el jugador se quede sin luz sin poder avanzar. |
+
+**Parámetros**
+
+| Parámetro | Valor |
+|---|---|
+| Batería inicial | 100 % |
+| Consumo encendida | 0.3 % por segundo (unos 5.5 min de luz continua) |
+| Recarga por pila | +40 %, hasta 100 % |
+| Pilas en el mapa | 4 |
+| Batería mínima al reaparecer | 30 % |
+| Sin batería | Mensaje «Sin batería» y luz ambiental mínima |
+| En un escondite | Se apaga y no puede encenderse |
+| Detección por la criatura | Haz encendido hasta 8 m |
+
+### S07 - Narrativa y diálogos
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Contar el pasado de Vadrik, Jereth y el Dr. Cooper durante la partida y cerrar la historia con la revelación final. |
+| Entradas | Documentos leídos, llegada a la fogata, llegada al laboratorio y opciones elegidas. |
+| Salidas | Pantallas de lectura, diálogos, escena final y créditos. |
+| Estados posibles | Introducción, exploración, diálogo, escena final. |
+| Datos que necesita | Textos de documentos, nodos de diálogo (quién habla, texto y opciones) y banderas. |
+| Datos que genera | Banderas de diálogos terminados para que no se repitan. |
+| Riesgos | Que el jugador no entienda el final si no leyó documentos; diálogos demasiado largos. |
+
+**Momentos narrativos**
+
+| Momento | Dónde | Qué ocurre | Tipo |
+|---|---|---|---|
+| Introducción | Inicio de la partida | Explica cómo Vadrik, desesperado por la enfermedad de Jereth, llegó con el Dr. Cooper | Texto en pantalla |
+| Documentos | Bosque, cabañas y laboratorio | Notas, archivos e imágenes revelan quién es en realidad el Dr. Cooper y sus experimentos | Lectura opcional |
+| Alucinación | Fogata, entre las cabañas 2 y 3 | Vadrik cree ver a Jereth y habla con él; es una alucinación, no una comunicación real | Diálogo por opciones |
+| Dr. Cooper | Laboratorio | Cooper, herido, le dice que Jereth está encerrado; antes de morir confiesa que nunca hubo cura | Diálogo por opciones |
+| Revelación | Oficina del Dr. Cooper | Vadrik lee el archivo de Jereth y descubre que la criatura es su hijo | Lectura |
+| Final | Oficina del Dr. Cooper | La criatura aparece detrás de Vadrik (jumpscare) | Escena y créditos |
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Opciones | De 2 a 3 por respuesta; cambian la réplica, no la historia ni el final |
+| Repetición | Cada diálogo ocurre una sola vez |
+| Documentos | Opcionales, pero el archivo de Jereth es obligatorio para terminar |
+
+### S08 - Interfaz y señales
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Comunicar con claridad qué puede hacer el jugador, qué tiene y cuándo está en peligro. |
+| Entradas | Eventos de S01 a S07. |
+| Salidas | Elementos del HUD, mensajes, pantallas y sonidos. |
+| Datos que necesita | Textos, íconos, tamaño de texto, subtítulos y volúmenes. |
+| Riesgos | Saturar la pantalla; señales que delaten demasiado la ubicación de los objetos. |
+
+**Señales**
+
+| Señal | Tipo | Cuándo |
+|---|---|---|
+| Objetivo actual | Texto en el HUD | Siempre visible; cambia al completar un paso |
+| Batería | Barra en el HUD | Siempre visible; aviso cuando está baja |
+| Aviso de interacción | Texto al centro | Al apuntar un objeto a 2 m o menos |
+| Mensajes | Texto temporal | Requisito faltante, checkpoint guardado, código correcto o incorrecto |
+| Respiración de la criatura | Sonido | Según su estado y distancia |
+| Efecto de miedo | Viñeta en pantalla | Cuando la criatura está cerca o persigue |
+| Subtítulos | Texto | Diálogos y sonidos importantes (se pueden desactivar) |
+
+### S09 - Gestión de partida, guardado y ajustes
+
+| Campo | Contenido |
+|---|---|
+| Objetivo | Permitir pausar, reintentar, guardar, continuar y configurar el juego. |
+| Entradas | Esc, botones de los menús, checkpoints y captura. |
+| Salidas | Cambios de estado global, partida guardada o cargada y ajustes aplicados. |
+| Datos que necesita | Último checkpoint, archivo de guardado y preferencias. |
+| Datos que genera | `darkmutant_save.json` (con respaldo `.bak`) y preferencias en PlayerPrefs. |
+| Riesgos | Guardado dañado; reaparecer en un lugar inseguro. |
+
+**Reglas**
+
+| Regla | Detalle |
+|---|---|
+| Guardado automático | En cada checkpoint |
+| Guardado manual | Desde el menú de pausa, en la posición actual |
+| Captura | Reaparece en el último checkpoint con al menos 30 % de batería |
+| Nueva partida | Borra la partida guardada; conserva los ajustes |
+| Continuar | Carga la partida guardada desde el menú principal |
+| Ajustes | Volumen general, de ambiente y de voces; sensibilidad; invertir eje Y; subtítulos; tamaño de texto; efectos reducidos; modo de pantalla; calidad; VSync |
+| Detalle técnico | Ver [[04 - Datos y Persistencia]] |
 
 ## Relaciones entre sistemas
 
 | Origen | Destino | Información intercambiada |
 |---|---|---|
-| S01 - Jugador | S02 - Interacción | Dirección de cámara, distancia y solicitud **[E]** |
-| S01 - Jugador | S05 - Criatura | Posición visible, postura y avisos de pasos |
-| S01 - Jugador | S06 - Linterna | Dirección, entradas de defensa y estado que permite actuar |
-| S02 - Interacción | S03 - Progreso | Información descubierta, objetos utilizados e interacciones completadas |
-| S03 - Progreso | S04 - Clima | Evento de avance de investigación definido para activar lluvia |
-| S04 - Clima | S05 - Criatura | Fase y modificadores de percepción en exteriores |
-| S06 - Linterna | S05 - Criatura | Avisos del haz, ruido de golpe e interrupciones válidas |
-| S05 - Criatura | S08 - Partida | Captura confirmada |
-| S03 - Progreso | S08 - Partida | Estado de objetivos e interacciones para reinicio o recuperación |
-| S01 a S06 | S07 - Interfaz/audio | Estados y eventos necesarios para mensajes, sonidos y subtítulos |
-| S08 - Partida | S01 a S07 | Pausa, restauración, progreso y ajustes persistentes |
+| S01 - Jugador | S02 - Interacción | Dirección de la cámara y solicitud de E |
+| S01 - Jugador | S05 - Criatura | Posición, postura y ruido de pasos |
+| S01 - Jugador | S06 - Linterna | Pulsación de F y estado del escondite |
+| S02 - Interacción | S03 - Progresión | Llaves, fusibles y documentos obtenidos |
+| S03 - Progresión | S07 - Narrativa | Llegada a la fogata y al laboratorio |
+| S04 - Ambiente | S05 - Criatura | Modificadores de visión y ruido por la lluvia |
+| S06 - Linterna | S05 - Criatura | Haz encendido |
+| S05 - Criatura | S09 - Partida | Captura confirmada |
+| S03 - Progresión | S09 - Partida | Checkpoint alcanzado y progreso a guardar |
+| S01 a S07 | S08 - Interfaz | Estados y eventos para mensajes, HUD y sonidos |
+| S09 - Partida | S01 a S08 | Pausa, restauración del checkpoint y ajustes |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mecánicas]] · [[04 - Controles]] →
-
-03-Sistemas
-
-03 - Sistemas
