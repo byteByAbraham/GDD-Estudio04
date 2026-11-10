@@ -1,68 +1,67 @@
 # Mundo
 
-## Descripción de la sección
-
-Define el contexto donde ocurre el videojuego: lugares, culturas, reglas, historia, tecnología, conflictos y elementos que hacen coherente el mundo.
-
 ## Concepto del mundo
 
-**Época:** 1981
+**Época:** 1981.
 
-**Lugar:** Bosque remoto de Rumania, con ubicación geográfica desconocida. 
+**Lugar:** Bosque remoto de Rumania, con ubicación geográfica desconocida.
 
-**Contexto:** Vadrik Dsang lleva a su hijo Jereth, quien padece una enfermedad desconocida para la época, con el Dr. Cooper, un científico que le ofrece la posibilidad de tratarlo mediante experimentos. Después de la muerte de su esposa en un accidente cuya naturaleza no se especifica, Vadrik deposita sus esperanzas en el tratamiento y confía en que su hijo se encuentra en buenas manos.
+**Contexto:** Vadrik Dsang lleva a su hijo Jereth, quien padece una enfermedad desconocida para la época, con el Dr. Cooper, un científico que le ofrece la posibilidad de tratarlo mediante experimentos. Vadrik acepta y deposita sus esperanzas en la promesa del doctor, sin sospechar lo que pretende hacer con su hijo.
 
-Sin embargo, los experimentos provocan una transformación en Jereth. Tras los acontecimientos ocurridos en el laboratorio, Vadrik despierta en una cabaña del bosque sin comprender cómo llegó allí. Convencido de que su hijo continúa a salvo en las instalaciones de Cooper, emprende una búsqueda para reunirse con él.
+Vadrik despierta encerrado en una cabaña, sin comprender cómo llegó allí ni dónde está Jereth. Aferrado a la idea de que su hijo permanece en el laboratorio, se adentra en el bosque para encontrarlo. Durante la búsqueda, los mensajes inquietantes y las evidencias que descubre comienzan a contradecir la confianza que había depositado en Cooper.
 
-Durante el recorrido encuentra pistas que interpreta como señales de ayuda de Jereth. Lo que desconoce es que la criatura que habita el bosque es su propio hijo, transformado y fuera de su control. La verdad permanece oculta hasta que Vadrik llega al laboratorio y descubre el expediente de la investigación.
+Una criatura mutante lo acecha durante el recorrido, obligándolo a sobrevivir mientras busca respuestas. Al llegar al laboratorio, encuentra al científico muerto y examina los expedientes de la investigación. Los registros revelan que Jereth fue utilizado como sujeto experimental y transformado en la criatura mutante que lo perseguía, perdiendo por completo su conciencia y humanidad. Vadrik descubre la verdad, pero la historia termina sin aclarar qué sucederá con él ni con su hijo.
 
 **Reglas especiales del mundo:**
+
 1. La noche y la lluvia parecen permanentes. No se conoce la causa de esta condición.
 2. El bosque está aislado y no existen referencias claras que permitan identificar su ubicación exacta.
-3. La apariencia y el comportamiento de la criatura no permiten determinar con certeza si Jereth conserva parte de su conciencia.
-4. Los experimentos del Dr. Cooper son la causa de la transformación de Jereth, aunque sus detalles se descubren hasta llegar al laboratorio.
+3. Los experimentos de Cooper buscan alterar y acelerar la evolución humana, pero sus resultados son fallidos e incontrolables.
+4. Jereth, convertido en una criatura mutante, carece de conciencia humana y no reconoce a Vadrik como su padre.
+5. Los mensajes del recorrido no son escritos por Jereth ni representan intentos de comunicarse con su padre; su autor e intención permanecen desconocidos.
+6. El Dr. Cooper actúa por cuenta propia; no hay personal activo en las instalaciones.
 
 ## Historia del mundo
 
 ### Antes del juego:
-Vadrik Dsang vive con su hijo Jereth, quien padece una enfermedad desconocida para la medicina de la época. Después de la muerte de su esposa en un accidente no especificado, Vadrik busca desesperadamente una forma de salvar al niño.
 
-El Dr. Cooper le ofrece una posible solución mediante procedimientos experimentales en un laboratorio oculto en un bosque de Rumania. Confiando en el científico, Vadrik lleva a Jereth para que reciba el tratamiento. Sin embargo, los experimentos provocan una transformación en el niño y la situación termina fuera del control de Cooper.
+Antes de los acontecimientos del juego, el Dr. Cooper realiza experimentos clandestinos en un laboratorio oculto en un bosque remoto de Rumania. Su propósito es forzar la evolución humana, pero sus intentos provocan transformaciones físicas y resultados fallidos que documenta en expedientes, anotaciones y fotografías conservados en las instalaciones.
 
-Después de estos acontecimientos, Jereth se convierte en una criatura peligrosa y escapa de las instalaciones. Vadrik, por razones que desconoce, termina despertando en una de las cabañas del bosque, todavía convencido de que su hijo se encuentra a salvo en el laboratorio.
+En 1981, Vadrik Dsang acude a él buscando una oportunidad para su hijo Jereth, quien padece una enfermedad para la que no se conoce un tratamiento en esa época. Cooper le ofrece un procedimiento experimental y Vadrik acepta, convencido de que podría salvarlo, sin saber que la promesa de ayudar al niño oculta los verdaderos objetivos del científico.
+
+Durante el experimento, el procedimiento se sale del control de Cooper y Jereth sufre una transformación irreversible que lo convierte en una criatura mutante, despojada por completo de su conciencia y humanidad. Vadrik desconoce lo sucedido y, tras un periodo del que no tiene claridad, despierta encerrado en una cabaña del bosque, separado de su hijo y sin comprender cómo llegó allí.
 
 ### Durante el juego:
-Vadrik despierta encerrado en una cabaña del bosque sin comprender qué ha sucedido ni dónde se encuentra su hijo. Para descubrir la verdad, debe recorrer tres cabañas principales antes de llegar al laboratorio.
 
-Mientras avanza por las cabañas y el bosque, una criatura comienza a perseguirlo. En un momento de la historia, Vadrik cree ver a su hijo y piensa que finalmente está cerca de reunirse con él. Sin embargo, aquella aparición es una ilusión: en realidad, se trata de la criatura que lo ha seguido durante el recorrido.
+Vadrik despierta encerrado en una cabaña del bosque sin comprender cómo llegó allí, pero convencido de que Jereth permanece a salvo bajo el cuidado del Dr. Cooper. Con la intención de reunirse con su hijo, recorre las tres cabañas principales y el bosque hasta llegar al laboratorio.
 
-Al llegar al laboratorio, Vadrik encuentra al Dr. Cooper en un estado de salud deteriorado. Allí descubre el expediente de Jereth, donde se documentan los experimentos y las consecuencias que tuvieron sobre el niño. Los registros le permiten comprender que su hijo no permaneció a salvo en las instalaciones y que la criatura que lo persiguió durante todo el trayecto es, en realidad, Jereth.
+Durante el trayecto, una criatura mutante comienza a perseguirlo. En un momento de la historia, Vadrik cree ver a Jereth y piensa que finalmente está cerca de reunirse con él. Sin embargo, su percepción lo engaña: frente a él se encuentra la criatura mutante que lo ha estado acechando, aunque todavía desconoce su identidad.
 
-La revelación cambia por completo la percepción que Vadrik tenía de su búsqueda. El destino de su hijo y la posibilidad de que todavía conserve algo de su identidad permanecen sin una respuesta definitiva.
+Al llegar al laboratorio, Vadrik encuentra al Dr. Cooper herido y examina el expediente de Jereth. Los registros revelan que el supuesto tratamiento ocultaba un experimento que se salió de control y transformó a su hijo en la criatura mutante que lo persiguió, despojándolo por completo de su conciencia y humanidad.
+
+Vadrik comprende que su hijo nunca estuvo a salvo y que no puede recuperarlo como lo recordaba. La historia termina sin aclarar el destino de ambos.
 
 ### Después del juego:
+
 Después de los acontecimientos, los registros de los experimentos salen a la luz y la investigación comienza a aparecer en los periódicos. La muerte de Cooper y las consecuencias de sus procedimientos exponen la existencia de una investigación que terminó en tragedia.
 
-El destino de Vadrik y Jereth permanece sin confirmarse. Con el paso de los años, comienza a circular una leyenda sobre un hombre que quedó atrapado en el bosque, condenado a buscar a su hijo entre las cabañas y la oscuridad. (propuesta)
+El destino de Vadrik y Jereth permanece sin confirmarse. Con el paso de los años, comienza a circular una leyenda sobre un hombre que quedó atrapado en el bosque, condenado a buscar a su hijo entre las cabañas y la oscuridad, y una criatura mutante que deambula entre los árboles, acechando a quienes se adentran en el lugar.
 
 ## Lugares
 
-| Lugar               | Descripción                                                                                                                                         | Función jugable                                                                   | Importancia narrativa                                                           |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Cabaña 1            | Una construcción en medio del bosque donde Vadrik despierta sin comprender qué ha sucedido.                                                         | Introducir la exploración y el primer acertijo para encontrar la llave de salida. | Es el lugar donde Vadrik despierta y comienza su búsqueda.                      |
-| Cabaña 2            | Construcción antigua de madera, desgastada por la humedad y el abandono. Está separada de las otras cabañas y rodeada por la vegetación del bosque. | Encontrar la llave necesaria para continuar, utilizando pistas del entorno.       | Refuerza el misterio y permite relacionar las pistas con la búsqueda de Jereth. |
-| Cabaña 3            | Cabaña vieja y aislada, con un interior oscuro y deteriorado. La lluvia y el paso del tiempo han afectado su estructura.                            | Investigar mensajes y resolver el acertijo del candado para avanzar.              | Aumenta la tensión antes de que Vadrik se acerque al laboratorio.               |
-| Cabañas secundarias | Construcciones antiguas, deterioradas y dispersas entre los árboles, alejadas unas de otras                                                         | Ninguna. Son parte del entorno y no cuentan con interacciones jugables.           | Contribuyen al misterio del bosque y a la incertidumbre sobre lo ocurrido.      |
-| Laboratorio         | Instalación oculta equipada para realizar procedimientos experimentales.                                                                            | Activar dos generadores, explorar las instalaciones y consultar los archivos.     | Revela la transformación de Jereth y la verdadera identidad de la criatura.     |
-
+| Lugar                    | Descripción                                                                                                                                            | Función jugable                                                                                                                | Importancia narrativa                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Bosque                   | Entorno aislado, oscuro y lluvioso que conecta las cabañas con el laboratorio                                                                          | Explorar, buscar llaves y evitar a la criatura mutante                                                                          | Refuerza el aislamiento y la incertidumbre de Vadrik durante la búsqueda de su hijo |
+| Cabaña 1                | Una construcción en medio del bosque donde Vadrik despierta sin comprender qué ha sucedido.                                                           | Introducir la exploración y el primer objetivo para encontrar la llave de salida, además de establecer el checkpoint inicial. | Es el lugar donde Vadrik despierta y comienza su búsqueda.                          |
+| Cabaña 2                | Construcción antigua de madera, desgastada por la humedad y el abandono. Está separada de las otras cabañas y rodeada por la vegetación del bosque. | Encontrar la llave necesaria para continuar, utilizando pistas del entorno, y activar un nuevo checkpoint.                      | Refuerza el misterio y permite relacionar las pistas con la búsqueda de Jereth.     |
+| Cabaña 3                | Cabaña vieja y aislada, con un interior oscuro y deteriorado. La lluvia y el paso del tiempo han afectado su estructura.                               | Investigar los mensajes, encontrar la llave para avanzar y activar un nuevo checkpoint.                                         | Aumenta la tensión antes de que Vadrik se acerque al laboratorio.                   |
+| Cabañas secundarias     | Construcciones antiguas, deterioradas y dispersas entre los árboles, alejadas unas de otras                                                            | Ninguna. Son parte del entorno y no cuentan con interacciones jugables.                                                         | Contribuyen al misterio del bosque y a la incertidumbre sobre lo ocurrido.           |
+| Exterior del laboratorio | Área que rodea las instalaciones y contiene los dos generadores                                                                                        | Localizar y activar ambos generadores para habilitar la entrada                                                                 | Prolonga la tensión antes de acceder al lugar donde ocurrió el experimento         |
+| Interior del laboratorio | Instalaciones del Dr. Cooper donde permanecen sus registros y los resultados de sus investigaciones                                                     | Examinar fotografías y expedientes para completar la investigación                                                            | Revela la transformación de Jereth y la verdadera identidad de la criatura.         |
 
 ## Facciones
 
-No existen facciones organizadas que participen directamente en la historia. Los acontecimientos se centran en Vadrik Dsang, Jereth Dsang y el Dr. Cooper, cuyas acciones y decisiones constituyen el conflicto principal.
-
-| Facción | Objetivo | Relación con el jugador |     |
-| ------- | -------- | ----------------------- | --- |
-|         |          |                         |     |
+No existen facciones organizadas en el juego. El Dr. Cooper realiza sus investigaciones por cuenta propia, Vadrik busca a su hijo y la criatura mutante actúa por instinto, sin pertenecer a ningún grupo ni responder a una organización.
 
 ## Coherencia del mundo
 

@@ -1,9 +1,5 @@
 # Público y Plataforma
 
-## Descripción de la sección
-
-Define para quién se diseña el videojuego y dónde se jugará. Las decisiones de diseño, interfaz, controles y rendimiento dependen de estas variables.
-
 ## Público objetivo
 
 **Edad aproximada:** De 18 años en adelante.
@@ -27,8 +23,6 @@ Define para quién se diseña el videojuego y dónde se jugará. Las decisiones 
 | Conexión requerida     | No                    |
 
 ## Restricciones de plataforma
-
-Documenta limitaciones de hardware, controles, memoria, almacenamiento, distribución o conectividad.
 
 **Hardware:** El videojuego requerirá un equipo capaz de ejecutar escenarios 3D, modelos de personajes, iluminación y efectos ambientales sin afectar considerablemente el rendimiento.
 

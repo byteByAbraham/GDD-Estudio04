@@ -1,54 +1,44 @@
 # Premisa y Trama
 
-## Descripción de la sección
-
-Aquí se documenta la narrativa que sostiene la experiencia. La historia debe explicar qué sucede, por qué sucede y cómo participa el jugador.
-
 ## Premisa
 
-**Resume el conflicto principal en pocas líneas.**
-Un padre busca a su hijo en un bosque aislado, sin saber que la criatura que lo persigue es el resultado del experimento al que lo sometió para intentar salvarlo.
+Vadrik Dsang despierta encerrado en una cabaña de un bosque aislado tras confiar el tratamiento de su hijo Jereth al Dr. Cooper. Para descubrir qué ocurrió, deberá llegar al laboratorio mientras sobrevive a una criatura mutante y empieza a sospechar que el supuesto tratamiento ocultaba otras intenciones
 
 ## Sinopsis
 
-**Describe el argumento completo sin entrar todavía en cada escena.**
+En 1981, Vadrik Dsang lleva a su hijo Jereth, quien padece una enfermedad para la que no se conoce un tratamiento en esa época, con el Dr. Cooper, un científico que le ofrece un procedimiento experimental en un bosque remoto de Rumania. Desesperado por salvarlo, acepta sin conocer las verdaderas intenciones del doctor.
 
-En 1981, Vadrik Dsang acepta la ayuda del Dr. Cooper para tratar la enfermedad de su hijo Jereth. El experimento termina en tragedia y Vadrik despierta en una cabaña, convencido de que debe llegar al laboratorio para encontrar al niño.
-
-Mientras avanza, sigue pistas que parecen guiarlo y evita a una criatura que desconoce. Al llegar al laboratorio, los registros de Cooper revelan la verdad: Jereth y el monstruo son el mismo ser.
+Vadrik despierta encerrado en una cabaña, separado de su hijo y sin comprender lo sucedido. Tras conseguir salir, recorre el bosque en busca de respuestas mientras intenta sobrevivir a una criatura mutante cuyo origen desconoce. Al llegar al laboratorio, los registros del Dr. Cooper revelan la verdad: Jereth fue sometido a un experimento que lo transformó en la criatura mutante que lo ha estado persiguiendo, despojándolo de su conciencia y humanidad.
 
 ## Estructura narrativa
 
 ### Acto / Etapa 1: Desorientación
 
-Vadrik despierta desorientado en la cabaña donde inicia el juego y debe buscar una salida.
+Vadrik despierta encerrado en una cabaña, separado de Jereth y sin comprender lo ocurrido. Los mensajes inquietantes que encuentra aumentan su preocupación y lo llevan a preguntarse qué sucedió mientras estuvo inconsciente.
 
-### Acto / Etapa 2: En buscas de pistas y laboratorio
+### Acto / Etapa 2: La búsqueda
 
-Las pistas lo conducen hacia el laboratorio mientras la criatura lo acecha.
+Vadrik se adentra en el bosque buscando a su hijo. Una criatura mutante comienza a acecharlo, mientras sus alucinaciones lo hacen dudar de lo que percibe. Conforme investiga, crecen sus sospechas sobre el supuesto tratamiento del Dr. Cooper.
 
-### Acto / Etapa 3: La revelación
+### Acto / Etapa 3: El descubrimiento
 
-Los archivos revelan la identidad del mutante. Cooper muere y el destino de Vadrik queda sin confirmar.
+Al entrar al laboratorio, Vadrik encuentra al Dr. Cooper herido y descubre evidencias de sus experimentos. Los registros contradicen las promesas del científico y revelan que Jereth fue utilizado como sujeto experimental.
 
 ## Eventos principales
 
-| Orden | Evento               | Participación del jugador           | Consecuencia                        |
-| ----- | -------------------- | ------------------------------------ | ----------------------------------- |
-| 1     | Despertar            | Escapar de la cabaña.               | Comienza la búsqueda.              |
-| 2     | Primer encuentro     | Esconderse de la criatura.           | Descubre que está en peligro.      |
-| 3     | Avance por el bosque | Resolver acertijos y seguir pistas.  | Encuentra el camino al laboratorio. |
-| 4     | Expediente de Jereth | Examinar los registros.              | Descubre la identidad del mutante.  |
-| 5     | Muerte del Dr.Cooper | Presenciar el desenlace y sobrevivir | La historia queda abierta.          |
+| Orden | Evento                                           | Participación del jugador                                                   | Consecuencia                                                                        |
+| ----- | ------------------------------------------------ | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| 1     | Vadrik despierta encerrado en la primera cabaña | Explora el interior y  debe  encuentrar la llave para salir                | Comienza la búsqueda de Jereth y sale al bosque                                    |
+| 2     | Recorre el bosque hacia la segunda cabaña       | Utiliza la linterna, busca la llave y reconoce sonidos como pasos y tarareos | Percibe las primeras señales de la criatura mutante                                |
+| 3     | Entra a la segunda cabaña                       | Examina el interior en busca de pistas                                       | Obtiene pistas y activa un checkpoint                                               |
+| 4     | La criatura mutante comienza a acecharlo         | Se esconde o huye durante el recorrido                                       | Descubre la amenaza que habita el bosque                                            |
+| 5     | Entra a la tercera cabaña                       | Busca su llave y examina el interior                                         | Aumentan sus sospechas sobre Cooper y activa otro checkpoint                        |
+| 6     | Experimenta alucinaciones                        | Presencia situaciones que alteran su percepción                             | Duda de lo que ve y escucha                                                         |
+| 7     | Llega al laboratorio                             | Activa los dos generadores exteriores, entra y encuentra a Cooper herido.    | Busca respuestas en las evidencias del lugar                                        |
+| 8     | Descubre la verdad sobre Jereth                  | Examina los expedientes y relaciona lo descubierto                           | Comprende que su hijo es la criatura mutante y ha perdido su conciencia y humanidad |
 
 ## Finales
 
-Documenta los finales posibles y las condiciones que los provocan.
+### Final único
 
-Final único (propuesta)
-Vadrik descubre la verdad, pero no logra recuperar a su hijo. La historia termina sin aclarar el destino de ambos ni cuánto queda de Jereth dentro de la criatura. Las decisiones de diálogo no cambian el desenlace.
-
-> [!warning] ⚠️ Spoilers
-> Si el documento será compartido con estudiantes o colaboradores, considera separar información sensible de la documentación general.
-
-> **Navegación:** [[00 - Índice]] · ← [[07 - Reglas y Estados del Juego]] · [[02 - Mundo]] →
+Vadrik descubre la verdad, pero no logra recuperar a su hijo, quien ha perdido por completo su conciencia y humanidad al convertirse en una criatura mutante. La historia termina sin aclarar el destino de ambos. Posteriormente, los periódicos exponen las verdaderas intenciones del Dr. Cooper: forzar la evolución humana mediante experimentos que habían fracasado repetidamente, hasta que el procedimiento realizado en Jereth se salió de su control. Las decisiones de diálogo no cambian el desenlace
