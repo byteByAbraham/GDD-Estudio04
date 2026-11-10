@@ -1,9 +1,5 @@
 # Alcance
 
-## Descripción de la sección
-
-Define qué se va a construir y, sobre todo, qué queda fuera del proyecto.
-
 ## Alcance de la versión objetivo
 
 ### Incluido
@@ -11,14 +7,16 @@ Define qué se va a construir y, sobre todo, qué queda fuera del proyecto.
 * 3 personajes principales: Vadrik Dsang, Jereth Dsang y Dr. Cooper.
 * Criatura mutante con comportamientos de patrullaje, investigación, persecución y búsqueda.
 * 1 bosque como escenario principal.
-* 3 cabañas y 1 laboratorio.
+* 3 cabañas principales, cabañas secundarias decorativas y 1 laboratorio
 * Objetivos principales para avanzar entre zonas.
-* Exploración en primera persona.
+* Zona de fogata con un evento narrativo de alucinación.
+* Inventario para almacenar la linterna, llaves y fusibles.
+* Interacción con llaves, notas, fotografías, expedientes y puertas.
 * Interacción con llaves, notas, fotografías y expedientes.
 * Activación de dos generadores para acceder al laboratorio.
+* Panel numérico para desbloquear el laboratorio mediante un código encontrado en la tercera cabaña.
 * Progresión lineal mediante el cumplimiento de objetivos.
 * Sistema de checkpoints para guardar automáticamente el progreso del jugador en puntos específicos de la historia.
-
 
 ### No incluido
 
@@ -30,6 +28,8 @@ Define qué se va a construir y, sobre todo, qué queda fuera del proyecto.
 * Modo multijugador o cooperativo.
 * Sistema de niveles, experiencia o mejoras del personaje.
 * Decisiones que modifiquen el desarrollo de la historia.
+* Menú de configuración para modificar audio, video o controles.
+* Personalización de teclas o compatibilidad con mandos.
 * Soporte para dispositivos móviles o consolas.
 * Contenido descargable o expansiones adicionales.
 
@@ -41,9 +41,7 @@ El **Producto Mínimo Viable** debe contener únicamente lo necesario para demos
 
 ## Vertical Slice
 
-¿Qué parte del juego debe estar completamente terminada para demostrar la calidad y dirección del producto?
-
-La primera zona del juego, que incluye una cabaña y parte del bosque, con escenarios, iluminación, lluvia y ambientación sonora terminados, movimiento en primera persona, linterna funcional, interacción con notas y llaves, objetivos para avanzar, presencia de la criatura mutante, sistema de sigilo, interfaz de usuario y un checkpoint funcional.
+La primera zona del juego, que incluye una cabaña y parte del bosque completamente terminados, con iluminación, lluvia y ambientación sonora, movimiento en primera persona, linterna con batería limitada, inventario funcional, interacción con notas y llaves, objetivos en pantalla, presencia de la criatura mutante, mecánicas de sigilo, interfaz de usuario y un checkpoint que permita guardar y recuperar el progreso.
 
 ## Criterios de recorte
 
@@ -53,5 +51,3 @@ Si el tiempo o los recursos son insuficientes, ¿qué se elimina primero?
 * Simplificar las animaciones secundarias de los personajes.
 * Reducir la cantidad de notas, fotografías y expedientes.
 * Simplificar la escena final del Dr. Cooper herido, reduciendo las animaciones y los detalles visuales sin eliminar su participación en el desenlace de la historia.
-
-> **Navegación:** [[00 - Índice]] · ← [[05 - Seguridad y Riesgos Técnicos]] · [[02 - Roles y Responsabilidades]] →
