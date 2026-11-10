@@ -6,61 +6,80 @@ Define la relación entre las acciones del jugador y las entradas físicas del d
 
 ## Mapa de controles
 
-| Acción                                                                                            | Teclado                                             | Mouse                               | Control     | Táctil      |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------- | ----------- | ----------- |
-| Mover                                                                                             | W, A, S y D - mantener                              | -                                   | No previsto | No previsto |
-| Mirar / orientar el haz                                                                           | -                                                   | Movimiento                          | No previsto | No previsto |
-| Interactuar: leer, recoger llaves, baterías, abrir, usar llave, encender generador, usar candado. | **[E]** - pulsar                                    | -                                   | No previsto | No previsto |
-| Entrar / salir del escondite                                                                      | **[E]** - pulsar, acción contextual                 | -                                   | No previsto | No previsto |
-| Encender / apagar linterna                                                                        | **[F]** - pulsar                                    | -                                   | No previsto | No previsto |
-| Correr                                                                                            | Shift izquierdo - mantener mientras se mueve de pie | -                                   | No previsto | No previsto |
-| Agacharse / ponerse de pie                                                                        | Ctrl izquierdo - pulsar para alternar               | -                                   | No previsto | No previsto |
-| Abrir / cerrar archivo de notas                                                                   | Tab - pulsar                                        | -                                   | No previsto | No previsto |
-| Elegir opción de diálogo                                                                          | Teclas **[1]** y [2]                                | Clic izquierdo                      | No previsto | No previsto |
-| Seleccionar en interfaz                                                                           | -                                                   | Clic izquierdo - pulsar             | No previsto | No previsto |
-| Desplazar texto o lista                                                                           | -                                                   | Rueda                               | No previsto | No previsto |
-| Saltar                                                                                            | Sin asignación, el recorrido no requiere salto      | -                                   | No previsto | No previsto |
-| Menú / pausa                                                                                      | Esc - pulsar durante exploración                    | Clic izquierdo para elegir opciones | No previsto | No previsto |
-| Cerrar lectura o panel                                                                            | Esc - pulsar, Tab también cierra el archivo         | Botón "Cerrar" - clic izquierdo     | No previsto | No previsto |
-| Volver desde opciones                                                                             | Esc - pulsar                                        | Botón "Volver" - clic izquierdo     | No previsto | No previsto |
-| Reintentar tras captura                                                                           | -                                                   | Clic izquierdo en "Reintentar"      | No previsto | No previsto |
+Dark Mutant se juega únicamente con teclado y mouse. No hay soporte para control (mando) ni pantalla táctil.
+
+**Exploración**
+
+| Acción | Teclado | Mouse |
+|---|---|---|
+| Mover | W, A, S y D (mantener) | — |
+| Mirar y orientar la linterna | — | Movimiento |
+| Correr | Shift izquierdo (mantener, solo de pie) | — |
+| Agacharse o ponerse de pie | C (pulsar para alternar) | — |
+| Interactuar: leer, recoger, abrir, usar llave, colocar fusible, bajar palanca y usar el panel de código | E (pulsar) | — |
+| Entrar o salir de un escondite | E (pulsar) | — |
+| Encender o apagar la linterna | F (pulsar) | — |
+| Abrir o cerrar el inventario | Tab (pulsar) | — |
+| Pausa | Esc (pulsar) | — |
+| Saltar | Sin asignación; el recorrido no requiere saltar | — |
+
+**Inventario**
+
+| Acción | Teclado | Mouse |
+|---|---|---|
+| Cambiar de pestaña (Inventario / Documentos) | Q y E | Clic en la pestaña |
+| Moverse por la lista | W y S, o flechas | Clic en el elemento; rueda para desplazar |
+| Examinar un objeto o leer un documento completo | F o Intro | Clic |
+| Cerrar | Tab o Esc | Botón «Cerrar» |
+
+**Panel de código, diálogos y menús**
+
+| Acción | Teclado | Mouse |
+|---|---|---|
+| Ingresar un dígito en el panel de código | Teclas 0 a 9 (fila superior o teclado numérico) | Clic en el dígito |
+| Confirmar o cerrar el panel de código | Intro / Esc | Botones del panel |
+| Elegir una opción de diálogo o continuar | — | Clic izquierdo |
+| Cerrar una lectura | Esc | Botón «Cerrar» |
+| Seleccionar en menús | — | Clic izquierdo |
+| Volver desde Configuración | Esc | Botón «Volver» |
+| Reintentar tras una captura | — | Clic en «Reintentar» |
 
 ## Principios de control
 
-- Los controles deben ser consistentes.
-- Las acciones críticas deben ser fáciles de identificar.
-- Debe existir retroalimentación visual, sonora o háptica cuando corresponda.
-- Evitar combinaciones innecesariamente complejas.
+- **Una tecla por función:** E siempre sirve para interactuar con lo que el jugador tiene enfrente, F siempre es la linterna y Tab siempre es el inventario.
+- **Acciones críticas cerca de W A S D:** correr (Shift), agacharse (C), interactuar (E) y linterna (F) se alcanzan sin soltar el movimiento, lo cual es importante durante una persecución.
+- **Sin combinaciones:** ninguna acción requiere pulsar dos teclas a la vez, salvo moverse y correr.
+- **Retroalimentación inmediata:** cada acción tiene una respuesta visual o sonora (ver la tabla de abajo). No hay vibración, porque no hay soporte para control.
 
 ## Reasignación
 
-El jugador no podrá hacer cambios en las asignaciones de teclas o botones de mouse a los controles contemplados. La sensibilidad de cámara y las opciones de presentación podrán ajustarse sin modificar esas asignaciones.
+El jugador no puede cambiar las teclas asignadas. Desde Configuración sí puede ajustar la sensibilidad del mouse e invertir el eje Y, además de las opciones de audio, video y accesibilidad.
 
 ## Entrada y retroalimentación
 
-| Entrada / acción                 | Respuesta inmediata                                                                    | Confirmación o límite                                                                                                                                    |
-| -------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| W, A, S y D                      | Movimiento relativo a cámara y pasos acordes a postura                                 | Las colisiones bloquean el paso, la diagonal no aumenta velocidad                                                                                        |
-| Movimiento del mouse             | Cambia mirada y orientación de la linterna                                             | En interfaz mueve el cursor, en escondite respeta los límites de giro                                                                                    |
-| **[E]** sobre documento          | Abre lectura, registra la entrada y pausa el mundo                                     | Aviso breve de entrada añadida, releer no duplica registros                                                                                              |
-| **[E]** sobre objeto clave       | Recoge el objeto y agrega la llave a la lista de llaves                                | Nombre del objeto y confirmación sonora, el objeto deja de estar disponible en el mundo                                                                  |
-| **[E]** sobre puerta o mecanismo | Ejecuta la interacción disponible si cumple sus requisitos                             | Si falta un requisito, lo comunica, no utiliza objetos incorrectos                                                                                       |
-| **[E]** sobre escondite          | Lleva a la posición de ocultamiento y apaga la linterna                                | Muestra "[E] - Salir", no borra una persecución si la criatura vio la entrada                                                                            |
-| **[E]** desde escondite          | Devuelve al punto de salida y postura anterior                                         | La linterna permanece apagada, no concede invulnerabilidad                                                                                               |
-| Shift mantenido                  | Aumenta velocidad mientras se mueve de pie                                             | Pasos más notorios, no corre al agacharse                                                                                                                |
-| Ctrl pulsado                     | Cambia altura y postura                                                                | Pasos más suaves, si falta altura para levantarse, conserva postura e indica el obstáculo                                                                |
-| **[F]** pulsado                  | Alterna iluminación normal con un sonido breve                                         | Consume batería mientras está encendida                                                                                                                  |
-| Tab pulsado                      | Abre o cierra archivo de notas, imágenes y grabaciones, y cambia entre cursor y cámara | La consulta pausa la simulación, no abre otro panel si ya hay una pantalla contextual                                                                    |
-| Esc pulsado                      | Cierra el panel abierto o cambia pausa                                                 | La interfaz continúa respondiendo con la simulación detenida                                                                                             |
-| Captura confirmada               | Se bloquean entradas del mundo y aparece la secuencia breve de captura                 | Después se ofrecen "Reintentar" y "Menú principal"                                                                                                       |
-| Clic en "Reintentar"             | Carga el último checkpoint                                                             | La criatura reaparece en su patrulla inicial, la batería queda en un mínimo del 30% y el jugador no aparece dentro de una pared ni bajo ataque inmediato |
-| [E] sobre batería                | La recoge, recarga 40% y suena un aviso breve.                                         | Aviso sonoro breve. Si la batería ya está al 100%, no se desperdicia ni se pierde, se recoge y se completa hasta el 100%                                 |
-| [E] sobre generador              | Lo enciende, emite ruido y avisa con luz y sonido.                                     | No se puede apagar. La criatura investiga el origen del ruido                                                                                            |
-| [1] / [2] o clic en diálogo      | Elige la opción y continúa el texto.                                                   | Solo hay 2 opciones, y la elección no se puede cambiar una vez hecha                                                                                     |
-| **[E]** sobre candado            | Abre un panel para ingresar el código con clic en los dígitos y pausa el mundo         | Un código incorrecto no abre y muestra un aviso breve. **[Esc]** cierra el panel sin resolver                                                            |
+| Entrada / acción | Respuesta inmediata | Confirmación o límite |
+|---|---|---|
+| W, A, S y D | Movimiento según hacia dónde mira la cámara, con sonido de pasos según la postura | Las colisiones bloquean el paso; la diagonal no aumenta la velocidad |
+| Movimiento del mouse | Cambia la mirada y la dirección de la linterna | En los menús mueve el cursor; en un escondite solo gira la cámara |
+| Shift mantenido | Aumenta la velocidad mientras se mueve de pie | Pasos más ruidosos (12 m); no funciona agachado |
+| C | Cambia la altura de la cámara y la postura | Pasos más silenciosos (2 m); si hay un techo encima, sigue agachado |
+| F | Enciende o apaga la linterna con un sonido breve | Gasta batería encendida; con 0 % muestra «Sin batería»; no funciona en un escondite |
+| E sobre un documento | Abre la pantalla de lectura y pausa el juego | Se agrega a Documentos; volver a leerlo no lo duplica |
+| E sobre una llave o un fusible | Lo recoge y muestra su nombre | Se agrega al Inventario y desaparece del escenario |
+| E sobre una pila | La usa al instante y recupera 40 % de batería | Máximo 100 %; si la batería está llena, el sobrante se pierde |
+| E sobre una puerta | La abre si tiene la llave correcta | Sin la llave muestra «Está cerrada con llave» |
+| E sobre una caseta de generador | Primero coloca el fusible; después baja la palanca y enciende el generador con luz y sonido | Sin fusible muestra «Falta un fusible»; el generador hace ruido a 8 m y no se puede apagar |
+| E sobre el panel de código | Abre el teclado numérico y pausa el juego | Sin energía no responde; código incorrecto: «Código incorrecto»; código correcto: la puerta se desbloquea |
+| E sobre un escondite | Coloca al jugador dentro y apaga la linterna | Muestra «[E] Salir»; corta la persecución |
+| E desde un escondite | Devuelve al jugador al punto de salida | La linterna sigue apagada; no hay invulnerabilidad |
+| Tab | Abre o cierra el inventario y cambia entre cursor y cámara | Pausa el juego; no se abre si hay otra pantalla abierta |
+| Esc | Cierra la pantalla abierta o abre la pausa | Los menús siguen respondiendo con el juego detenido |
+| Clic en una opción de diálogo | Muestra la respuesta del otro personaje | La elección no se puede cambiar y no altera el final |
+| Captura | Se bloquean las entradas y aparece la pantalla de captura | Opciones «Reintentar» y «Menú principal» |
+| Clic en «Reintentar» | Carga el último checkpoint | La criatura vuelve a su patrulla, la batería queda en al menos 30 % y el jugador no aparece bajo ataque inmediato |
 
-Las interacciones de los acertijos usan **[E]** en el mundo (llaves, baterías, generadores y puertas) y un panel contextual con el mouse para el candado de código. Los detalles de cada puzle están en [[03 - Sistemas]], sistema S03.
+## Aprendizaje de los controles
 
-La introducción propone enseñar, en este orden: mirar y caminar, linterna, leer una pista, agacharse y esconderse, recoger batería. Los mensajes desaparecen después de utilizar la acción y quedan disponibles desde pausa para consulta.
+Los controles se enseñan dentro de la cabaña 1, que es una zona segura, mediante los avisos de interacción y el objetivo en pantalla, en este orden: mirar y caminar, encender la linterna en la oscuridad, leer un documento, recoger la llave y abrir la puerta. Agacharse, esconderse y recoger pilas se aprenden en el bosque y en la cabaña 2, con el aviso que aparece al apuntar cada objeto. La lista completa de controles se puede consultar en el menú de pausa.
 
 > **Navegación:** [[00 - Índice]] · ← [[03 - Sistemas]] · [[05 - Progresión]] →
