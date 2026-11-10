@@ -8,17 +8,22 @@ Menú principal
 ├── Continuar
 └── Salir
 
-Durante la partida → Pausa
-├── Reanudar
+Durante la partida
+├── Inventario
+│   ├── Linterna
+│   ├── Llaves
+│   └── Fusibles
+└── Menú de pausa
+    ├── Reanudar
+    ├── Volver al menú principal
+    └── Salir
+
+Pantalla de derrota
+├── Reintentar desde el último checkpoint
 ├── Volver al menú principal
 └── Salir
 
-Después de la derrota
-├── Reintentar 
-├── Volver al menú principal
-└── Salir
-
-Después de la victoria
+Pantalla final
 ├── Volver al menú principal
 └── Salir
 ```

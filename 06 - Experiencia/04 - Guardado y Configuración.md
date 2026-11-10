@@ -14,13 +14,15 @@
 
 ## Configuración
 
-| Categoría    | Opciones                                                                            |
-| ------------- | ----------------------------------------------------------------------------------- |
-| Audio         | Volumen general, de música y de efectos.                                           |
-| Video         | por definir                                                                         |
-| Controles     | Esquema fijo de teclado y mouse, sin reasignación de teclas.                       |
-| Accesibilidad | Ajuste del tamaño de texto.                                                        |
-| Jugabilidad   | Progreso lineal, objetivos en pantalla y guardado automático mediante checkpoints. |
+Dark Mutant no cuenta con un menú de configuración. Los controles, la presentación visual y las opciones de audio estarán definidos previamente y no podrán modificarse desde el juego.
+
+| Categoría    | Opciones                                                                       |
+| ------------- | ------------------------------------------------------------------------------ |
+| Audio         | Sonidos y volumen predeterminados, sin ajustes.                                |
+| Video         | Configuración gráfica predeterminada, sin ajustes de resolución ni calidad. |
+| Controles     | Teclado y mouse con teclas fijas, sin reasignación.                           |
+| Accesibilidad | Sin opciones de personalización.                                              |
+| Jugabilidad   | Progreso lineal, objetivos en pantalla y checkpoints automáticos.             |
 
 ## Restablecimiento
 
