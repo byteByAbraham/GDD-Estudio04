@@ -2,15 +2,15 @@
 
 Los objetivos indican qué debe lograr el jugador para avanzar y se actualizan en pantalla conforme completa cada etapa. Los desafíos surgen durante la exploración y exigen utilizar los objetos disponibles, observar el entorno y reaccionar ante el peligro.
 
-## Objetivos principales durante la partida 
+## Objetivos principales durante la partida
 
-| Etapa                    | Objetivo                                                        | Condición de cumplimiento                                |
-| ------------------------ | --------------------------------------------------------------- | --------------------------------------------------------- |
-| Primera cabaña          | Encontrar la forma de salir.                                    | Encontrar la llave y abrir la salida.                     |
-| Segunda cabaña          | Encontrar la llave y acceder al interior.                       | Utilizar la llave y entrar a la cabaña.                  |
-| Tercera cabaña          | Encontrar el siguiente acceso para continuar la investigación. | Localizar su llave y entrar.**[E]**.                |
-| Exterior del laboratorio | Restablecer la energía.                                        | Activar los dos generadores del exterior.                 |
-| Interior del laboratorio | Descubrir qué ocurrió con Jereth.                             | Examinar el expediente que presenta la revelación final. |
+| Etapa                    | Objetivo                                                             | Condición de cumplimiento                                                    |
+| ------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Primera cabaña          | Encontrar la forma de salir.                                         | Localizar la llave y abrir la puerta.                                         |
+| Segunda cabaña          | Acceder al interior y encontrar el primer fusible.                   | Utilizar la llave y recoger el fusible.                                       |
+| Tercera cabaña          | Encontrar el segundo fusible y descubrir el código del laboratorio. | Abrir la cabaña, recoger el fusible y revisar la pizarra.                    |
+| Exterior del laboratorio | Restablecer la energía y desbloquear la entrada.                    | Colocar los fusibles, activar las palancas e introducir el código correcto.  |
+| Interior del laboratorio | Descubrir qué ocurrió con Jereth.                                  | Presenciar la muerte del Dr. Cooper y examinar los expedientes de su oficina. |
 
 ## Desafíos principales durante la partida
 
@@ -28,7 +28,8 @@ Los objetivos indican qué debe lograr el jugador para avanzar y se actualizan e
 
 1. Iluminar el entorno para reconocer caminos y referencias.
 2. Explorar las áreas relacionadas con el objetivo actual.
-3. Localizar el objeto o acceso necesario.
+3. Localizar las llaves y los fusibles necesarios para avanzar.
+4. Encontrar el acceso a la siguiente zona.
 
 **Condición de éxito:** Alcanzar el siguiente punto del recorrido.
 
@@ -58,7 +59,8 @@ Tipo: Recurrente.
 2. Encender la linterna cuando sea necesario.
 3. Apagarla cuando la iluminación permita orientarse.
 4. Recoger pilas para recuperar carga.
-   Condición de éxito: Disponer de iluminación para reconocer caminos y objetos importantes.
+
+**Condición de éxito**: Disponer de iluminación para reconocer caminos y objetos importantes.
 
 **Condición de fracaso:** Agotar la batería apaga la linterna y dificulta la exploración, pero no termina la partida.
 
@@ -72,7 +74,7 @@ Tipo: Recurrente.
 
 ### Desafío 3 — Evitar la captura
 
-Tipo: Recurrente.
+**Tipo:** Recurrente.
 
 **Objetivo:** Continuar el recorrido sin ser atrapado por la criatura mutante.
 
@@ -82,11 +84,12 @@ Tipo: Recurrente.
 
 **Pasos:**
 
-1. Reconocer sus señales visuales y sonoras.
+1. Reconocer las señales visuales y sonoras de la criatura mutante.
 2. Reducir el ruido y aprovechar los obstáculos.
 3. Esconderse o huir si detecta al jugador.
 4. Retomar el objetivo cuando termine la búsqueda.
-   Condición de éxito: Evitar la detección o escapar de una persecución.
+
+**Condición de éxito:** Evitar la detección o escapar de una persecución.
 
 **Condición de fracaso:** Ser capturado.
 

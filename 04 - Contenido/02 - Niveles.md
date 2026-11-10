@@ -2,28 +2,27 @@
 
 Dark Mutant presenta un recorrido continuo dividido en cinco zonas de progresión. Cada zona cumple una función dentro de la exploración, la supervivencia y el desarrollo de la historia.
 
-
 ## Zona 1 — Primera cabaña
 
 **Objetivo principal:** Encontrar la llave y salir de la cabaña.
 
-**Objetivos secundarios:** Observar el entorno y leer las primeras notas inquietantes.
+**Objetivos secundarios:** Explorar el interior y leer las primeras notas inquietantes.
 
 **Duración estimada:** 3–5 minutos.
 
 **Dificultad:** Baja; funciona como introducción.
 
-**Mecánicas introducidas:** Movimiento en primera persona, control de cámara e interacción mediante la tecla E.
+**Mecánicas introducidas:** Movimiento en primera persona, control de cámara, interacción mediante la tecla E y uso del inventario.
 
-**Mecánicas utilizadas:** Exploración, lectura de notas y uso de llaves.
+**Mecánicas utilizadas:** Exploración, lectura de notas, uso de llaves y linterna.
 
-**Obstáculos:** Puerta cerrada que requiere una llave.
+**Obstáculos:** Oscuridad y puerta cerrada que requiere una llave.
 
 **Recompensas:** Acceso al bosque y primeras pistas sobre la situación de Vadrik.
 
 **Puntos de guardado:** Checkpoint inicial dentro de la cabaña.
 
-**Condición de entrada:** Iniciar una nueva partida.
+**Condición de entrada:** Finalizar la cinemática introductoria.
 
 **Condición de salida:** Encontrar y utilizar la llave de la puerta.
 
@@ -35,132 +34,125 @@ Dark Mutant presenta un recorrido continuo dividido en cinco zonas de progresió
 Despertar → Explorar → Encontrar la llave → Abrir la puerta → Salir al bosque.
 ```
 
-
 ## Zona 2 — Bosque y segunda cabaña
 
-**Objetivo principal:** Encontrar la llave y acceder a la segunda cabaña.
+**Objetivo principal:** Acceder a la segunda cabaña y encontrar el primer fusible.
 
-**Objetivos secundarios:** Investigar los mensajes del recorrido y localizar pilas cuando sea necesario.
+**Objetivos secundarios:** Investigar las notas del recorrido y localizar pilas para la linterna.
 
-**Duración estimada:** 6–8 minutos.
+**Duración estimada**: 6–8 minutos.
 
 **Dificultad:** Media; introduce la exploración bajo amenaza.
 
-**Mecánicas introducidas:** Uso de la linterna, administración de batería y reconocimiento de las señales de la criatura mutante.
+**Mecánicas introducidas:** Administración de batería, recolección de fusibles y reconocimiento de las señales de la criatura mutante.
 
-**Mecánicas utilizadas:** Exploración, interacción, búsqueda de llaves, sigilo, escondite y huida.
+**Mecánicas utilizadas:** Exploración, inventario, búsqueda de llaves, linterna, sigilo, escondite y huida.
 
-**Obstáculos:** Oscuridad, acceso cerrado y presencia de la criatura mutante durante el trayecto.
+**Obstáculos:** Oscuridad, puerta cerrada y presencia de la criatura mutante durante el recorrido.
 
-**Recompensas:** Acceso a la cabaña, nueva información y guardado del progreso.
+**Recompensas:** Primer fusible, nuevas pistas y guardado del progreso.
 
 **Puntos de guardado:** Checkpoint al entrar en la segunda cabaña.
 
 **Condición de entrada:** Haber salido de la primera cabaña.
 
-**Condición de salida:** Acceder a la segunda cabaña y completar el objetivo de investigación de la zona.
+**Condición de salida**: Encontrar el primer fusible y completar la exploración de la cabaña.
 
-**Eventos narrativos:** Los mensajes encontrados comienzan a generar dudas sobre lo ocurrido y sobre la seguridad de Jereth.
+**Eventos narrativos:** Los mensajes encontrados generan dudas sobre las verdaderas intenciones del Dr. Cooper y la seguridad de Jereth.
 
 **Flujo del nivel:**
 
 ```
-Despertar → Explorar → Encontrar la llave → Abrir la puerta → Salir al bosque.
+Explorar el bosque → Encontrar la llave → Entrar a la cabaña → Guardar checkpoint → Encontrar el fusible → Continuar.
 ```
-
-
 
 ## Zona 3 — Bosque y tercera cabaña
 
-**Objetivo principal:** Encontrar la llave de la tercera cabaña y continuar la investigación.
+**Objetivo principal:** Encontrar el segundo fusible y descubrir el código de acceso al laboratorio.
 
-**Objetivos secundarios:** Relacionar las pistas descubiertas y conservar suficiente batería para el siguiente recorrido.
+**Objetivos secundarios:** Investigar las notas, revisar la pizarra y conservar batería para el siguiente recorrido.
 
 **Duración estimada:** 6–8 minutos.
 
-**Dificultad:** Media-alta; combina la búsqueda con una mayor exposición al peligro.
+**Dificultad:** Media-alta; combina la búsqueda de objetos con una mayor exposición al peligro.
 
-**Mecánicas introducidas:** No introduce mecánicas nuevas; exige combinar las ya aprendidas.
+**Mecánicas introducidas:** Obtención de información necesaria para resolver un acceso mediante código.
 
-**Mecánicas utilizadas:** Exploración, uso de llaves, lectura de notas, administración de la linterna, sigilo y huida.
+**Mecánicas utilizadas:** Exploración, inventario, uso de llaves, lectura de notas, linterna, sigilo y huida.
 
-**Obstáculos:** Recorrido más largo, acceso cerrado y encuentros con la criatura mutante.
+**Obstáculos:** Oscuridad, puerta cerrada y encuentros con la criatura mutante.
 
-**Recompensas:** Nuevas pistas, checkpoint y avance hacia el laboratorio.
+**Recompensas:** Segundo fusible, código del laboratorio, nuevas pistas y checkpoint.
 
 **Puntos de guardado:** Checkpoint al entrar en la tercera cabaña.
 
-**Condición de entrada:** Haber completado el objetivo de la segunda cabaña.
+**Condición de entrada:** Haber obtenido el primer fusible y continuar el recorrido por el bosque.
 
-**Condición de salida:** Acceder a la tercera cabaña y completar su objetivo antes de dirigirse al laboratorio.
+**Condición de salida:** Obtener el segundo fusible y descubrir el código de acceso.
 
-**Eventos narrativos:** La información encontrada aumenta las sospechas de Vadrik sobre los experimentos de Cooper.
+**Eventos narrativos:** Las pistas aumentan las sospechas sobre los experimentos del Dr. Cooper. Durante el recorrido, Vadrik experimenta una alucinación junto a la fogata, donde cree encontrarse con Jereth.
 
 **Flujo del nivel:**
 
 ```
-Continuar por el bosque → Encontrar la llave → Evitar a la criatura mutante → Entrar a la cabaña → Guardar checkpoint → Investigar → Continuar al laboratorio.
+Recorrer el bosque → Fogata → Encontrar la llave → Entrar a la cabaña → Obtener el fusible → Revisar la pizarra → Ir al laboratorio.
 ```
-
 
 ## Zona 4 — Exterior del laboratorio
 
-**Objetivo principal:** Activar los dos generadores para habilitar la entrada al laboratorio.
+**Objetivo principal:** Restablecer la energía y desbloquear la entrada del laboratorio.
 
-**Objetivos secundarios:** Reconocer los caminos entre los generadores y los lugares disponibles para esconderse.
+**Objetivos secundarios:** Localizar las dos casetas eléctricas y evitar a la criatura mutante.
 
 **Duración estimada:** 6–8 minutos.
 
 **Dificultad:** Media-alta; reúne los desafíos de exploración y supervivencia.
 
-**Mecánicas introducidas:** Activación de generadores y apertura de un acceso mediante dos requisitos.
+**Mecánicas introducidas:** Colocación de fusibles, activación de palancas e introducción de códigos numéricos.
 
-**Mecánicas utilizadas:** Interacción, orientación, uso de la linterna, sigilo, escondite y huida.
+**Mecánicas utilizadas:** Inventario, interacción, linterna, sigilo, escondite y huida.
 
-**Obstáculos:** Entrada sin energía, generadores separados y presencia de la criatura mutante en el exterior.
+**Obstáculos:** Generadores sin fusibles, falta de energía, panel de acceso bloqueado y presencia de la criatura mutante.
 
-**Recompensas:** Restablecimiento de la energía y acceso al laboratorio.
+**Recompensas:** Restablecimiento de la energía y acceso al interior del laboratorio.
 
 **Puntos de guardado:** Se conserva el checkpoint de la tercera cabaña.
 
-**Condición de entrada:** Haber completado el recorrido por las cabañas y llegado al laboratorio.
+**Condición de entrada:** Haber obtenido ambos fusibles y el código de acceso.
 
-**Condición de salida:** Activar ambos generadores y cruzar la entrada habilitada.
+**Condición de salida:** Activar los dos generadores e introducir el código correcto en el panel de la puerta.
 
-**Eventos narrativos:** Vadrik alcanza las instalaciones donde espera encontrar a su hijo y obtener respuestas.
-
-**Flujo del nivel:**
+**Eventos narrativos:** Vadrik llega a las instalaciones donde espera encontrar respuestas sobre Jereth y los experimentos del Dr. Cooper.
 
 ```
-Llegar al laboratorio → Localizar y activar ambos generadores → Restablecer la energía → Entrar.
+Llegar al laboratorio → Colocar los fusibles → Activar las palancas → Restablecer la energía → Introducir el código → Entrar.
 ```
-
 
 ## Zona 5 — Interior del laboratorio
 
-**Objetivo principal:** Investigar los expedientes y descubrir qué ocurrió con Jereth.
+**Objetivo principal:** Acceder a la oficina del Dr. Cooper y descubrir qué ocurrió con Jereth.
 
-**Objetivos secundarios:** Examinar las evidencias sobre los procedimientos del Dr. Cooper.
+**Objetivos secundarios:** Examinar las fotografías, notas y expedientes relacionados con los experimentos.
 
 **Duración estimada:** 4–6 minutos.
 
-**Dificultad:** Baja en ejecución; centrada en la exploración y comprensión de la historia.
+**Dificultad:** Baja en ejecución; centrada en la exploración y el descubrimiento de la historia.
 
 **Mecánicas introducidas:** No introduce mecánicas nuevas.
 
-**Mecánicas utilizadas:** Exploración, interacción y lectura de expedientes.
+**Mecánicas utilizadas:** Exploración, interacción, inventario y lectura de documentos.
 
-**Obstáculos:** Información distribuida por las instalaciones que el jugador debe examinar para comprender los acontecimientos.
+**Obstáculos:** Información distribuida por las instalaciones y acontecimientos que conducen al desenlace.
 
-**Recompensas:** Revelación de la identidad de la criatura mutante y conclusión de la historia.
+**Recompensas:** Descubrimiento de las verdaderas intenciones del Dr. Cooper y la identidad de la criatura mutante.
 
 **Puntos de guardado:** No existe un checkpoint adicional para esta zona.
 
-**Condición de entrada:** Haber activado los dos generadores del exterior.
+**Condición de entrada:** Haber restablecido la energía e introducido el código correcto.
 
-**Condición de salida:** Completar la investigación que activa la secuencia final.
+**Condición de salida:** Examinar los expedientes de Jereth en la oficina del Dr. Cooper.
 
-**Eventos narrativos:** Vadrik encuentra a Cooper Herido y descubre que Jereth fue transformado en la criatura mutante, perdiendo por completo su conciencia y humanidad. El destino de ambos queda sin confirmar.
+**Eventos narrativos:** Vadrik presencia la muerte del Dr. Cooper y posteriormente encuentra los archivos de su hijo, descubriendo que fue transformado en la criatura mutante y perdió completamente su conciencia humana. El destino de Vadrik y Jereth queda sin confirmar.
 
 **Flujo del nivel:**
 
@@ -168,15 +160,18 @@ Llegar al laboratorio → Localizar y activar ambos generadores → Restablecer 
 Entrar → Explorar las instalaciones → Examinar los expedientes → Descubrir la verdad → Final abierto.
 ```
 
-
 ## Criterios de calidad
 
-* Cada zona presenta un objetivo comprensible.
+* Cada zona presenta un objetivo comprensible y relacionado con la progresión.
 * Los objetos necesarios para avanzar son accesibles antes del bloqueo que resuelven.
+* El inventario permite almacenar y utilizar la linterna, llaves y fusibles.
+* La oscuridad de las cabañas favorece el uso de la linterna.
 * Las señales de peligro permiten reaccionar antes de una captura.
 * Los checkpoints confirman que el progreso se ha guardado.
 * El agotamiento de la linterna no impide completar el recorrido.
 * Los textos se leen con claridad y mantienen coherencia con la historia.
 * El jugador comprende qué requisito le falta para acceder a la siguiente zona.
+
+
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Estructura del Contenido]] · [[03 - Enemigos y NPC]] →
