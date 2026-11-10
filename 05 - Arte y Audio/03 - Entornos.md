@@ -42,3 +42,9 @@ Lista los modelos, sprites, texturas, materiales y efectos necesarios.
 | Materiales         | Superficies mates y desgastadas, metal oxidado y acabados húmedos con reflejos discretos.            |
 | Imágenes          | Diseños de notas, expedientes y fotografías utilizados como texturas.                               |
 | Efectos            | Lluvia y efectos visuales de peligro asociados a la proximidad y persecución de la criatura mutante. |
+
+## Modelos 3D
+
+| Cabaña                       | Laboratorio                       |
+| ---------------------------- | --------------------------------- |
+| ![[Entorno_Cabana.gif\|276]] | ![[Entorno_Laboratorio.gif\|344]] |
