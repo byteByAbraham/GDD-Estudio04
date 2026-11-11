@@ -306,6 +306,6 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 | S05 - Criatura | S09 - Partida | Captura confirmada |
 | S03 - Progresión | S09 - Partida | Checkpoint alcanzado y progreso a guardar |
 | S01 a S07 | S08 - Interfaz | Estados y eventos para mensajes, HUD y sonidos |
-| S09 - Partida | S01 a S08 | Pausa, restauración del checkpoint y ajustes |
+| S09 - Partida | S01 a S08 | Pausa, restauración del checkpoint y  |
 
 > **Navegación:** [[00 - Índice]] · ← [[02 - Mecánicas]] · [[04 - Controles]] →

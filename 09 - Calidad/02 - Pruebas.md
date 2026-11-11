@@ -50,7 +50,7 @@ Se comprobó que el videojuego mantenga un rendimiento estable en PC, tomando co
 1. Utilizar W, A, S y D para desplazarse.
 2. Mover el mouse para controlar la cámara.
 3. Mantener Shift izquierdo para correr.
-4. Presionar Ctrl izquierdo para agacharse.
+4. Presionar la tecla C para agacharse.
 5. Intentar desplazarse contra paredes y objetos sólidos.
 
 **Resultado esperado:** Vadrik responde correctamente a los controles y no atraviesa los obstáculos del escenario.

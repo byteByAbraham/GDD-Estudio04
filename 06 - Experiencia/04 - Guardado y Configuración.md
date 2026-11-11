@@ -18,7 +18,7 @@ Dark Mutant cuenta con un menú de opciones dividido en Audio, Video y Controles
 
 | Categoría    | Opciones                                                                                                      |
 | ------------- | ------------------------------------------------------------------------------------------------------------- |
-| Audio         | Sonidos y volumen predeterminados, sin ajustes.                                                               |
+| Audio         | Permite ajustar el volumen general y los sonidos ambientales.                                                 |
 | Video         | Seleccionar el modo de pantalla entre ventana, sin bordes y pantalla completa.                                |
 | Controles     | Ajustar la sensibilidad de la cámara e invertir el eje vertical del mouse. Las teclas permanecen fijas.      |
 | Accesibilidad | No incluye ajustes de tamaño de texto, subtítulos ni reasignación de teclas.                               |
@@ -26,4 +26,4 @@ Dark Mutant cuenta con un menú de opciones dividido en Audio, Video y Controles
 
 ## Restablecimiento
 
-No se contempla el restablecimiento de opciones, ya que el juego no incluye ajustes de configuración.
+El juego permite restablecer los ajustes de audio, video y controles a sus valores predeterminados desde el menú de configuración, sin afectar el progreso de la partida.
