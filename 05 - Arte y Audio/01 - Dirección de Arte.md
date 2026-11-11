@@ -3,7 +3,7 @@
 ## Identidad visual
 
 **Estilo:**
-Gráficos 3D estilizados, con modelos de personajes y escenarios de detalle moderado, sin buscar un acabado hiperrealista.
+Gráficos 3D estilizados con una estética de terror oscuro. Los personajes presentan proporciones humanas reconocibles, geometría de detalle moderado, texturas de apariencia ligeramente pictórica y rasgos definidos sin llegar al hiperrealismo.
 
 **Referencias:**
 Slender: The Eight Pages y Amnesia: The Dark Descent.
@@ -40,7 +40,6 @@ Texturas de resolución moderada, con superficies de madera, tierra, vegetación
 
 - **Blanco (`#FFFFFF`): **objetivos, textos y avisos de interacción.
 - **Gris claro (`#B9B9B9`)**:  información complementaria y elementos secundarios de la interfaz.
-
 
 ## Reglas visuales
 

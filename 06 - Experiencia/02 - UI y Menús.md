@@ -4,8 +4,14 @@
 
 ```text
 Menú principal
-├── Nueva partida
+├── Jugar
+│   └── Confirmación de nueva partida
 ├── Continuar
+├── Opciones
+│   ├── Audio
+│   ├── Video
+│   └── Controles
+├── Créditos
 └── Salir
 
 Durante la partida
@@ -15,6 +21,7 @@ Durante la partida
 │   └── Fusibles
 └── Menú de pausa
     ├── Reanudar
+    ├── Reiniciar desde el checkpoint
     ├── Volver al menú principal
     └── Salir
 
@@ -32,19 +39,33 @@ Pantalla final
 
 ### Menú principal
 
-**Propósito: Propósito:** Permitir el acceso al juego.
+**Propósito: Propósito:** Permitir el acceso a las funciones principales del videojuego.
 
-**Elementos:** Título del juego, botones Jugar y  Salir.
+**Elementos:** Título Dark Mutant y opciones Jugar, Continuar, Opciones, Créditos y Salir.
 
-**Acciones disponibles:** Iniciar la partida, reanudar partida  o cerrar el juego.
+**Acciones disponibles:** Iniciar una nueva partida, continuar una partida guardada, acceder a la configuración, consultar los créditos o cerrar el jueg
 
-### Diálogos
+### Configuración
 
-**Propósito:** Presentar conversaciones y opciones de respuesta.
+**Propósito:** Permitir al jugador modificar los ajustes de audio, video y controles.
 
-**Elementos:** Texto del diálogo y respuestas disponibles.
+**Elementos:** Secciones Audio, Video y Controles, con sus respectivas opciones de ajuste.
 
-**Acciones disponibles:** Avanzar el texto y seleccionar una respuesta.
+**Acciones disponibles:**
+
+- **Audio:** Ajustar el volumen general y los sonidos ambientales.
+- **Video:** Seleccionar el modo de pantalla.
+- **Controles:** Ajustar la sensibilidad del mouse e invertir el eje vertical.
+- **Restablecer:** Recuperar los valores predeterminados.
+- 
+
+### Créditos
+
+**Propósito:** Mostrar a los integrantes que participaron en el desarrollo de Dark Mutant.
+
+**Elementos:** Nombres de los integrantes y sus funciones dentro del proyecto.
+
+**Acciones disponibles:** Consultar los créditos y regresar al menú principal.
 
 ### Pausa
 
@@ -72,8 +93,9 @@ Pantalla final
 
 ### Confirmaciones
 
-| Acción                            | Mensaje de confirmación                                                                  | Opciones                   |
-| ---------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------- |
-| Reiniciar desde el checkpoint      | «¿Reiniciar desde el último checkpoint? Perderás el avance posterior al guardado».   | Reiniciar / Cancelar       |
-| Volver al menú durante la partida | «¿Volver al menú principal? El progreso posterior al último checkpoint se perderá». | Volver al menú / Cancelar |
-| Cerrar el juego durante la partida | «¿Salir del juego? El progreso posterior al último checkpoint se perderá».           | Salir / Cancelar           |
+| Acción                                     | Mensaje de confirmación                                                                  | Opciones                   |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------- |
+| Iniciar nueva partida con progreso guardado | «Se reiniciará el progreso guardado actual. ¿Deseas continuar?»                       | Iniciar / Cancelar         |
+| Reiniciar desde el checkpoint               | «¿Reiniciar desde el último checkpoint? Perderás el avance posterior al guardado».   | Reiniciar / Cancelar       |
+| Volver al menú durante la partida          | «¿Volver al menú principal? El progreso posterior al último checkpoint se perderá». | Volver al menú / Cancelar |
+| Cerrar el juego durante la partida          | «¿Salir del juego? El progreso posterior al último checkpoint se perderá».           | Salir / Cancelar           |

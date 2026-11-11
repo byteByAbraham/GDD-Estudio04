@@ -2,21 +2,23 @@
 
 ## Opciones previstas
 
-- [X] Tamaño de texto
+- [ ] Tamaño de texto
 - [ ] Subtítulos
 - [ ] Contraste
 - [ ] Modo para daltonismo
 - [ ] Reasignación de controles
-- [ ] Sensibilidad
+- [X] Sensibilidad
 - [ ] Reducción de movimiento
 - [ ] Reducción de destellos
 - [ ] Asistencia de apuntado
 - [ ] Dificultad ajustable
-- [ ] Volumen independiente
+- [X] Volumen independiente
 - [ ] Indicadores visuales para sonidos importantes
 
 ## Consideraciones
 
-El tamaño de texto está contemplado para facilitar la lectura de objetivos, diálogos y documentos. Las demás opciones de la lista no se incluyen en esta versión.
+El tamaño de los textos será fijo, sin posibilidad de ajustarlo desde la configuración. Se mantendrá una presentación legible para los objetivos, diálogos y documentos.
 
-El esquema actual utiliza controles fijos de teclado y mouse. La reasignación de teclas y el soporte de mando no están contemplados en esta versión de Dark Mutant.
+El videojuego permitirá ajustar la sensibilidad de la cámara y los niveles de volumen general y ambiente. Las demás opciones de accesibilidad no están contempladas para esta versión de Dark Mutant.
+
+Los controles serán de teclado y mouse, sin posibilidad de reasignar teclas ni utilizar mando.
