@@ -10,7 +10,7 @@
 
 Vadrik despierta encerrado en una cabaña, sin comprender cómo llegó allí ni dónde está Jereth. Aferrado a la idea de que su hijo permanece en el laboratorio, se adentra en el bosque para encontrarlo. Durante la búsqueda, los mensajes inquietantes y las evidencias que descubre comienzan a contradecir la confianza que había depositado en Cooper.
 
-Una criatura mutante lo acecha durante el recorrido, obligándolo a sobrevivir mientras busca respuestas. Al llegar al laboratorio, encuentra al científico muerto y examina los expedientes de la investigación. Los registros revelan que Jereth fue utilizado como sujeto experimental y transformado en la criatura mutante que lo perseguía, perdiendo por completo su conciencia y humanidad. Vadrik descubre la verdad, pero la historia termina sin aclarar qué sucederá con él ni con su hijo.
+Una criatura mutante lo acecha durante el recorrido, obligándolo a sobrevivir mientras busca respuestas. Al llegar al laboratorio, encuentra al científico herido y examina los expedientes de la investigación. Los registros revelan que Jereth fue utilizado como sujeto experimental y transformado en la criatura mutante que lo perseguía, perdiendo por completo su conciencia y humanidad. Vadrik descubre la verdad, pero la historia termina sin aclarar qué sucederá con él ni con su hijo.
 
 **Reglas especiales del mundo:**
 
@@ -71,7 +71,7 @@ No existen facciones organizadas en el juego. El Dr. Cooper realiza sus investig
 - La ubicación exacta del bosque no debe revelarse.
 - El protagonista cree que Jereth continúa a salvo en el laboratorio hasta descubrir la verdad.
 - El expediente encontrado en el laboratorio permite a Vadrik comprender lo que sucedió con su hijo.
-- La muerte del Dr. Cooper ocurre durante el encuentro final con la criatura.
+- El Dr. Cooper muere a causa de sus heridas después de hablar con Vadrik.
 - Nunca se confirma si la criatura conserva la conciencia de Jereth.
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Premisa y Trama]] · [[03 - Personajes]] →

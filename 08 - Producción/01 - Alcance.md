@@ -12,7 +12,6 @@
 * Zona de fogata con un evento narrativo de alucinación.
 * Inventario para almacenar la linterna, llaves y fusibles.
 * Interacción con llaves, notas, fotografías, expedientes y puertas.
-* Interacción con llaves, notas, fotografías y expedientes.
 * Activación de dos generadores para acceder al laboratorio.
 * Panel numérico para desbloquear el laboratorio mediante un código encontrado en la tercera cabaña.
 * Progresión lineal mediante el cumplimiento de objetivos.
@@ -28,7 +27,6 @@
 * Modo multijugador o cooperativo.
 * Sistema de niveles, experiencia o mejoras del personaje.
 * Decisiones que modifiquen el desarrollo de la historia.
-* Menú de configuración para modificar audio, video o controles.
 * Personalización de teclas o compatibilidad con mandos.
 * Soporte para dispositivos móviles o consolas.
 * Contenido descargable o expansiones adicionales.

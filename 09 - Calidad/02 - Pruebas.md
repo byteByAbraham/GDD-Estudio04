@@ -35,9 +35,9 @@ Se comprobó que el videojuego mantenga un rendimiento estable en PC, tomando co
 
 **Resultado esperado:** La introducción se reproduce y el jugador comienza dentro de la primera cabaña con el control del personaje habilitado.
 
-**Resultado obtenido:** La cinemática se reprodujo correctamente y, al finalizar, Vadrik apareció dentro de la primera cabaña con los controles habilitados.
+**Resultado obtenido:** Pendiente: la introducción se está integrando en la versión final.
 
-**Estado:** Correcto.
+**Estado:** Pendiente.
 
 ### CP02 — Movimiento y controles
 
@@ -50,7 +50,7 @@ Se comprobó que el videojuego mantenga un rendimiento estable en PC, tomando co
 1. Utilizar W, A, S y D para desplazarse.
 2. Mover el mouse para controlar la cámara.
 3. Mantener Shift izquierdo para correr.
-4. Presionar Ctrl izquierdo para agacharse.
+4. Presionar C para agacharse.
 5. Intentar desplazarse contra paredes y objetos sólidos.
 
 **Resultado esperado:** Vadrik responde correctamente a los controles y no atraviesa los obstáculos del escenario.

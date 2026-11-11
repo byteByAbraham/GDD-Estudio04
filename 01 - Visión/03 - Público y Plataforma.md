@@ -30,7 +30,7 @@
 
 **Controles:** El diseño estará pensado para teclado y mouse, utilizados para el movimiento, interacción y exploración del escenario, por lo que no se contempla como requisito el uso de controles alternativos.
 
-**Conectividad:** El videojuego requerirá conexión a Internet para acceder a determinadas funciones y recursos necesarios para el funcionamiento del prototipo.
+**Conectividad:** El videojuego funciona sin conexión a Internet.
 
 ## Sesión de juego
 

@@ -2,7 +2,7 @@
 
 ## Guardado
 
-**Tipo:** Automático mediante checkpoints.
+**Tipo:** Automático en cada checkpoint y manual desde el menú de pausa.
 
 **Cuándo se guarda:** Al iniciar el recorrido y al acceder a cada cabaña principal.
 
@@ -18,12 +18,12 @@ Dark Mutant cuenta con un menú de opciones dividido en Audio, Video y Controles
 
 | Categoría    | Opciones                                                                                                      |
 | ------------- | ------------------------------------------------------------------------------------------------------------- |
-| Audio         | Sonidos y volumen predeterminados, sin ajustes.                                                               |
-| Video         | Seleccionar el modo de pantalla entre ventana, sin bordes y pantalla completa.                                |
+| Audio         | Volumen general, de ambiente y de voces.                                                               |
+| Video         | Seleccionar el modo de pantalla entre ventana, sin bordes y pantalla completa, y sincronización vertical (VSync).                                |
 | Controles     | Ajustar la sensibilidad de la cámara e invertir el eje vertical del mouse. Las teclas permanecen fijas.      |
 | Accesibilidad | No incluye ajustes de tamaño de texto, subtítulos ni reasignación de teclas.                               |
 | Jugabilidad   | Progreso lineal, objetivos en pantalla y checkpoints automáticos, sin opciones para modificar la dificultad. |
 
 ## Restablecimiento
 
-No se contempla el restablecimiento de opciones, ya que el juego no incluye ajustes de configuración.
+El menú de opciones incluye un botón para restablecer los valores predeterminados.
