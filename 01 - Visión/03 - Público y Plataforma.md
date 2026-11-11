@@ -6,7 +6,7 @@
 
 **Experiencia esperada:** Intermedia, ya que el videojuego está pensado para jugadores que tengan cierta familiaridad con videojuegos de terror, supervivencia y exploración pero no requiere experiencia avanzada.
 
-**Intereses relevantes:** Videojuegos de terror psicológico, supervivencia, misterio, exploración, sigilo e historias con giros inesperados.
+**Intereses relevantes:** Videojuegos de terror,  supervivencia, misterio, exploración, sigilo e historias con giros inesperados.
 
 **Conocimientos previos necesarios:** Manejo básico de videojuegos en primera persona, uso de teclado y ratón, exploración de escenarios e interacción con objetos.
 

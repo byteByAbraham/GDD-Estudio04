@@ -22,11 +22,11 @@
 
 **Subgéneros:**
 
-- Survival Horror-Acción-aventura
+- Survival Horror
 
 **Plataforma objetivo:**
 
-* Pc
+* PC
 
 **Modo de juego:**
 
