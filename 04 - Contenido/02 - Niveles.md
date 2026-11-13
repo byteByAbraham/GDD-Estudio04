@@ -22,16 +22,16 @@ Dark Mutant presenta un recorrido continuo dividido en cinco zonas de progresió
 
 **Puntos de guardado:** Checkpoint inicial dentro de la cabaña.
 
-**Condición de entrada:** Finalizar la cinemática introductoria.
+**Condición de entrada:** Finalizar el storyboard introductorio.
 
 **Condición de salida:** Encontrar y utilizar la llave de la puerta.
 
-**Eventos narrativos:** Vadrik despierta sin comprender cómo llegó allí y cree que Jereth permanece a salvo en el laboratorio.
+**Eventos narrativos:** Tras los acontecimientos presentados en el storyboard, Vadrik despierta sin comprender cómo llegó a la cabaña y cree que Jereth permanece a salvo en el laboratorio.
 
 **Flujo del nivel:**
 
 ```
-Despertar → Explorar → Encontrar la llave → Abrir la puerta → Salir al bosque.
+Storyboard introductorio → Despertar → Explorar → Encontrar la llave → Abrir la puerta → Salir al bosque.
 ```
 
 ## Zona 2 — Bosque y segunda cabaña
@@ -171,7 +171,5 @@ Entrar → Explorar las instalaciones → Examinar los expedientes → Descubrir
 * El agotamiento de la linterna no impide completar el recorrido.
 * Los textos se leen con claridad y mantienen coherencia con la historia.
 * El jugador comprende qué requisito le falta para acceder a la siguiente zona.
-
-
 
 > **Navegación:** [[00 - Índice]] · ← [[01 - Estructura del Contenido]] · [[03 - Enemigos y NPC]] →

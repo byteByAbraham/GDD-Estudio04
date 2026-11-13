@@ -74,11 +74,31 @@ Imp**acto en otros sistemas:** Modelos 3D, texturas y rendimiento.
 
 **Responsable:** García Rodríguez Abraham Antonio.
 
+
+#### Cambio 5 — Sustitución de la cinemática de introducción por un storyboard 
+
+**Fecha:** 12/11/2026
+
+**Cambio propuesto:** Sustituir la cinemática animada de introducción por un storyboard ilustrado que presente los acontecimientos previos al inicio del videojuego.
+
+**Motivo:** Inicialmente, se contemplaba desarrollar una cinemática animada para mostrar cómo Vadrik D.sang y su hijo Jereth llegaron al laboratorio del Dr. Cooper. Sin embargo, se decidió utilizar una secuencia de ilustraciones para contar estos acontecimientos.
+
+**Beneficio esperado:** Presentar el contexto de la historia de manera clara, mantener el estilo artístico de los personajes y reducir el tiempo de producción de la introducción.
+
+**Costo estimado:** Bajo.
+
+**Impacto en otros sistemas:** Introducción del videojuego, narrativa, ilustraciones e interfaz.
+
+**Decisión:** Aprobado.
+
+**Responsable:** Equipo de desarrollo de Dark Mutant.
+
 ## Registro
 
-| Fecha      | Cambio                              | Motivo                                        | Impacto                        | Estado   |
-| ---------- | ----------------------------------- | --------------------------------------------- | ------------------------------ | -------- |
-| 24/10/2026 | Cerradura con llave en la cabaña 3 | Unificar el sistema de acceso a las cabañas. | Puertas, llaves y objetivos.   | Aprobado |
-| 02/11/2026 | Incorporación del inventario       | Organizar los objetos recolectados.           | Interfaz y guardado.           | Aprobado |
-| 04/11/2026 | Calidad gráfica de 4K a 2K         | Reducir el consumo de recursos.               | Modelos 3D y rendimiento.      | Aprobado |
-| 08/11/2026 | Código de acceso al laboratorio    | Incorporar una nueva condición de acceso.    | Panel numérico y progresión. | Aprobado |
+| Fecha      | Cambio                                          | Motivo                                                              | Impacto                                   | Estado   |
+| ---------- | ----------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- | -------- |
+| 24/10/2026 | Cerradura con llave en la cabaña 3             | Unificar el sistema de acceso a las cabañas.                       | Puertas, llaves y objetivos.              | Aprobado |
+| 02/11/2026 | Incorporación del inventario                   | Organizar los objetos recolectados.                                 | Interfaz y guardado.                      | Aprobado |
+| 04/11/2026 | Calidad gráfica de 4K a 2K                     | Reducir el consumo de recursos.                                     | Modelos 3D y rendimiento.                 | Aprobado |
+| 08/11/2026 | Código de acceso al laboratorio                | Incorporar una nueva condición de acceso.                          | Panel numérico y progresión.            | Aprobado |
+| 12/11/2026 | Cinemática sustituida por storyboard ilustrado | Reducir el trabajo de animación y presentar el contexto narrativo. | Introducción, narrativa e ilustraciones. | Aprobado |

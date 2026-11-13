@@ -41,7 +41,7 @@
 - Sistema de objetivos y checkpoints.
 - Integración de notas, fotografías y expedientes.
 - Ambientación sonora, iluminación y lluvia.
-- Cinemática introductoria y desenlace narrativo.
+- Storyboard ilustrado de introducción y desenlace narrativo.
 
 ### Pruebas
 

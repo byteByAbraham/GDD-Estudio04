@@ -22,20 +22,20 @@ Se comprobó que el videojuego mantenga un rendimiento estable en PC, tomando co
 
 ### CP01 — Inicio de partida
 
-**Objetivo:** Comprobar que el menú principal permita iniciar una nueva partida y reproducir la introducción del videojuego.
+**Objetivo:** Comprobar que el menú principal permita iniciar una nueva partida y presentar el storyboard introductorio del videojuego.
 
 **Precondiciones:** Ejecutar Dark Mutant desde el menú principal.
 
 **Pasos:**
 
 1. Seleccionar la opción «Nueva partida».
-2. Comprobar que se reproduzca la cinemática introductoria.
+2. Comprobar que se presente el storyboard introductorio.
 3. Esperar a que termine la introducción.
 4. Verificar que Vadrik aparezca dentro de la primera cabaña.
 
-**Resultado esperado:** La introducción se reproduce y el jugador comienza dentro de la primera cabaña con el control del personaje habilitado.
+**Resultado esperado:** El storyboard introductorio se presenta correctamente y el jugador comienza dentro de la primera cabaña con el control del personaje habilitado.
 
-**Resultado obtenido:** La cinemática se reprodujo correctamente y, al finalizar, Vadrik apareció dentro de la primera cabaña con los controles habilitados.
+**Resultado obtenido:** El storyboard se presentó correctamente y, al finalizar, Vadrik apareció dentro de la primera cabaña con los controles habilitados.
 
 **Estado:** Correcto.
 

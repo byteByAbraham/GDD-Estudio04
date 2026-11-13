@@ -4,15 +4,15 @@
 
 Métodos narrativos
 
-| Método         | Aplicación                                                                                     |
-| --------------- | ----------------------------------------------------------------------------------------------- |
-| Diálogo        | Conversación al final del juego entre Vadrik y el Dr. Cooper.                                  |
-| Cinemáticas    | Secuencia introductoria en desarrollo que presenta cómo Vadrik llegó a la cabaña.            |
-| Texto ambiental | Notas y mensajes que generan dudas y suspenso durante el recorrido.                             |
-| Objetos         | Expedientes y fotografías que muestran evidencias de los experimentos.                         |
-| Exploración    | El jugador descubre información al observar y revisar los escenarios.                          |
-| Audio           | Los sonidos ambientales y de la criatura mutante refuerzan la tensión y advierten del peligro. |
-| Narración      | La historia se reconstruye mediante los elementos anteriores; no hay narrador de voz.           |
+| Método               | Aplicación                                                                                                       |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Diálogo              | Conversación al final del juego entre Vadrik y el Dr. Cooper.                                                    |
+| Storyboard ilustrado | Secuencia de ilustraciones que presenta los acontecimientos previos al despertar de Vadrik en la primera cabaña. |
+| Texto ambiental      | Notas y mensajes que generan dudas y suspenso durante el recorrido.                                              |
+| Objetos              | Expedientes y fotografías que muestran evidencias de los experimentos.                                           |
+| Exploración          | El jugador descubre información al observar y revisar los escenarios.                                            |
+| Audio                | Los sonidos ambientales y de la criatura mutante refuerzan la tensión y advierten del peligro.                   |
+| Narración            | La historia se reconstruye mediante los elementos anteriores; no hay narrador de voz.                            |
 
 ## Estructura de diálogo
 

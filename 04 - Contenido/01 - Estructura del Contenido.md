@@ -7,7 +7,7 @@ Dark Mutant se desarrolla en un único escenario conectado, con una progresión 
 ```text
 Dark Mutant
 ├── Prólogo
-│   └── Cinemática que muestra cómo y por qué Vadrik llega a la cabaña.
+│   └── Storyboard ilustrado que muestra cómo y por qué Vadrik llega a la cabaña.
 ├── Bosque y cabañas
 │   ├── Cabaña 1: despertar, encontrar la llave y salir.
 │   ├── Cabaña 2: localizar la llave, investigar y obtener el primer fusible.
@@ -48,7 +48,7 @@ Dark Mutant
 
 | Contenido                                 | Requisito previo                                          |
 | ----------------------------------------- | --------------------------------------------------------- |
-| Despertar en la primera cabaña           | Finalizar la cinemática introductoria.                   |
+| Despertar en la primera cabaña           | Finalizar el storyboard introductorio.                    |
 | Salida al bosque                          | Encontrar y utilizar la llave de la primera cabaña.      |
 | Acceso a la segunda cabaña               | Encontrar su llave correspondiente.                       |
 | Primer fusible                            | Explorar el interior de la segunda cabaña.               |

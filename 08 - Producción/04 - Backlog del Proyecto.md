@@ -158,7 +158,7 @@
 
 ### Tarea 12. Integración de los acontecimientos narrativos
 
-**Descripción:** Incorporar la cinemática introductoria, el evento de la fogata, el encuentro con el Dr. Cooper y los expedientes que permiten descubrir la verdad al final del videojuego.
+**Descripción:** Incorporar el storyboard ilustrado de introducción, el evento de la fogata, el encuentro con el Dr. Cooper y los expedientes que permiten descubrir la verdad al final del videojuego.
 
 **Responsable:** Equipo de desarrollo.
 
@@ -183,7 +183,7 @@
 - [B09] — Objetivos y checkpoints: Mostrar el progreso de los objetivos y guardar la partida en los puntos de control.
 - [B10] — Animaciones y ambientación visual: Integrar las animaciones, la iluminación nocturna, la lluvia y los efectos ambientales.
 - [B11] — Ambientación sonora: Incorporar los sonidos del bosque, la lluvia, las interacciones y la criatura mutante.
-- [B12] — Acontecimientos narrativos: Integrar la cinemática introductoria, el evento de la fogata, el encuentro con el Dr. Cooper y el desenlace de la historia.
+- [B12] — Acontecimientos narrativos: Integrar el storyboard ilustrado de introducción, el evento de la fogata, el encuentro con el Dr. Cooper y el desenlace de la historia.
 
 ## Priorización
 
