@@ -18,7 +18,7 @@ Dark Mutant presenta un recorrido continuo dividido en cinco zonas de progresió
 
 **Obstáculos:** Oscuridad y puerta cerrada que requiere una llave.
 
-**Recompensas:** Acceso al bosque y primeras pistas sobre la situación de Vadrik.
+**Recompensas:** Acceso al bosque y primeros detalles sobre la situación de Vadrik.
 
 **Puntos de guardado:** Checkpoint inicial dentro de la cabaña.
 
@@ -50,7 +50,7 @@ Storyboard introductorio → Despertar → Explorar → Encontrar la llave → A
 
 **Obstáculos:** Oscuridad, puerta cerrada y presencia de la criatura mutante durante el recorrido.
 
-**Recompensas:** Primer fusible, nuevas pistas y guardado del progreso.
+**Recompensas:** Primer fusible, información narrativa mediante las notas y guardado del progreso.
 
 **Puntos de guardado:** Checkpoint al entrar en la segunda cabaña.
 
@@ -82,7 +82,7 @@ Explorar el bosque → Encontrar la llave → Entrar a la cabaña → Guardar ch
 
 **Obstáculos:** Oscuridad, puerta cerrada y encuentros con la criatura mutante.
 
-**Recompensas:** Segundo fusible, código del laboratorio, nuevas pistas y checkpoint.
+**Recompensas:** Segundo fusible, código de acceso al laboratorio, información adicional sobre la historia mediante las notas, expedientes y checkpoint.
 
 **Puntos de guardado:** Checkpoint al entrar en la tercera cabaña.
 
@@ -90,7 +90,7 @@ Explorar el bosque → Encontrar la llave → Entrar a la cabaña → Guardar ch
 
 **Condición de salida:** Obtener el segundo fusible y descubrir el código de acceso.
 
-**Eventos narrativos:** Las pistas aumentan las sospechas sobre los experimentos del Dr. Cooper. Durante el recorrido, Vadrik experimenta una alucinación junto a la fogata, donde cree encontrarse con Jereth.
+**Eventos narrativos:** Las notas, fotos y expedientes aportan información que aumenta las sospechas de Vadrik sobre los experimentos del Dr. Cooper. Durante el recorrido, Vadrik experimenta una alucinación junto a la fogata, donde cree encontrarse con Jereth, sin saber que en realidad está frente a la criatura mutante.
 
 **Flujo del nivel:**
 

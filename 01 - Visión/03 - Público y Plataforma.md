@@ -36,7 +36,7 @@
 
 **Duración esperada de una sesión:** 10 a 15 minutos.
 
-**Duración total estimada del juego:** 30-35 minutos.
+**Duración total estimada del juego:** 25-30 minutos.
 
 ## Modelo de distribución
 

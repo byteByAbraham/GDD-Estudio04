@@ -6,17 +6,17 @@ Los sistemas son conjuntos de reglas y componentes que trabajan juntos: combate,
 
 ## Inventario de sistemas
 
-| Sistema | Propósito | Dependencias | Estado |
-|---|---|---|---|
-| S01 - Jugador, cámara y entradas | Moverse, observar y aceptar solo las acciones permitidas en cada situación | Colisiones, S09 | Implementado |
-| S02 - Interacción e inventario | Usar objetos, leer documentos y guardar el equipo | S01, S08 | Implementado (falta la linterna en el inventario) |
-| S03 - Progresión, accesos y checkpoints | Controlar objetivos, puertas, generadores, panel de código y puntos de guardado | S02, S09 | En integración (faltan la palanca y conectar el panel) |
-| S04 - Ambiente nocturno y lluvia | Mantener la noche, la lluvia constante, la oscuridad interior y el audio ambiental | S05, S08 | Implementado (falta que la lluvia empiece desde el inicio) |
-| S05 - Criatura: percepción, estados y captura | Crear una amenaza justa y coherente con el sigilo, sin combate | NavMesh, S01, S04, S06 | Implementado |
-| S06 - Linterna y batería | Iluminar con un costo de batería y de riesgo | S01, S02, S05 | Implementado |
-| S07 - Narrativa y diálogos | Contar la historia con la introducción, los documentos, los diálogos y la escena final | S02, S03, S08 | Pendiente (el sistema de diálogos existe; faltan las escenas) |
-| S08 - Interfaz y señales | Comunicar acciones, estado y peligro con texto, imagen y sonido | S01 a S07 | Implementado |
-| S09 - Gestión de partida, guardado y ajustes | Pausar, reintentar desde el checkpoint, guardar y cargar | S01 a S08 | Implementado |
+| Sistema                                       | Propósito                                                                                                                           | Dependencias           | Estado       |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------ |
+| S01 - Jugador, cámara y entradas              | Moverse, observar y aceptar solo las acciones permitidas en cada situación                                                          | Colisiones, S09        | Implementado |
+| S02 - Interacción e inventario                | Interactuar con objetos, recolectar y consultar el equipo, y examinar los elementos del entorno.                                    | S01, S08               | Implementado |
+| S03 - Progresión, accesos y checkpoints       | Controlar objetivos, puertas, generadores, panel de código y puntos de guardado                                                     | S02, S09               | Implementado |
+| S04 - Ambiente nocturno y lluvia              | Mantener la ambientación nocturna, la neblina, la lluvia intermitente, la iluminación tenue de los interiores y el audio ambiental. | S05, S08               | Implementado |
+| S05 - Criatura: percepción, estados y captura | Crear una amenaza justa y coherente con el sigilo, sin combate                                                                      | NavMesh, S01, S04, S06 | Implementado |
+| S06 - Linterna y batería                      | Iluminar con un costo de batería y de riesgo                                                                                        | S01, S02, S05          | Implementado |
+| S07 - Narrativa y diálogos                    | Contar la historia mediante el storyboard introductorio, los elementos narrativos, los diálogos y la escena final.                  | S02, S03, S08          | Implementado |
+| S08 - Interfaz y señales                      | Comunicar acciones, estado y peligro con texto, imagen y sonido                                                                     | S01 a S07              | Implementado |
+| S09 - Gestión de partida, guardado y ajustes  | Pausar, reintentar desde el checkpoint, guardar y cargar                                                                            | S01 a S08              | Implementado |
 
 ## Estados globales del juego
 
@@ -57,39 +57,39 @@ Todos los sistemas consultan el estado global (`GameStateManager`) para saber qu
 
 ### S02 - Interacción e inventario
 
-| Campo | Contenido |
-|---|---|
-| Objetivo | Permitir usar los objetos del escenario y guardar el equipo y los documentos obtenidos. |
-| Entradas | E sobre un objeto a 2 m o menos; Tab para el inventario. |
-| Salidas | Objeto guardado, documento leído, puerta o mecanismo actualizado y mensaje en pantalla. |
-| Estados posibles | Sin objetivo, objeto apuntado, pantalla de lectura abierta, inventario abierto. |
-| Datos que necesita | Identificador único de cada objeto, su tipo y sus requisitos (llave, fusible o energía). |
-| Datos que genera | Banderas `pickup:<id>`, listas de llaves y documentos. |
-| Riesgos | Registrar un objeto dos veces; que un objeto obligatorio quede inaccesible. |
+| Campo              | Contenido                                                                                                                                                   |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo           | Permitir al jugador interactuar con objetos del entorno, recolectar elementos necesarios para avanzar y consultar los objetos almacenados en el inventario. |
+| Entradas           | E sobre un objeto a 2 m o menos; **Tab** para abrir el inventario, clic izquierdo para seleccionar objetos y **F** para examinarlos.                        |
+| Salidas            | Objeto guardado, documento leído, puerta o mecanismo actualizado y mensaje en pantalla.                                                                     |
+| Estados posibles   | Sin objetivo, objeto apuntado, pantalla de lectura abierta, inventario abierto.                                                                             |
+| Datos que necesita | Identificador único de cada objeto, su tipo y sus requisitos (llave, fusible o energía).                                                                    |
+| Datos que genera   | Banderas `pickup:<id>`, listas de llaves y documentos.                                                                                                      |
+| Riesgos            | Registrar un objeto dos veces; que un objeto obligatorio quede inaccesible.                                                                                 |
 
 **Objetos interactivos**
 
-| Objeto | Acción con E | Dónde se guarda |
-|---|---|---|
-| Linterna | Equipo inicial | Inventario |
-| Pila | Recoger (se usa al instante, +40 %) | No se guarda |
-| Llave | Recoger | Inventario |
-| Fusible | Recoger | Inventario |
-| Nota, archivo o imagen | Leer | Documentos |
-| Puerta | Abrir o cerrar; pide su llave si está cerrada | — |
-| Escondite (armario, cama o casillero) | Entrar o salir | — |
-| Caseta de generador | Colocar fusible y bajar la palanca | — |
-| Panel de código | Abrir el teclado numérico | — |
+| Objeto                                | Acción con E                                  | Dónde se guarda |
+| ------------------------------------- | --------------------------------------------- | --------------- |
+| Linterna                              | Equipo inicial                                | Inventario      |
+| Pila                                  | Recoger (se usa al instante, +40 %)           | No se guarda    |
+| Llave                                 | Recoger                                       | Inventario      |
+| Fusible                               | Recoger                                       | Inventario      |
+| Nota, expediente clínico o fotografía | Leer                                          | No se guarda    |
+| Puerta                                | Abrir o cerrar; pide su llave si está cerrada | —               |
+| Escondite (armario, cama o casillero) | Entrar o salir                                | —               |
+| Caseta de generador                   | Colocar fusible y bajar la palanca            | —               |
+| Panel de código                       | Abrir el teclado numérico                     | —               |
 
 **Reglas**
 
-| Regla | Detalle |
-|---|---|
-| Detección del objeto | Raycast desde el centro de la cámara, 2 m, sin obstáculos |
-| Aviso | Muestra el nombre y la acción: leer, recoger, abrir, colocar, activar o esconderse |
-| Requisito faltante | Mensaje como «Está cerrada con llave» o «Falta un fusible», sin completar la acción |
-| Duplicados | Cada objeto se registra una sola vez |
-| Inventario | Pestañas Inventario y Documentos; Q / E cambian de pestaña y F examina |
+| Regla                | Detalle                                                                                           |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| Detección del objeto | Raycast desde el centro de la cámara, 2 m, sin obstáculos                                         |
+| Aviso                | Muestra el nombre y la acción: leer, recoger, abrir, colocar, activar o esconderse                |
+| Requisito faltante   | Mensaje como «Está cerrada con llave» o «Falta un fusible», sin completar la acción               |
+| Duplicados           | Cada objeto se registra una sola vez                                                              |
+| Inventario           | Muestra los objetos recolectados, permite seleccionarlos y examinarlos en 3D mediante la tecla F. |
 
 ### S03 - Progresión, accesos y checkpoints
 
@@ -119,37 +119,37 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 
 **Reglas**
 
-| Regla | Detalle |
-|---|---|
-| Fusibles | Cualquiera de los dos funciona en cualquier caseta |
-| Generador | E coloca el fusible y E baja la palanca; hace ruido a 8 m |
-| Energía | Con los dos generadores encendidos, se activa el panel de código |
-| Panel de código | 4 dígitos, sin límite de intentos |
-| No retroceder | Las puertas desbloqueadas, los generadores y los objetivos completados no se pierden |
-| Checkpoint | Guarda posición, batería, objetivo, banderas, llaves y documentos |
+| Regla           | Detalle                                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Fusibles        | Cualquiera de los dos funciona en cualquier caseta                                                                              |
+| Generador       | E coloca el fusible y E baja la palanca; hace ruido a 8 m                                                                       |
+| Energía         | Con los dos generadores encendidos, se activa el panel de código                                                                |
+| Panel de código | 4 dígitos, sin límite de intentos                                                                                               |
+| No retroceder   | Las puertas desbloqueadas, los generadores y los objetivos completados no se pierden                                            |
+| Checkpoint      | Guarda la posición, batería de la linterna, objetivo actual, estado de progreso y objetos recolectados, como llaves y fusibles. |
 
 ### S04 - Ambiente nocturno y lluvia
 
-| Campo | Contenido |
-|---|---|
-| Objetivo | Mantener una atmósfera oscura y lluviosa que limite la percepción del jugador y de la criatura. |
-| Entradas | Posición del jugador (interior o exterior) y ajustes de audio. |
-| Salidas | Lluvia visual, sonido de lluvia, modificador de ruido y de visión para S05. |
-| Estados posibles | Exterior bajo la lluvia, interior a cubierto. |
-| Datos que necesita | Zonas de refugio (`WeatherShelterZone`) en cada cabaña y en el laboratorio. |
-| Datos que genera | Indicador «bajo la lluvia» para el ruido y la visión de la criatura. |
-| Riesgos | Que la oscuridad impida orientarse; caída de FPS por las partículas de lluvia. |
+| Campo              | Contenido                                                                                                                 |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo           | Mantener una atmósfera nocturna con neblina y lluvia intermitente que genere tensión y limite la visibilidad del jugador. |
+| Entradas           | Posición del jugador (interior o exterior) y ajustes de audio.                                                            |
+| Salidas            | Lluvia visual, sonido de lluvia, modificador de ruido y de visión para S05.                                               |
+| Estados posibles   | Exterior bajo la lluvia, interior a cubierto.                                                                             |
+| Datos que necesita | Zonas de refugio (`WeatherShelterZone`) en cada cabaña y en el laboratorio.                                               |
+| Datos que genera   | Indicador «bajo la lluvia» para el ruido y la visión de la criatura.                                                      |
+| Riesgos            | Que la oscuridad impida orientarse; caída de FPS por las partículas de lluvia.                                            |
 
 **Reglas**
 
-| Regla | Detalle |
-|---|---|
-| Noche | Permanente durante toda la partida (skybox nocturno y posprocesado `VP_Mundo`) |
-| Lluvia | Constante desde el inicio |
-| Interior de las cabañas | Sin luz; la linterna es la única fuente para ver los objetos |
-| Dentro de un refugio | El sonido de la lluvia se atenúa y deja de reducir el ruido del jugador |
-| Efecto en el ruido | Con lluvia, los pasos se oyen a 3 / 8 / 1 m (caminar / correr / agachado) en lugar de 5 / 12 / 2 m |
-| Efecto en la visión de la criatura | Con lluvia, su alcance baja de 10 m a 7 m |
+| Regla                              | Detalle                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Noche                              | Permanente durante toda la partida (skybox nocturno y posprocesado `VP_Mundo`)                     |
+| Lluvia                             | Intermitente durante el recorrido en el bosque.                                                    |
+| Interior de las cabañas            | Sin luz; la linterna es la única fuente para ver los objetos                                       |
+| Dentro de un refugio               | El sonido de la lluvia se atenúa y deja de reducir el ruido del jugador                            |
+| Efecto en el ruido                 | Con lluvia, los pasos se oyen a 3 / 8 / 1 m (caminar / correr / agachado) en lugar de 5 / 12 / 2 m |
+| Efecto en la visión de la criatura | Con lluvia, su alcance baja de 10 m a 7 m                                                          |
 
 ### S05 - Criatura: percepción, estados y captura
 
@@ -218,15 +218,15 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 
 ### S07 - Narrativa y diálogos
 
-| Campo | Contenido |
-|---|---|
-| Objetivo | Contar el pasado de Vadrik, Jereth y el Dr. Cooper durante la partida y cerrar la historia con la revelación final. |
-| Entradas | Documentos leídos, llegada a la fogata, llegada al laboratorio y opciones elegidas. |
-| Salidas | Pantallas de lectura, diálogos, escena final y créditos. |
-| Estados posibles | Introducción, exploración, diálogo, escena final. |
-| Datos que necesita | Textos de documentos, nodos de diálogo (quién habla, texto y opciones) y banderas. |
-| Datos que genera | Banderas de diálogos terminados para que no se repitan. |
-| Riesgos | Que el jugador no entienda el final si no leyó documentos; diálogos demasiado largos. |
+| Campo              | Contenido                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| Objetivo           | Contar el pasado de Vadrik, Jereth y el Dr. Cooper durante la partida y cerrar la historia con la revelación final. |
+| Entradas           | Lectura de elementos narrativos, llegada a la fogata y al laboratorio, y opciones de diálogo seleccionadas.         |
+| Salidas            | Pantallas de lectura, diálogos, escena final y créditos.                                                            |
+| Estados posibles   | Introducción, exploración, diálogo, escena final.                                                                   |
+| Datos que necesita | Textos de documentos, nodos de diálogo (quién habla, texto y opciones) y banderas.                                  |
+| Datos que genera   | Banderas de diálogos terminados para que no se repitan.                                                             |
+| Riesgos            | Que el jugador no entienda el final si no leyó documentos; diálogos demasiado largos.                               |
 
 **Momentos narrativos**
 

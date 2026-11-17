@@ -19,20 +19,20 @@ Elementos:
 
 ## Estados
 
-| Estado                  | Representación visual                                                                                        |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Exploración            | Se muestran el objetivo actual y el indicador de batería.                                                    |
-| Interacción disponible | Aparece la tecla E junto con la acción que puede realizarse.                                                 |
-| Lectura                 | Se muestra el contenido de la nota o expediente de forma legible.                                             |
-| Diálogo                | Se presentan el texto y las opciones de respuesta disponibles.                                                |
-| Batería baja           | El indicador advierte que la carga está por agotarse.                                                        |
-| Peligro                 | Los bordes de la pantalla se oscurecen según la cercanía o persecución de la criatura mutante. (pendiente) |
-| Guardado                | Aparece brevemente la confirmación del checkpoint.                                                           |
-| Pausa                   | Se muestra el menú de pausa y se detiene la partida.                                                         |
-| Configuración          | Se muestran las categorías Audio, Video y Controles.                                                         |
-| Confirmación           | Aparece una ventana para confirmar el inicio de una nueva partida y el reinicio del progreso guardado.        |
-| Derrota                 | Aparece la pantalla de captura con la opción de reintentar.                                                  |
-| Partida completada      | Se muestra la pantalla de finalización tras el desenlace.                                                    |
+| Estado                 | Representación visual                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ |
+| Exploración            | Se muestran el objetivo actual y el indicador de batería.                                              |
+| Interacción disponible | Aparece la tecla E junto con la acción que puede realizarse.                                           |
+| Lectura                | Se muestra el contenido de la nota o expediente de forma legible.                                      |
+| Diálogo                | Se presentan el texto y las opciones de respuesta disponibles.                                         |
+| Batería baja           | El indicador advierte que la carga está por agotarse.                                                  |
+| Peligro                | Los bordes de la pantalla se oscurecen según la cercanía o persecución de la criatura mutante.         |
+| Guardado               | Aparece brevemente la confirmación del checkpoint.                                                     |
+| Pausa                  | Se muestra el menú de pausa y se detiene la partida.                                                   |
+| Configuración          | Se muestran las categorías Audio, Video y Controles.                                                   |
+| Confirmación           | Aparece una ventana para confirmar el inicio de una nueva partida y el reinicio del progreso guardado. |
+| Derrota                | Aparece la pantalla de captura con la opción de reintentar.                                            |
+| Partida completada     | Se muestra la pantalla de finalización tras el desenlace.                                              |
 
 ## Convenciones
 
@@ -40,11 +40,11 @@ Elementos:
 
 **Iconografía:** Símbolos sencillos y reconocibles para la batería, la tecla E y el guardado. Mantener el mismo estilo y grosor de línea en todos los iconos.
 
-**Tamaños mínimos:** Pendientes de definir mediante pruebas dentro del juego. Los objetivos, diálogos y documentos deben poder leerse sin acercarse a la pantalla.
+**Tamaños mínimos:** Los textos de los menús, objetivos e interacciones mantienen tamaños que permiten su lectura durante la partida. Los títulos y opciones de los menús utilizan una tipografía de mayor tamaño, mientras que las indicaciones de interacción emplean textos más pequeños, pero legibles.
 
 **Contraste:** Textos blancos o gris claro sobre fondos oscuros en la interfaz. En notas y expedientes, texto oscuro sobre papel claro; las manchas y el desgaste no deben ocultar información necesaria.
 
-**Animaciones:** Pendientes de definir. Las transiciones y avisos deben ser breves y permitir leer la información sin distraer de la exploración.
+
 
 ## Pantallas
 

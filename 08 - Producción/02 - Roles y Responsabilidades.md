@@ -13,14 +13,14 @@
 ## Áreas
 
 | Áreas        | Responsabilidades                                                                                                                                                                     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Diseño       | Definir la distribución de las zonas, los objetivos, las interacciones y las pistas necesarias para avanzar. Mantener actualizadas las decisiones en el GDD.                         |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Diseño       | Definir la distribución de las zonas, los objetivos, las interacciones y los objetos necesarios para avanzar. Mantener actualizadas las decisiones en el GDD.                         |
 | Programación | Desarrollar e integrar el movimiento en primera persona, el sigilo, la linterna, el inventario, las interacciones, el comportamiento de la criatura mutante y el sistema de guardado. |
-| Arte          | Elaborar bocetos y arte conceptual de personajes y escenarios, además de crear los modelos 3D, notas, fotografías, expedientes y demás recursos visuales del juego.                |
+| Arte         | Elaborar bocetos y arte conceptual de personajes y escenarios, además de crear los modelos 3D, notas, fotografías, expedientes y demás recursos visuales del juego.                   |
 | Animación    | Preparar e integrar las animaciones de los personajes, la criatura mutante y los eventos necesarios para el desarrollo de la historia.                                                |
-| Audio         | Preparar e integrar los sonidos del bosque, la lluvia, los efectos de interacción y las señales sonoras relacionadas con la criatura mutante.                                       |
-| Narrativa     | Mantener la coherencia de la historia de Vadrik, Jereth y el Dr. Cooper. Elaborar y revisar las notas, expedientes, diálogos y acontecimientos del desenlace.                        |
-| QA            | Probar las mecánicas, las interacciones, la persecución de la criatura mutante, los objetivos y los checkpoints. Identificar errores y comprobar sus correcciones.                  |
+| Audio        | Preparar e integrar los sonidos del bosque, la lluvia, los efectos de interacción y las señales sonoras relacionadas con la criatura mutante.                                         |
+| Narrativa    | Mantener la coherencia de la historia de Vadrik, Jereth y el Dr. Cooper. Elaborar y revisar las notas, expedientes, diálogos y acontecimientos del desenlace.                         |
+| QA           | Probar las mecánicas, las interacciones, la persecución de la criatura mutante, los objetivos y los checkpoints. Identificar errores y comprobar sus correcciones.                    |
 | Gestión      | Organizar las tareas del equipo, supervisar los avances, revisar los entregables y verificar que el desarrollo cumpla con lo establecido en el GDD.                                   |
 
 ## Responsabilidad

@@ -17,7 +17,7 @@
 
 ## Consideraciones
 
-El tamaño de los textos será fijo, sin posibilidad de ajustarlo desde la configuración. Se mantendrá una presentación legible para los objetivos, diálogos y documentos.
+El tamaño de los textos será fijo y no podrá modificarse desde la configuración. Los objetivos, diálogos y textos de la interfaz mantendrán un tamaño adecuado para facilitar su lectura durante la partida.
 
 El videojuego permitirá ajustar la sensibilidad de la cámara y los niveles de volumen general y ambiente. Las demás opciones de accesibilidad no están contempladas para esta versión de Dark Mutant.
 

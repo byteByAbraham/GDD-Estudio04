@@ -12,7 +12,7 @@ Se comprobó que los sistemas funcionen correctamente entre sí. Por ejemplo, qu
 
 ### Pruebas de usabilidad
 
-Se comprobó que el jugador comprenda los objetivos mostrados en pantalla, identifique los objetos interactivos, utilice el inventario y pueda avanzar mediante la exploración y las pistas. También permiten evaluar si las señales de peligro de la criatura mutante son comprensible
+Se comprobó que el jugador comprenda los objetivos mostrados en pantalla, identifique los objetos interactivos, utilice el inventario y pueda avanzar mediante la exploración y la búsqueda de objetos necesarios. También se evaluó si las señales de peligro de la criatura mutante son comprensibles y permiten al jugador reaccionar ante su presencia.
 
 ### Pruebas de rendimiento
 

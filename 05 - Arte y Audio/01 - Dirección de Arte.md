@@ -49,13 +49,8 @@ Texturas de resolución moderada, con superficies de madera, tierra, vegetación
 - Conservar una apariencia oscura y deteriorada en el bosque, las cabañas y el laboratorio.
 - Mantener proporciones humanas reconocibles, modelos de detalle moderado y diseños acordes con el estilo visual del juego.
 - Utilizar materiales de resolución moderada, evitando detalles excesivos que afecten el rendimiento.
-- Representar la lluvia constante y la humedad del entorno, sin incluir charcos de agua.
+- Representar la humedad del entorno mediante neblina y lluvia intermitente, sin incluir charcos de agua.
 - Mantener una apariencia antigua y desgastada en notas, fotografías y expedientes, con manchas y detalles que no dificulten su lectura.
 - Utilizar textos claros y elementos visuales discretos que no interrumpan la exploración.
 - Todos los personajes, objetos y escenarios deberán mantener el mismo nivel de detalle y estilo gráfico.
 
-## Referencias
-
-Añade enlaces o imágenes dentro de la carpeta del proyecto.
-
-> **Navegación:** [[00 - Índice]] · ← [[05 - Misiones y Desafíos]] · [[02 - Personajes y Animación]] →

@@ -13,7 +13,7 @@ Dark Mutant
 │   ├── Cabaña 2: localizar la llave, investigar y obtener el primer fusible.
 │   ├── Cabaña 3: encontrar la llave, obtener el segundo fusible y descubrir el código del laboratorio en una pizarra.
 │   ├── Fogata: Vadrik experimenta una alucinación en la que cree encontrarse con Jereth.
-│   └── Recorridos: explorar, seguir pistas y evitar a la criatura mutante.
+│   └── Recorridos: explorar el entorno, encontrar objetos necesarios para avanzar y evitar a la criatura mutante.
 ├── Laboratorio
 │   ├── Exterior
 │   │   ├── Colocar los fusibles en las dos casetas eléctricas.

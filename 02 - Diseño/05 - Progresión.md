@@ -8,15 +8,15 @@ Explica cómo cambia la experiencia desde el inicio hasta el final. La progresi�
 
 Describe las etapas principales del juego.
 
-| Etapa | Zona | Objetivo en pantalla | Qué aprende o enfrenta el jugador |
-|---|---|---|---|
-| **1. Inicio** | Cabaña 1 | «Encuentra la forma de salir» | Una introducción explica cómo Vadrik llegó con el Dr. Cooper. Despierta en la cabaña oscura, aprende a moverse, encender la linterna e interactuar, lee los primeros documentos y encuentra la llave para salir. |
-| **2. Primer recorrido** | Bosque y cabaña 2 | «Encuentra la llave y entra a la segunda cabaña» | Recorre el bosque con la linterna y escucha por primera vez la respiración y los pasos de la criatura. Encuentra la llave perdida en el bosque, y dentro de la cabaña, la llave de la cabaña 3 y el primer fusible. |
-| **3. La alucinación** | Fogata, entre las cabañas 2 y 3 | «Busca la forma de entrar a la tercera cabaña» | Vadrik cree ver a Jereth junto a la fogata y habla con él. El jugador elige sus respuestas, pero el encuentro es una alucinación y no cambia la historia. |
-| **4. Avance de la investigación** | Bosque y cabaña 3 | «Explora la tercera cabaña» | Usa el sigilo y los escondites en trayectos más largos. Encuentra el segundo fusible y la pizarra con el código de la puerta del laboratorio. Los documentos revelan quién es en realidad el Dr. Cooper. |
-| **5. Restablecimiento de energía** | Exterior del laboratorio | «Restablece la energía del laboratorio» | Coloca un fusible en cada caseta y baja sus palancas. Cada generador hace ruido y puede atraer a la criatura, por lo que el jugador queda expuesto en la zona más peligrosa. |
-| **6. Entrada al laboratorio** | Puerta del laboratorio | «Abre la puerta del laboratorio» | Ingresa en el panel el código de 4 dígitos que vio en la pizarra de la cabaña 3. |
-| **7. Revelación final** | Laboratorio y oficina del Dr. Cooper | «Descubre la verdad» | Encuentra al Dr. Cooper herido, que le dice que Jereth está encerrado y, antes de morir, confiesa que nunca hubo cura. En la oficina, Vadrik lee el archivo de Jereth y descubre que la criatura es su hijo. La criatura aparece detrás de él y el juego termina con los créditos. |
+| Etapa                              | Zona                                 | Objetivo en pantalla                             | Qué aprende o enfrenta el jugador                                                                                                                                                                                                                                                  |
+| ---------------------------------- | ------------------------------------ | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Inicio**                      | Cabaña 1                             | «Encuentra la llave de la primera cabaña.»       | Un storyboard introductorio muestra cómo Vadrik llegó con Jereth al laboratorio del Dr. Cooper. Después, despierta en una cabaña oscura, aprende a moverse, utilizar la linterna e interactuar con objetos, lee las primeras notas y encuentra la llave para salir.                |
+| **2. Primer recorrido**            | Bosque y cabaña 2                    | «Encuentra la llave y entra a la segunda cabaña» | Recorre el bosque con la linterna y escucha por primera vez la respiración y los pasos de la criatura. Encuentra la llave perdida en el bosque, y dentro de la cabaña, la llave de la cabaña 3 y el primer fusible.                                                                |
+| **3. La alucinación**              | Fogata, entre las cabañas 2 y 3      | «Busca la forma de entrar a la tercera cabaña»   | Vadrik cree ver a Jereth junto a la fogata y habla con él. El jugador elige sus respuestas, pero el encuentro es una alucinación y no cambia la historia.                                                                                                                          |
+| **4. Avance de la investigación**  | Bosque y cabaña 3                    | «Explora la tercera cabaña»                      | Utiliza el sigilo y los escondites para evitar a la criatura mutante. Encuentra el segundo fusible y la pizarra con el código de acceso al laboratorio. Las notas, fotografías y expedientes  aportan información sobre los experimentos del Dr. Cooper.                           |
+| **5. Restablecimiento de energía** | Exterior del laboratorio             | «Restablece la energía del laboratorio»          | Coloca un fusible en cada caseta y baja sus palancas. Cada generador hace ruido y puede atraer a la criatura, por lo que el jugador queda expuesto en la zona más peligrosa.                                                                                                       |
+| **6. Entrada al laboratorio**      | Puerta del laboratorio               | «Abre la puerta del laboratorio»                 | Ingresa en el panel el código de 4 dígitos que vio en la pizarra de la cabaña 3.                                                                                                                                                                                                   |
+| **7. Revelación final**            | Laboratorio y oficina del Dr. Cooper | «Descubre la verdad»                             | Encuentra al Dr. Cooper herido, que le dice que Jereth está encerrado y, antes de morir, confiesa que nunca hubo cura. En la oficina, Vadrik lee el archivo de Jereth y descubre que la criatura es su hijo. La criatura aparece detrás de él y el juego termina con los créditos. |
 
 ## Progresión del jugador
 
@@ -36,7 +36,7 @@ Describe las etapas principales del juego.
 
 ## Progresión del personaje
 
-Vadrik no obtiene nuevas habilidades ni mejoras de estadísticas. Su único equipo es la linterna, que tiene desde el inicio; a lo largo del recorrido solo reúne objetos de progreso (llaves y fusibles) y documentos. Su progresión es emocional y de conocimiento:
+Vadrik no obtiene nuevas habilidades ni mejoras de estadísticas. Desde el inicio cuenta con una linterna y, durante el recorrido, recolecta objetos necesarios para avanzar, como llaves, fusibles y pilas. Su progresión se centra en el conocimiento de la historia y en el impacto emocional de los acontecimientos, conforme descubre información sobre los experimentos del Dr. Cooper y el destino de su hijo.
 
 | Momento | Estado de Vadrik |
 |---|---|

@@ -10,11 +10,11 @@ Describe el ciclo que se repite durante la experiencia.
 
 **Bucle principal de Dark Mutant:**
 
-`Recibir objetivo → Explorar con la linterna → Encontrar llaves, fusibles, pilas y documentos → Evitar a la criatura → Abrir un nuevo acceso → Guardar checkpoint → Descubrir una parte de la historia → Nuevo objetivo`
+`Recibir objetivo → Explorar con la linterna → Buscar llaves, fusibles, pilas y objetos necesarios para avanzar → Evitar a la criatura mutante → Desbloquear nuevos accesos → Activar checkpoint → Descubrir información sobre la historia mediante notas, fotografías y expedientes clínicos → Recibir nuevo objetivo → Repetir.`
 
 **Bucle del proyecto:**
 
-El jugador recibe un objetivo breve y explora el bosque y las cabañas, que están completamente a oscuras, con la ayuda de la linterna. Busca las llaves que abren cada cabaña, algunas perdidas en el bosque y otras dentro de las propias cabañas, además de pilas para recargar la batería y documentos (notas, archivos e imágenes) que cuentan quién es en realidad el Dr. Cooper y qué le ocurrió a Jereth. Mientras tanto, una criatura patrulla la zona: el jugador debe agacharse, esconderse o huir para no ser atrapado. Cada nuevo acceso guarda un checkpoint. El ciclo se repite hasta reunir los dos fusibles de las cabañas 2 y 3, restablecer la energía del laboratorio con los generadores, abrir su puerta con el código que aparece en una pizarra de la cabaña 3 y descubrir la verdad.
+El jugador recibe un objetivo breve y explora el bosque y las cabañas, que están completamente a oscuras, con la ayuda de la linterna. Busca las llaves que abren cada cabaña, algunas perdidas en el bosque y otras dentro de las propias cabañas, además de pilas para recargar la batería y documentos (notas, expedientes e fotografías) que cuentan quién es en realidad el Dr. Cooper y qué le ocurrió a Jereth. Mientras tanto, una criatura patrulla la zona: el jugador debe agacharse, esconderse o huir para no ser atrapado. Cada nuevo acceso guarda un checkpoint. El ciclo se repite hasta reunir los dos fusibles de las cabañas 2 y 3, restablecer la energía del laboratorio con los generadores, abrir su puerta con el código que aparece en una pizarra de la cabaña 3 y descubrir la verdad.
 
 **Ciclo de amenaza:**
 
@@ -26,17 +26,17 @@ El jugador recibe un objetivo breve y explora el bosque y las cabañas, que est�
 
 ## Acciones principales del jugador
 
-| Acción | Propósito | Resultado |
-|---|---|---|
-| Explorar el bosque y las cabañas | Recorrer el entorno en busca de llaves, fusibles, pilas y documentos. | Encontrar lo necesario para abrir nuevos accesos y avanzar hacia el laboratorio. |
-| Usar y administrar la linterna | Iluminar el bosque y el interior oscuro de las cabañas, decidiendo cuándo encenderla para ahorrar batería. | Localizar objetos y caminos; a cambio, gasta batería y la luz puede delatar al jugador. |
-| Recoger pilas | Recuperar la carga de la linterna. | La pila se usa al recogerla y recupera 40 % de batería, hasta un máximo de 100 %. |
-| Leer notas, archivos e imágenes | Conocer el pasado: cómo llegó Vadrik con el Dr. Cooper, sus experimentos y lo ocurrido con Jereth. | El documento se guarda en el inventario y puede volver a consultarse. |
-| Recoger llaves y abrir puertas | Acceder a las cabañas. | Se abre una nueva zona y se guarda un checkpoint. |
-| Avanzar con sigilo, esconderse y huir | Evitar ser detectado por la criatura y escapar cuando comienza una persecución. | Sobrevivir y continuar la investigación. |
-| Colocar fusibles y bajar las palancas | Restablecer la energía en las dos casetas de generadores del laboratorio. | Se enciende el panel de código de la puerta del laboratorio. |
-| Ingresar el código en el panel | Abrir la puerta del laboratorio con el número que aparece en la pizarra de la cabaña 3. | Acceso al laboratorio y a la escena final. |
-| Elegir respuestas en los diálogos | Seleccionar cómo responde Vadrik en la alucinación de la fogata y en la conversación con el Dr. Cooper. | Una respuesta diferente en la conversación, sin modificar el rumbo ni el final de la historia. |
+| Acción                                | Propósito                                                                                                  | Resultado                                                                                      |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Explorar el bosque y las cabañas      | Recorrer el entorno en busca de llaves, fusibles, pilas y elementos narrativos.                            | Encontrar lo necesario para abrir nuevos accesos y avanzar hacia el laboratorio.               |
+| Usar y administrar la linterna        | Iluminar el bosque y el interior oscuro de las cabañas, decidiendo cuándo encenderla para ahorrar batería. | Localizar objetos y caminos; a cambio, gasta batería y la luz puede delatar al jugador.        |
+| Recoger pilas                         | Recuperar la carga de la linterna.                                                                         | La pila se usa al recogerla y recupera 40 % de batería, hasta un máximo de 100 %.              |
+| Leer notas, archivos e imágenes       | Conocer el pasado: cómo llegó Vadrik con el Dr. Cooper, sus experimentos y lo ocurrido con Jereth.         | El documento se guarda en el inventario y puede volver a consultarse.                          |
+| Recoger llaves y abrir puertas        | Acceder a las cabañas.                                                                                     | Se abre una nueva zona y se guarda un checkpoint.                                              |
+| Avanzar con sigilo, esconderse y huir | Evitar ser detectado por la criatura y escapar cuando comienza una persecución.                            | Sobrevivir y continuar la investigación.                                                       |
+| Colocar fusibles y bajar las palancas | Restablecer la energía en las dos casetas de generadores del laboratorio.                                  | Se enciende el panel de código de la puerta del laboratorio.                                   |
+| Ingresar el código en el panel        | Abrir la puerta del laboratorio con el número que aparece en la pizarra de la cabaña 3.                    | Acceso al laboratorio y a la escena final.                                                     |
+| Elegir respuestas en los diálogos     | Seleccionar cómo responde Vadrik en la alucinación de la fogata y en la conversación con el Dr. Cooper.    | Una respuesta diferente en la conversación, sin modificar el rumbo ni el final de la historia. |
 
 ## Experiencia segundo a segundo
 
@@ -48,7 +48,7 @@ En un minuto típico, el jugador lee su objetivo, recorre una zona del bosque co
 
 ## Experiencia a largo plazo
 
-La curiosidad por saber qué ocurrió con Jereth y quién es en realidad el Dr. Cooper impulsa al jugador a continuar. Los documentos cuentan la historia en desorden y cada uno responde una pregunta, pero abre otra. A mitad del recorrido, en la fogata, Vadrik cree ver a su hijo, un encuentro que el jugador todavía no puede explicar. La tensión crece al acercarse al laboratorio, donde el Dr. Cooper, herido, le confiesa que nunca hubo cura, y termina cuando Vadrik descubre en el archivo de Jereth que la criatura que lo persiguió todo el camino es su hijo.
+La curiosidad por descubrir qué ocurrió con Jereth y cuáles eran las verdaderas intenciones del Dr. Cooper impulsa al jugador a continuar. A lo largo del recorrido, las notas, fotografías y expedientes clínicos aportan información sobre los acontecimientos sin revelar toda la historia desde el principio. Durante el encuentro en la fogata, Vadrik experimenta una alucinación en la que cree ver a su hijo, sin comprender lo que realmente sucede. La tensión aumenta conforme se acerca al laboratorio, donde encuentra al Dr. Cooper herido y descubre, mediante los expedientes del experimento, que la criatura mutante que lo persiguió durante su búsqueda es en realidad Jereth.
 
 ## Condición de victoria
 
@@ -62,14 +62,14 @@ El jugador pierde cuando la criatura lo atrapa. No hay barra de vida: una captur
 
 Describe cómo alternan:
 
-| Momento | Qué ocurre en Dark Mutant |
-|---|---|
-| Exploración | Recorrer el bosque y el interior oscuro de las cabañas en busca de llaves, fusibles, pilas y documentos. |
-| Acción | Esconderse o huir cuando la criatura detecta al jugador o se acerca. |
-| Descanso | Momentos sin amenaza para leer documentos, revisar el inventario y planear el siguiente movimiento. La cabaña 1 es una zona segura a la que la criatura no entra. |
-| Desafío | Avanzar sin ser visto, administrar la batería y encender los generadores, que hacen ruido y obligan a permanecer en el exterior. |
-| Recompensa | Abrir nuevas zonas, alcanzar checkpoints y obtener respuestas sobre lo ocurrido. |
-| Historia | La introducción, los documentos, la alucinación de la fogata y la escena final en el laboratorio revelan la verdad poco a poco. |
+| Momento     | Qué ocurre en Dark Mutant                                                                                                                     |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Exploración | Recorrer el bosque y el interior oscuro de las cabañas en busca de llaves, fusibles, pilas y elementos narrativos.                            |
+| Acción      | Esconderse o huir cuando la criatura detecta al jugador o se acerca.                                                                          |
+| Descanso    | Momentos sin amenaza para leer notas y expedientes, revisar el inventario y planear el siguiente movimiento.                                  |
+| Desafío     | Avanzar sin ser visto, administrar la batería y encender los generadores, que hacen ruido y obligan a permanecer en el exterior.              |
+| Recompensa  | Abrir nuevas zonas, alcanzar checkpoints y obtener respuestas sobre lo ocurrido.                                                              |
+| Historia    | La introducción, los elementos narrativos, la alucinación de la fogata y la escena final en el laboratorio revelan progresivamente la verdad. |
 
 ## Principios de interacción
 
@@ -84,4 +84,3 @@ Describe cómo alternan:
 * Cuando falta algo para usar un objeto (una llave, un fusible o la energía), un mensaje lo indica, sin decir dónde encontrarlo.
 * Las respuestas de los diálogos nunca cambian el final, para que el jugador no sienta que eligió mal.
 
-> **Navegación:** [[00 - Índice]] · ← [[04 - Pilares de Diseño]] · [[02 - Mecánicas]] →

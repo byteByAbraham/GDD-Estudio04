@@ -70,15 +70,15 @@
 
 ## Hitos
 
-| Hito                           | Entregable                                            | Criterio de finalización                                                               | Estado     |
-| ------------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------- |
+| Hito                          | Entregable                                            | Criterio de finalización                                                               | Estado     |
+| ----------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------- | ---------- |
 | 1. Definición del concepto    | Concepto general, historia y personajes               | Se establece la idea principal, las mecánicas y el alcance del videojuego.             | Completado |
 | 2. Documentación del proyecto | Game Design Document (GDD)                            | Las secciones principales están documentadas y revisadas por el equipo.                | Completado |
 | 3. Diseño visual              | Bocetos y arte conceptual                             | Se cuenta con los diseños de referencia de los personajes y escenarios.                | Completado |
-| 4. Recursos narrativos         | Notas, fotografías y expedientes 3D                  | Los recursos están preparados para integrarse en Unity.                                | Completado |
+| 4. Recursos narrativos        | Notas, fotografías y expedientes 3D                   | Los recursos están preparados para integrarse en Unity.                                | Completado |
 | 5. Mecánicas principales      | Movimiento, sigilo, linterna e interacciones          | Las mecánicas funcionan correctamente dentro del videojuego.                           | Completado |
-| 6. Desarrollo de escenarios    | Bosque, cabañas y laboratorio                        | Las zonas están construidas y permiten completar el recorrido establecido.             | Completado |
-| 7. Integración de sistemas    | Inventario, objetivos, criatura mutante y checkpoints | Los sistemas funcionan de manera conjunta durante la partida.                           | Completado |
-| 8. Integración audiovisual    | Animaciones, iluminación, lluvia y sonidos           | Los recursos visuales y sonoros están integrados en los escenarios.                    | Completado |
-| 9. Pruebas y correcciones      | Versión jugable revisada                             | Se completa el recorrido y se corrigen los errores detectados.                          | Pendiente  |
-| 10. Entrega final              | Videojuego ejecutable y documentación                | El videojuego funciona en PC y los archivos del proyecto están listos para su entrega. | Pendiente  |
+| 6. Desarrollo de escenarios   | Bosque, cabañas y laboratorio                         | Las zonas están construidas y permiten completar el recorrido establecido.             | Completado |
+| 7. Integración de sistemas    | Inventario, objetivos, criatura mutante y checkpoints | Los sistemas funcionan de manera conjunta durante la partida.                          | Completado |
+| 8. Integración audiovisual    | Animaciones, iluminación, lluvia y sonidos            | Los recursos visuales y sonoros están integrados en los escenarios.                    | Completado |
+| 9. Pruebas y correcciones     | Versión jugable revisada                              | Se completa el recorrido y se corrigen los errores detectados.                         | Completado |
+| 10. Entrega final             | Videojuego ejecutable y documentación                 | El videojuego funciona en PC y los archivos del proyecto están listos para su entrega. | Pendiente  |

@@ -34,7 +34,7 @@ La propuesta de valor es ofrecer una experiencia de terror y supervivencia que c
 * Sigilo para esconderse y evitar a la criatura mutante.
 * Investigación mediante notas, fotografías y expedientes.
 * Búsqueda de llaves para desbloquear la entrada a las demás cabañas y generadores.
-* Noche permanente, lluvia constante y sonidos que generan tensión.
+* Ambiente nocturno con presencia de neblina, lluvia intermitente y sonidos que generan tensión.
 * Administración de la batería de la linterna para sobrevivir.
 
 ## Diferenciadores

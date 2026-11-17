@@ -36,7 +36,7 @@ Métodos narrativos
 
 **Contexto:** Vadrik llega al laboratorio y encuentra al científico herido. La conversación se relaciona con las evidencias descubiertas durante la investigación.
 
-**Opciones del jugador:** Seleccionar respuestas que expresen distintas reacciones o preguntas de Vadrik. Las opciones concretas están pendientes de redactar.
+**Opciones del jugador:** Seleccionar respuestas que expresen distintas reacciones o preguntas de Vadrik. 
 
 **Consecuencias:** La selección modifica el intercambio inmediato, pero no cambia los acontecimientos principales ni el final abierto.
 

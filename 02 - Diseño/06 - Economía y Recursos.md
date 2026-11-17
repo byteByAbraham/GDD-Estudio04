@@ -75,7 +75,7 @@ Con este balance, el jugador no puede llevar la linterna encendida todo el tiemp
 
 **¿Qué comportamiento queremos incentivar?**
 
-Que el jugador observe antes de actuar, decida cuándo vale la pena gastar batería, preste atención a los documentos (como el código de la pizarra) y busque refugio en lugar de correr sin rumbo.
+Que el jugador observe el entorno antes de actuar, administre la batería de la linterna, preste atención a los elementos importantes del escenario, como el código de la pizarra, y utilice el sigilo y los escondites para evitar a la criatura mutante.
 
 **¿Qué comportamiento queremos evitar?**
 

@@ -25,12 +25,12 @@ Dark Mutant se juega únicamente con teclado y mouse. No hay soporte para contro
 
 **Inventario**
 
-| Acción | Teclado | Mouse |
-|---|---|---|
-| Cambiar de pestaña (Inventario / Documentos) | Q y E | Clic en la pestaña |
-| Moverse por la lista | W y S, o flechas | Clic en el elemento; rueda para desplazar |
-| Examinar un objeto o leer un documento completo | F o Intro | Clic |
-| Cerrar | Tab o Esc | Botón «Cerrar» |
+| Acción                   | Teclado          | Mouse                                     |
+| ------------------------ | ---------------- | ----------------------------------------- |
+| Abrir inventario         | Tab              | Clic en la pestaña                        |
+| Moverse por la lista     | W y S, o flechas | Clic en el elemento; rueda para desplazar |
+| Examinar un objeto en 3D | F o Intro        | Clic                                      |
+| Cerrar inventario        | Tab o Esc        | Botón «Cerrar»                            |
 
 **Panel de código, diálogos y menús**
 
@@ -57,26 +57,26 @@ El jugador no puede cambiar las teclas asignadas. Desde Configuración sí puede
 
 ## Entrada y retroalimentación
 
-| Entrada / acción | Respuesta inmediata | Confirmación o límite |
-|---|---|---|
-| W, A, S y D | Movimiento según hacia dónde mira la cámara, con sonido de pasos según la postura | Las colisiones bloquean el paso; la diagonal no aumenta la velocidad |
-| Movimiento del mouse | Cambia la mirada y la dirección de la linterna | En los menús mueve el cursor; en un escondite solo gira la cámara |
-| Shift mantenido | Aumenta la velocidad mientras se mueve de pie | Pasos más ruidosos (12 m); no funciona agachado |
-| C | Cambia la altura de la cámara y la postura | Pasos más silenciosos (2 m); si hay un techo encima, sigue agachado |
-| F | Enciende o apaga la linterna con un sonido breve | Gasta batería encendida; con 0 % muestra «Sin batería»; no funciona en un escondite |
-| E sobre un documento | Abre la pantalla de lectura y pausa el juego | Se agrega a Documentos; volver a leerlo no lo duplica |
-| E sobre una llave o un fusible | Lo recoge y muestra su nombre | Se agrega al Inventario y desaparece del escenario |
-| E sobre una pila | La usa al instante y recupera 40 % de batería | Máximo 100 %; si la batería está llena, el sobrante se pierde |
-| E sobre una puerta | La abre si tiene la llave correcta | Sin la llave muestra «Está cerrada con llave» |
-| E sobre una caseta de generador | Primero coloca el fusible; después baja la palanca y enciende el generador con luz y sonido | Sin fusible muestra «Falta un fusible»; el generador hace ruido a 8 m y no se puede apagar |
-| E sobre el panel de código | Abre el teclado numérico y pausa el juego | Sin energía no responde; código incorrecto: «Código incorrecto»; código correcto: la puerta se desbloquea |
-| E sobre un escondite | Coloca al jugador dentro y apaga la linterna | Muestra «[E] Salir»; corta la persecución |
-| E desde un escondite | Devuelve al jugador al punto de salida | La linterna sigue apagada; no hay invulnerabilidad |
-| Tab | Abre o cierra el inventario y cambia entre cursor y cámara | Pausa el juego; no se abre si hay otra pantalla abierta |
-| Esc | Cierra la pantalla abierta o abre la pausa | Los menús siguen respondiendo con el juego detenido |
-| Clic en una opción de diálogo | Muestra la respuesta del otro personaje | La elección no se puede cambiar y no altera el final |
-| Captura | Se bloquean las entradas y aparece la pantalla de captura | Opciones «Reintentar» y «Menú principal» |
-| Clic en «Reintentar» | Carga el último checkpoint | La criatura vuelve a su patrulla, la batería queda en al menos 30 % y el jugador no aparece bajo ataque inmediato |
+| Entrada / acción                | Respuesta inmediata                                                                         | Confirmación o límite                                                                                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| W, A, S y D                     | Movimiento según hacia dónde mira la cámara, con sonido de pasos según la postura           | Las colisiones bloquean el paso; la diagonal no aumenta la velocidad                                              |
+| Movimiento del mouse            | Cambia la mirada y la dirección de la linterna                                              | En los menús mueve el cursor; en un escondite solo gira la cámara                                                 |
+| Shift mantenido                 | Aumenta la velocidad mientras se mueve de pie                                               | Pasos más ruidosos (12 m); no funciona agachado                                                                   |
+| C                               | Cambia la altura de la cámara y la postura                                                  | Pasos más silenciosos (2 m); si hay un techo encima, sigue agachado                                               |
+| F                               | Enciende o apaga la linterna con un sonido breve                                            | Gasta batería encendida; con 0 % muestra «Sin batería»; no funciona en un escondite                               |
+| E sobre un documento            | Abre la pantalla de lectura y pausa el juego                                                | Permite consultar su contenido sin almacenarlo en el inventario.                                                  |
+| E sobre una llave o un fusible  | Lo recoge y muestra su nombre                                                               | Se agrega al Inventario y desaparece del escenario                                                                |
+| E sobre una pila                | La usa al instante y recupera 40 % de batería                                               | Máximo 100 %; si la batería está llena, el sobrante se pierde                                                     |
+| E sobre una puerta              | La abre si tiene la llave correcta                                                          | Sin la llave muestra «Está cerrada con llave»                                                                     |
+| E sobre una caseta de generador | Primero coloca el fusible; después baja la palanca y enciende el generador con luz y sonido | Sin fusible muestra «Falta un fusible»; el generador hace ruido a 8 m y no se puede apagar                        |
+| E sobre el panel de código      | Abre el teclado numérico y pausa el juego                                                   | Sin energía no responde; código incorrecto: «Código incorrecto»; código correcto: la puerta se desbloquea         |
+| E sobre un escondite            | Coloca al jugador dentro y apaga la linterna                                                | Muestra «[E] Salir»; corta la persecución                                                                         |
+| E desde un escondite            | Devuelve al jugador al punto de salida                                                      | La linterna sigue apagada; no hay invulnerabilidad                                                                |
+| Tab                             | Abre o cierra el inventario y cambia entre cursor y cámara                                  | Pausa el juego; no se abre si hay otra pantalla abierta                                                           |
+| Esc                             | Cierra la pantalla abierta o abre la pausa                                                  | Los menús siguen respondiendo con el juego detenido                                                               |
+| Clic en una opción de diálogo   | Muestra la respuesta del otro personaje                                                     | La elección no se puede cambiar y no altera el final                                                              |
+| Captura                         | Se bloquean las entradas y aparece la pantalla de captura                                   | Opciones «Reintentar» y «Menú principal»                                                                          |
+| Clic en «Reintentar»            | Carga el último checkpoint                                                                  | La criatura vuelve a su patrulla, la batería queda en al menos 30 % y el jugador no aparece bajo ataque inmediato |
 
 ## Aprendizaje de los controles
 

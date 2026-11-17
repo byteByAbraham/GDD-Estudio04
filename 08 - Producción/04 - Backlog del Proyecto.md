@@ -102,7 +102,7 @@
 
 ### Tarea 08. Interacciones y acceso a las zonas
 
-**Descripción:** Incorporar la recolección de llaves y fusibles, la apertura de puertas, la inspección de documentos, la activación de generadores y el ingreso del código del laboratorio.
+**Descripción:** Incorporar la recolección de llaves y fusibles, la apertura de puertas, la interacción con elementos narrativos, la activación de generadores y el ingreso del código de acceso al laboratorio.
 
 **Responsable:** García Rodríguez Abraham Antonio.
 

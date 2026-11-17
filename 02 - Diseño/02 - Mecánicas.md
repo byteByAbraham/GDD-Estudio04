@@ -26,7 +26,7 @@ Documenta cada mecánica con suficiente detalle para que otro integrante pueda i
 
 **Propósito:**
 
-Permitir que el jugador descubra lo ocurrido con Jereth y quién es en realidad el Dr. Cooper mediante la observación, la lectura de documentos y el uso de objetos. La investigación es lo que obliga al jugador a salir de la seguridad de la cabaña 1.
+Permitir que el jugador descubra lo ocurrido con Jereth y las verdaderas intenciones del Dr. Cooper mediante la exploración, la lectura de elementos narrativos y la interacción con objetos. La búsqueda de respuestas motiva al jugador a abandonar la seguridad de la primera cabaña.
 
 **Activación:**
 
@@ -37,7 +37,7 @@ Acercarse a un objeto interactivo, apuntarlo con el centro de la cámara y pulsa
 - Solo son interactivos: linterna, pilas, llaves, fusibles, notas, archivos, imágenes, puertas, escondites, palancas de los generadores y panel de código. El resto del escenario es decorativo.
 - El objeto debe estar a 2 m o menos y sin una pared u obstáculo entre la cámara y el objeto.
 - Al apuntar, un mensaje indica la acción disponible: leer, recoger, abrir, colocar, activar o esconderse.
-- Las notas, archivos e imágenes se muestran en una pantalla de lectura y se guardan en la pestaña Documentos del inventario. Las llaves y los fusibles se guardan en la pestaña Inventario. Cada objeto tiene un identificador único y solo se registra una vez.
+- Las llaves y los fusibles se guardan en la pestaña Inventario. Cada objeto tiene un identificador único y solo se registra una vez.
 - Las cabañas no tienen luz; para encontrar los objetos de su interior se necesita la linterna.
 - Si falta un requisito (una llave, un fusible o la energía), un mensaje lo indica, por ejemplo «Está cerrada con llave», sin marcar la acción como completada.
 - La pantalla de lectura pausa el juego.
@@ -65,7 +65,7 @@ Acercarse a un objeto interactivo, apuntarlo con el centro de la cámara y pulsa
 - Volver a leer un documento no lo duplica ni repite eventos de progreso.
 - Si dos objetos están juntos, se selecciona el que toca primero el centro de la cámara; su nombre aparece en pantalla.
 - Un objeto obligatorio (llave o fusible) nunca puede quedar fuera del recorrido accesible.
-- Al reaparecer en un checkpoint, los objetos, documentos, llaves y puertas coinciden con el estado guardado.
+- Al reaparecer en un checkpoint, los objetos, llaves y puertas coinciden con el estado guardado.
 
 ### Mecánica 02 - Evitar a la criatura y utilizar escondites
 
@@ -263,27 +263,30 @@ Las siguientes mecánicas complementan el núcleo y utilizan la misma ficha para
 
 ### Mecánica secundaria 03 - Inventario
 
-**Propósito:** guardar el equipo y los objetos de progreso, y permitir releer los documentos encontrados, sin indicar al jugador qué hacer a continuación.
+**Propósito:** Almacenar y consultar el equipo y los objetos recolectados durante la partida, permitiendo examinar sus modelos 3D y descripciones.
 
 **Activación:** pulsar **[Tab]**.
 
 **Reglas:**
 
-- El inventario tiene dos pestañas: **Inventario** (linterna, llaves y fusibles) y **Documentos** (notas, archivos e imágenes).
-- Al seleccionar un elemento se muestra su imagen y descripción; con **F** o **Intro** se examina (acercar un objeto o leer el documento completo).
-- No muestra objetivos ni pistas sobre dónde ir.
-- Las llaves y los fusibles se usan automáticamente al pulsar **E** sobre su puerta o caseta, sin arrastrarlos.
+- El inventario muestra los objetos recuperados, como la linterna, las llaves y los fusibles.
+- Al seleccionar un objeto, se muestra su modelo 3D, nombre y descripción.
+- Al pulsar **F**, se abre una vista de inspección que permite observar el objeto con mayor detalle.
+- Durante la inspección, el jugador puede girar el objeto con el clic izquierdo, ajustar su altura con el clic derecho y acercarlo o alejarlo con la rueda del mouse.
+- El inventario no almacena notas, fotografías ni expedientes clínicos.
+- No muestra objetivos ni indicaciones sobre dónde encontrar otros objetos.
+- Las llaves y los fusibles se utilizan al interactuar con los mecanismos correspondientes, sin necesidad de arrastrarlos desde el inventario.
 - Abrir el inventario pausa el juego y libera el cursor.
 
-**Entrada:** **[Tab]** para abrir o cerrar, **[Q / E]** para cambiar de pestaña, **[W / S]** o flechas para moverse por la lista, **[F / Intro]** para examinar, **[Clic izquierdo]** para seleccionar y **[Esc]** para cerrar.
+**Entrada**:  **[Tab]** para abrir el inventario, **[Clic izquierdo]** para seleccionar objetos, **[F]** para examinar y **[Esc]** para cerrar. Durante la inspección, se utilizan los botones del mouse para girar y ajustar la altura del objeto, y la rueda para controlar el zoom.
 
-**Estado inicial:** exploración, con los objetos y documentos obtenidos hasta ese momento.
+**Estado inicial:** Exploración, con los objetos recolectados hasta ese momento.
 
-**Estado final:** información consultada y regreso a la exploración sin cambiar la posición del jugador.
+**Estado final:** Objeto consultado o examinado y regreso a la exploración sin cambiar la posición del jugador.
 
-**Recursos utilizados:** inventario, lista de llaves, fusibles y documentos.
+**Recursos utilizados:** Inventario, modelos 3D y descripciones de los objetos recolectados.
 
-**Recompensa:** relacionar la información de los documentos y recordar qué objetos se tienen.
+**Recompensa:** Consultar los objetos disponibles y examinarlos con mayor detalle.
 
 **Penalización:** no aplica una penalización jugable directa.
 
