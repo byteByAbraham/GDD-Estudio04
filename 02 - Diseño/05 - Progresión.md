@@ -62,15 +62,15 @@ Vadrik no obtiene nuevas habilidades ni mejoras de estadísticas. Desde el inici
 
 La dificultad aumenta con la distancia entre zonas, el tiempo que el jugador pasa expuesto y el ruido que debe hacer para avanzar.
 
-| Etapa | Nivel de amenaza | Por qué |
-|---|---|---|
-| 1. Cabaña 1 | Ninguno | Zona segura; la criatura no entra |
-| 2. Bosque y cabaña 2 | Bajo | Primer contacto con la criatura; el jugador puede refugiarse en la cabaña 1 |
-| 3. Fogata | Bajo | Momento narrativo; la criatura no puede atrapar al jugador durante el diálogo |
-| 4. Bosque y cabaña 3 | Medio | Trayectos más largos; la cabaña 1 queda lejos |
-| 5. Generadores | Alto | El jugador permanece en el exterior y cada generador hace ruido a 8 m |
-| 6. Panel de código | Medio | Hay que recordar o volver a buscar el código |
-| 7. Laboratorio | Narrativo | Escena final sin persecución, que termina con el jumpscare |
+| Etapa                | Nivel de amenaza | Por qué                                                                                                                                                                                                   |
+| -------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Cabaña 1          | Ninguno          | Zona segura; la criatura no entra                                                                                                                                                                         |
+| 2. Bosque y cabaña 2 | Bajo             | Primer contacto con la criatura; el jugador puede refugiarse en la cabaña 1                                                                                                                               |
+| 3. Fogata            | Bajo             | Momento narrativo; la criatura no puede atrapar al jugador durante el diálogo                                                                                                                             |
+| 4. Bosque y cabaña 3 | Medio            | Trayectos más largos; la cabaña 1 queda lejos                                                                                                                                                             |
+| 5. Generadores       | Alto             | El jugador permanece en el exterior y cada generador hace ruido a 8 m                                                                                                                                     |
+| 6. Panel de código   | Medio            | Hay que recordar o volver a buscar el código                                                                                                                                                              |
+| 7. Laboratorio       | Narrativo        | Vadrik descubre la verdad sobre Jereth y la historia concluye con una pantalla titulada «El final de la pesadilla» y la frase «Algunos secretos nunca debieron salir a la luz», dejando un final abierto. |
 
 ## Curva de aprendizaje
 

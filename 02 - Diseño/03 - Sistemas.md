@@ -230,14 +230,14 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 
 **Momentos narrativos**
 
-| Momento | Dónde | Qué ocurre | Tipo |
-|---|---|---|---|
-| Introducción | Inicio de la partida | Explica cómo Vadrik, desesperado por la enfermedad de Jereth, llegó con el Dr. Cooper | Texto en pantalla |
-| Documentos | Bosque, cabañas y laboratorio | Notas, archivos e imágenes revelan quién es en realidad el Dr. Cooper y sus experimentos | Lectura opcional |
-| Alucinación | Fogata, entre las cabañas 2 y 3 | Vadrik cree ver a Jereth y habla con él; es una alucinación, no una comunicación real | Diálogo por opciones |
-| Dr. Cooper | Laboratorio | Cooper, herido, le dice que Jereth está encerrado; antes de morir confiesa que nunca hubo cura | Diálogo por opciones |
-| Revelación | Oficina del Dr. Cooper | Vadrik lee el archivo de Jereth y descubre que la criatura es su hijo | Lectura |
-| Final | Oficina del Dr. Cooper | La criatura aparece detrás de Vadrik (jumpscare) | Escena y créditos |
+| Momento      | Dónde                           | Qué ocurre                                                                                     | Tipo                 |
+| ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------- |
+| Introducción | Inicio de la partida            | Explica cómo Vadrik, desesperado por la enfermedad de Jereth, llegó con el Dr. Cooper          | Texto en pantalla    |
+| Documentos   | Bosque, cabañas y laboratorio   | Notas, archivos e imágenes revelan quién es en realidad el Dr. Cooper y sus experimentos       | Lectura opcional     |
+| Alucinación  | Fogata, entre las cabañas 2 y 3 | Vadrik cree ver a Jereth y habla con él; es una alucinación, no una comunicación real          | Diálogo por opciones |
+| Dr. Cooper   | Laboratorio                     | Cooper, herido, le dice que Jereth está encerrado; antes de morir confiesa que nunca hubo cura | Diálogo por opciones |
+| Revelación   | Oficina del Dr. Cooper          | Vadrik lee el archivo de Jereth y descubre que la criatura es su hijo                          | Lectura              |
+| Final        | Oficina del Dr. Cooper          | La historia termina sin revelar qué sucede con Vadrik y Jereth.                                | Escena y créditos    |
 
 **Reglas**
 
@@ -249,25 +249,25 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 
 ### S08 - Interfaz y señales
 
-| Campo | Contenido |
-|---|---|
-| Objetivo | Comunicar con claridad qué puede hacer el jugador, qué tiene y cuándo está en peligro. |
-| Entradas | Eventos de S01 a S07. |
-| Salidas | Elementos del HUD, mensajes, pantallas y sonidos. |
-| Datos que necesita | Textos, íconos, tamaño de texto, subtítulos y volúmenes. |
-| Riesgos | Saturar la pantalla; señales que delaten demasiado la ubicación de los objetos. |
+| Campo              | Contenido                                                                              |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Objetivo           | Comunicar con claridad qué puede hacer el jugador, qué tiene y cuándo está en peligro. |
+| Entradas           | Eventos de S01 a S07.                                                                  |
+| Salidas            | Elementos del HUD, mensajes, pantallas y sonidos.                                      |
+| Datos que necesita | Textos, íconos, elementos visuales de la interfaz y configuración de audio.            |
+| Riesgos            | Saturar la pantalla; señales que delaten demasiado la ubicación de los objetos.        |
 
 **Señales**
 
-| Señal | Tipo | Cuándo |
-|---|---|---|
-| Objetivo actual | Texto en el HUD | Siempre visible; cambia al completar un paso |
-| Batería | Barra en el HUD | Siempre visible; aviso cuando está baja |
-| Aviso de interacción | Texto al centro | Al apuntar un objeto a 2 m o menos |
-| Mensajes | Texto temporal | Requisito faltante, checkpoint guardado, código correcto o incorrecto |
-| Respiración de la criatura | Sonido | Según su estado y distancia |
-| Efecto de miedo | Viñeta en pantalla | Cuando la criatura está cerca o persigue |
-| Subtítulos | Texto | Diálogos y sonidos importantes (se pueden desactivar) |
+| Señal                      | Tipo               | Cuándo                                                                |
+| -------------------------- | ------------------ | --------------------------------------------------------------------- |
+| Objetivo actual            | Texto en el HUD    | Siempre visible; cambia al completar un paso                          |
+| Batería                    | Barra en el HUD    | Siempre visible; aviso cuando está baja                               |
+| Aviso de interacción       | Texto al centro    | Al apuntar un objeto a 2 m o menos                                    |
+| Mensajes                   | Texto temporal     | Requisito faltante, checkpoint guardado, código correcto o incorrecto |
+| Respiración de la criatura | Sonido             | Según su estado y distancia                                           |
+| Efecto de miedo            | Viñeta en pantalla | Cuando la criatura está cerca o persigue                              |
+| Diálogos                   | Texto en pantalla  | Durante las conversaciones y los eventos narrativos.                  |
 
 ### S09 - Gestión de partida, guardado y ajustes
 
@@ -282,15 +282,15 @@ La alucinación de la fogata ocurre en el trayecto entre la cabaña 2 y la caba�
 
 **Reglas**
 
-| Regla | Detalle |
-|---|---|
-| Guardado automático | En cada checkpoint |
-| Guardado manual | Desde el menú de pausa, en la posición actual |
-| Captura | Reaparece en el último checkpoint con al menos 30 % de batería |
-| Nueva partida | Borra la partida guardada; conserva los ajustes |
-| Continuar | Carga la partida guardada desde el menú principal |
-| Ajustes | Volumen general, de ambiente y de voces; sensibilidad; invertir eje Y; subtítulos; tamaño de texto; efectos reducidos; modo de pantalla; calidad; VSync |
-| Detalle técnico | Ver [[04 - Datos y Persistencia]] |
+| Regla | Detalle                                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Guardado automático | En cada checkpoint                                                                                                                            |
+| Guardado manual | Desde el menú de pausa, en la posición actual                                                                                                 |
+| Captura | Reaparece en el último checkpoint con al menos 30 % de batería                                                                                |
+| Nueva partida | Borra la partida guardada; conserva los ajustes                                                                                               |
+| Continuar | Carga la partida guardada desde el menú principal                                                                                             |
+| Ajustes | Volumen general y de ambiente; sensibilidad; invertir eje Y; subtítulos; tamaño de texto; efectos reducidos; modo de pantalla; calidad; VSync |
+| Detalle técnico | Ver [[04 - Datos y Persistencia]]                                                                                                             |
 
 ## Relaciones entre sistemas
 

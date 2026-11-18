@@ -62,25 +62,25 @@ El juego final utiliza dos escenas. El bosque, las tres cabañas, los generadore
 
 ## Componentes principales
 
-| Componente | Responsabilidad | Dependencias |
+| Componente | Responsabilidad                                                                                                                                                                                 | Dependencias |
 |---|---|---|
-| `PlayerInputController` | Lee las acciones del Input System (mover, mirar, correr, agacharse, interactuar, linterna, pausa y archivo) y las entrega a los demás scripts del jugador. | `PlayerInputActions` |
-| `PlayerMotor` | Movimiento en primera persona con Character Controller: caminar, correr, agacharse, gravedad y ruido de pasos. | `PlayerInputController`, `NoiseEmitter`, `WeatherController` |
-| `PlayerInteractor` | Lanza un raycast de 2 m desde la cámara, muestra el aviso del objeto y ejecuta la interacción con E. | `Interactable`, `GameEvents`, `GameStateManager` |
-| `PlayerHiding` | Entra y sale de escondites; bloquea el movimiento y la linterna mientras el jugador está escondido. | `HidingSpot`, `PlayerMotor` |
-| `Flashlight` + `BatteryModel` | Enciende y apaga la linterna, descuenta 0.3 % de batería por segundo y aplica las recargas de 40 %. | `PlayerHiding`, `GameEvents` |
+| `PlayerInputController` | Lee las acciones del Input System (mover, mirar, correr, agacharse, interactuar, linterna, pausa y archivo) y las entrega a los demás scripts del jugador.                                      | `PlayerInputActions` |
+| `PlayerMotor` | Movimiento en primera persona con Character Controller: caminar, correr, agacharse, gravedad y ruido de pasos.                                                                                  | `PlayerInputController`, `NoiseEmitter`, `WeatherController` |
+| `PlayerInteractor` | Lanza un raycast de 2 m desde la cámara, muestra el aviso del objeto y ejecuta la interacción con E.                                                                                            | `Interactable`, `GameEvents`, `GameStateManager` |
+| `PlayerHiding` | Entra y sale de escondites; bloquea el movimiento y la linterna mientras el jugador está escondido.                                                                                             | `HidingSpot`, `PlayerMotor` |
+| `Flashlight` + `BatteryModel` | Enciende y apaga la linterna, descuenta 0.3 % de batería por segundo y aplica las recargas de 40 %.                                                                                             | `PlayerHiding`, `GameEvents` |
 | `Interactable` (clase base) | Define el comportamiento común de todo objeto con el que se interactúa. De ella heredan `DoorInteractable`, `KeyPickup`, `NotePickup`, `BatteryPickup`, `GeneratorInteractable` y `HidingSpot`. | `PlayerRig`, `GameProgress` |
-| `CreatureAI` | Máquina de estados de la criatura: patrulla, investigación, persecución, búsqueda y captura. Percibe al jugador por la vista, el ruido y la linterna. | `NavMeshAgent`, `NoiseEmitter`, `PlayerHiding`, `Flashlight`, `ProtectedZone`, `GameStateManager` |
-| `ProgressionDirector` | Cambia el objetivo en pantalla al completar cada etapa y guarda una bandera permanente para no retroceder. | `GameProgress`, `GeneratorInteractable`, `GameEvents` |
-| `GameStateManager` | Controla el estado global: `Playing`, `Paused`, `Reading`, `Captured` y `Victory`. Pausa el juego al perder el foco de la ventana. | `PlayerInputActions` |
-| `GameProgress` (estático) | Guarda en memoria el progreso de la partida: objetivo actual, banderas, notas y llaves obtenidas. | — |
-| `NoiseEmitter` (estático) | Emite eventos de ruido con posición y radio; calcula el radio de los pasos según la postura y la lluvia. | `WeatherShelterZone` |
-| `GameEvents` (estático) | Canal de mensajes hacia la interfaz: avisos, textos de interacción, lectura de notas y subtítulos. | — |
-| `CheckpointManager` | Guarda el estado en cada checkpoint y, tras una captura, restaura al jugador, la criatura y la batería (mínimo 30 %). | `SaveSystem`, `GameProgress`, `CreatureAI`, `Flashlight`, `GameFlow` |
-| `SaveSystem` (estático) | Escribe y lee la partida guardada en un archivo JSON con copia de respaldo. | `GameProgress` |
-| `GameSettings` (estático) | Guarda la configuración del jugador (volumen, sensibilidad, subtítulos, calidad) en PlayerPrefs. | — |
-| `WeatherController` | Controla la lluvia y su audio; informa a los demás sistemas si el jugador está bajo la lluvia. | `GameProgress`, `GameSettings`, `PlayerRig` |
-| `HUDController`, `NotesUI`, `BatteryBarHUD` y pantallas | Muestran el objetivo, la batería, el archivo de notas y llaves, la pausa, la captura y la victoria. | `GameProgress`, `GameStateManager`, `GameEvents` |
+| `CreatureAI` | Máquina de estados de la criatura: patrulla, investigación, persecución, búsqueda y captura. Percibe al jugador por la vista, el ruido y la linterna.                                           | `NavMeshAgent`, `NoiseEmitter`, `PlayerHiding`, `Flashlight`, `ProtectedZone`, `GameStateManager` |
+| `ProgressionDirector` | Cambia el objetivo en pantalla al completar cada etapa y guarda una bandera permanente para no retroceder.                                                                                      | `GameProgress`, `GeneratorInteractable`, `GameEvents` |
+| `GameStateManager` | Controla el estado global: `Playing`, `Paused`, `Reading`, `Captured` y `Victory`. Pausa el juego al perder el foco de la ventana.                                                              | `PlayerInputActions` |
+| `GameProgress` (estático) | Guarda en memoria el progreso de la partida: objetivo actual, banderas, notas y llaves obtenidas.                                                                                               | — |
+| `NoiseEmitter` (estático) | Emite eventos de ruido con posición y radio; calcula el radio de los pasos según la postura y la lluvia.                                                                                        | `WeatherShelterZone` |
+| `GameEvents` (estático) | Canal de mensajes hacia la interfaz: avisos, textos de interacción, lectura de notas y diálogos                                                                                                 | — |
+| `CheckpointManager` | Guarda el estado en cada checkpoint y, tras una captura, restaura al jugador, la criatura y la batería (mínimo 30 %).                                                                           | `SaveSystem`, `GameProgress`, `CreatureAI`, `Flashlight`, `GameFlow` |
+| `SaveSystem` (estático) | Escribe y lee la partida guardada en un archivo JSON con copia de respaldo.                                                                                                                     | `GameProgress` |
+| `GameSettings` (estático) | Guarda la configuración del jugador (volumen, sensibilidad) en PlayerPrefs.                                                                                                                     | — |
+| `WeatherController` | Controla la lluvia y su audio; informa a los demás sistemas si el jugador está bajo la lluvia.                                                                                                  | `GameProgress`, `GameSettings`, `PlayerRig` |
+| `HUDController`, `NotesUI`, `BatteryBarHUD` y pantallas | Muestran el objetivo, la batería, el archivo de notas y llaves, la pausa, la captura y la victoria.                                                                                             | `GameProgress`, `GameStateManager`, `GameEvents` |
 
 ## Comunicación
 

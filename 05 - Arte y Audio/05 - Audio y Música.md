@@ -32,7 +32,7 @@ Define la identidad sonora y cómo el audio comunica información al jugador.
 | Panel de código                          | Pitido por dígito; tono de error o de aceptación                                                           | Confirmar cada dígito y el resultado                           | Implementado  |
 | Checkpoint                               | Aviso breve y discreto                                                                                     | Confirmar el guardado                                          | Implemmentado |
 | Captura                                  | Golpe sonoro con el grito de la criatura                                                                   | Reforzar el momento de la derrota                              | Implementado  |
-| Jumpscare final                          | Golpe sonoro fuerte con el grito de la criatura                                                            | Cerrar la historia de forma impactante                         | Implementado  |
+
 
 
 ## Audio espacial
@@ -49,9 +49,9 @@ Define la identidad sonora y cómo el audio comunica información al jugador.
 
 **Narración:** No hay narrador. La introducción se presenta mediante un storyboard ilustrado con texto, mientras que los elementos narrativos se consultan durante la exploración.
 
-**Diálogos hablados:** no hay. Los diálogos de la fogata y del Dr. Cooper se muestran como texto con opciones.
+**Diálogos hablados:** No hay voces grabadas. Los diálogos de la fogata y del Dr. Cooper se presentan mediante texto con opciones de respuesta.
 
-**Vocalizaciones:** la criatura no habla; se comunica con respiraciones, gruñidos y gritos. Su volumen se controla con la opción «Voces» de la configuración.
+**Vocalizaciones:** La criatura mutante no habla; emite respiraciones, gruñidos y gritos que forman parte de los efectos de sonido del juego.
 
 **Idiomas:** español.
 
@@ -67,5 +67,5 @@ Define la identidad sonora y cómo el audio comunica información al jugador.
 | 6         | Música durante la partida | Bajo                              | Acompaña la exploración y se mezcla suavemente con los sonidos ambientales sin ocultar las amenazas.   |
 | —         | Música del menú           | Medio                             | Solo en el menú principal                                                                              |
 
-El jugador ajusta tres volúmenes desde la configuración: **general** (100 % por defecto), **ambiente** (80 %) y **voces** (100 %).
+El jugador ajusta tres volúmenes desde la configuración: **general** (100 % por defecto), **ambiente** (80 %) 
 

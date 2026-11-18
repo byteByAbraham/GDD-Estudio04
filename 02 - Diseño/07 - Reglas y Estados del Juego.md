@@ -6,42 +6,41 @@ Define las reglas globales y los estados que puede atravesar el videojuego.
 
 ## Estados principales
 
-| Estado | Descripción |
-|---|---|
-| Menú principal | Primera pantalla del juego. Desde aquí el jugador comienza una nueva partida, retoma la que tiene guardada, ajusta la configuración, consulta los créditos o cierra el juego. |
-| Configuración | Reúne las opciones de audio, controles (sensibilidad del mouse e invertir eje Y), video y accesibilidad. Puede abrirse tanto desde el menú principal como desde la pausa. |
-| Carga | Mientras la pantalla se funde a negro, el juego prepara la escena `Mundo` y los datos de la partida, ya sea nueva o desde el último checkpoint. |
-| Introducción | Solo aparece en una partida nueva: un texto breve cuenta cómo Vadrik terminó confiando en el Dr. Cooper. |
-| Jugando | Estado normal de la partida. El jugador controla a Vadrik, recorre el bosque y las cabañas, usa objetos y avanza en sus objetivos mientras se mantiene lejos de la criatura. |
-| Lectura | Se activa cuando hay una ventana abierta sobre el juego: un documento, el inventario, el panel de código o un diálogo. Mientras dura, el mundo se detiene y la criatura no puede atrapar al jugador. |
-| Pausa | Congela la partida y ofrece reanudar, guardar, entrar a la configuración o regresar al menú principal. |
-| Capturado | Ocurre cuando la criatura alcanza a Vadrik. El jugador pierde el control y aparece la pantalla de captura, con las opciones «Reintentar» y «Menú principal». |
-| Escena final | Después de que Vadrik lee el archivo de Jereth en la oficina del Dr. Cooper, la criatura aparece a sus espaldas (jumpscare). |
-| Créditos | Muestran a los integrantes del equipo y los recursos utilizados. Se reproducen al cerrar la escena final y también pueden verse desde el menú principal. |
+| Estado         | Descripción                                                                                                                                                                                          |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Menú principal | Primera pantalla del juego. Desde aquí el jugador comienza una nueva partida, retoma la que tiene guardada, ajusta la configuración, consulta los créditos o cierra el juego.                        |
+| Configuración  | Reúne las opciones de audio, controles (sensibilidad del mouse e invertir eje Y), video y accesibilidad. Puede abrirse tanto desde el menú principal como desde la pausa.                            |
+| Carga          | Mientras la pantalla se funde a negro, el juego prepara la escena `Mundo` y los datos de la partida, ya sea nueva o desde el último checkpoint.                                                      |
+| Introducción   | Solo aparece en una partida nueva: un texto breve cuenta cómo Vadrik terminó confiando en el Dr. Cooper.                                                                                             |
+| Jugando        | Estado normal de la partida. El jugador controla a Vadrik, recorre el bosque y las cabañas, usa objetos y avanza en sus objetivos mientras se mantiene lejos de la criatura.                         |
+| Lectura        | Se activa cuando hay una ventana abierta sobre el juego: un documento, el inventario, el panel de código o un diálogo. Mientras dura, el mundo se detiene y la criatura no puede atrapar al jugador. |
+| Pausa          | Congela la partida y ofrece reanudar, guardar, entrar a la configuración o regresar al menú principal.                                                                                               |
+| Capturado      | Ocurre cuando la criatura alcanza a Vadrik. El jugador pierde el control y aparece la pantalla de captura, con las opciones «Reintentar» y «Menú principal».                                         |
+| Escena final   | Después de que Vadrik descubre la verdad sobre Jereth, aparece la pantalla «El final de la pesadilla» con la frase «Algunos secretos nunca debieron salir a la luz», dejando un final abierto.       |
+| Créditos       | Muestran a los integrantes del equipo y los recursos utilizados. Se reproducen al cerrar la escena final y también pueden verse desde el menú principal.                                             |
 
 ## Transiciones
 
-| Estado origen | Evento | Estado destino | Condición |
-|---|---|---|---|
-| Menú principal | Elegir «Nueva partida» | Carga | Si ya hay una partida guardada, el juego pide confirmar, porque se reemplazará |
-| Menú principal | Elegir «Continuar» | Carga | Tiene que existir una partida guardada válida |
-| Menú principal | Elegir «Configuración» | Configuración | — |
-| Carga | Termina de preparar una partida nueva | Introducción | La escena y el personaje ya están listos |
-| Carga | Termina de preparar una partida guardada | Jugando | Se recuperan la posición, la batería y el progreso |
-| Introducción | El texto termina o el jugador lo salta | Jugando | — |
-| Jugando | Abrir un documento, el inventario (Tab) o el panel de código, o comenzar un diálogo | Lectura | No debe haber otra ventana abierta |
-| Lectura | Cerrar la ventana (Esc, Tab o botón) o terminar el diálogo | Jugando | — |
-| Jugando | Pulsar Esc | Pausa | — |
-| Jugando | La ventana del juego deja de estar activa | Pausa | Solo cuando el estado era Jugando |
-| Pausa | Elegir «Reanudar» o pulsar Esc otra vez | Jugando | — |
-| Pausa | Elegir «Configuración» | Configuración | Al salir, se regresa a la pausa |
-| Pausa | Elegir «Menú principal» | Menú principal | El jugador confirma que quiere abandonar la partida |
-| Jugando | La criatura alcanza a Vadrik | Capturado | Está a 3 m o menos durante 0.6 s y el jugador no está escondido |
-| Capturado | Elegir «Reintentar» | Carga | Se recupera el último checkpoint |
-| Capturado | Elegir «Menú principal» | Menú principal | — |
-| Jugando | Leer el archivo de Jereth en la oficina del Dr. Cooper | Escena final | Antes debe haber ocurrido la conversación con el Dr. Cooper |
-| Escena final | Termina el jumpscare | Créditos | — |
-| Créditos | Terminan o el jugador pulsa «Volver» | Menú principal | — |
+| Estado origen  | Evento                                                                              | Estado destino | Condición                                                                      |
+| -------------- | ----------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------ |
+| Menú principal | Elegir «Nueva partida»                                                              | Carga          | Si ya hay una partida guardada, el juego pide confirmar, porque se reemplazará |
+| Menú principal | Elegir «Continuar»                                                                  | Carga          | Tiene que existir una partida guardada válida                                  |
+| Menú principal | Elegir «Configuración»                                                              | Configuración  | —                                                                              |
+| Carga          | Termina de preparar una partida nueva                                               | Introducción   | La escena y el personaje ya están listos                                       |
+| Carga          | Termina de preparar una partida guardada                                            | Jugando        | Se recuperan la posición, la batería y el progreso                             |
+| Introducción   | El texto termina o el jugador lo salta                                              | Jugando        | —                                                                              |
+| Jugando        | Abrir un documento, el inventario (Tab) o el panel de código, o comenzar un diálogo | Lectura        | No debe haber otra ventana abierta                                             |
+| Lectura        | Cerrar la ventana (Esc, Tab o botón) o terminar el diálogo                          | Jugando        | —                                                                              |
+| Jugando        | Pulsar Esc                                                                          | Pausa          | —                                                                              |
+| Jugando        | La ventana del juego deja de estar activa                                           | Pausa          | Solo cuando el estado era Jugando                                              |
+| Pausa          | Elegir «Reanudar» o pulsar Esc otra vez                                             | Jugando        | —                                                                              |
+| Pausa          | Elegir «Configuración»                                                              | Configuración  | Al salir, se regresa a la pausa                                                |
+| Pausa          | Elegir «Menú principal»                                                             | Menú principal | El jugador confirma que quiere abandonar la partida                            |
+| Jugando        | La criatura alcanza a Vadrik                                                        | Capturado      | Está a 3 m o menos durante 0.6 s y el jugador no está escondido                |
+| Capturado      | Elegir «Reintentar»                                                                 | Carga          | Se recupera el último checkpoint                                               |
+| Capturado      | Elegir «Menú principal»                                                             | Menú principal | —                                                                              |
+| Jugando        | Leer el archivo de Jereth en la oficina del Dr. Cooper                              | Escena final   | Antes debe haber ocurrido la conversación con el Dr. Cooper                    |
+| Créditos       | Terminan o el jugador pulsa «Volver»                                                | Menú principal | —                                                                              |
 
 ## Reglas globales
 

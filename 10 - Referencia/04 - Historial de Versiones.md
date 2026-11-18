@@ -23,13 +23,12 @@ Registra los cambios importantes realizados al GDD. Esto permite conocer cómo e
 
 ## Cambios de diseño importantes
 
-| Versión | Cambio | Motivo |
-|---|---|---|
-| 0.5.0 | Las tres cabañas se abren con llave; se descarta el candado de código de las cabañas. | Reducir el alcance por tiempo. |
-| 0.7.0 | Se elimina la «defensa» con la linterna (luz intensa y golpe). | Contradecía la regla de no tener combate. |
-| 0.9.0 | Se agregan los fusibles, las palancas de los generadores y el panel de código en la puerta del laboratorio. | Dar más peso a la investigación antes del final. |
-| 0.9.0 | Nuevo final: conversación con el Dr. Cooper herido, su muerte, el archivo de Jereth y el jumpscare. | Cerrar la historia con una revelación más fuerte. |
-| 0.9.0 | Se agrega la alucinación de Jereth en la fogata. | Sembrar la duda antes de la revelación final. |
+| Versión | Cambio                                                                                                      | Motivo                                            |
+| ------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| 0.5.0   | Las tres cabañas se abren con llave; se descarta el candado de código de las cabañas.                       | Reducir el alcance por tiempo.                    |
+| 0.7.0   | Se elimina la «defensa» con la linterna (luz intensa y golpe).                                              | Contradecía la regla de no tener combate.         |
+| 0.9.0   | Se agregan los fusibles, las palancas de los generadores y el panel de código en la puerta del laboratorio. | Dar más peso a la investigación antes del final.  |
+| 0.9.0   | Se agrega la alucinación de Jereth en la fogata.                                                            | Sembrar la duda antes de la revelación final.     |
 
 ## Convención sugerida
 

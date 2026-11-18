@@ -7,7 +7,7 @@ Define qué información necesita conservar el juego y cómo se estructura.
 ## Datos persistentes
 
 * **Progreso:** escena, posición y orientación del jugador en el último punto guardado, objetivo actual en pantalla y banderas de progreso (objetos recogidos, puertas desbloqueadas y abiertas, generadores encendidos y objetivos completados).
-* **Configuración:** volumen general, volumen de ambiente, volumen de voces, sensibilidad del mouse, invertir eje Y, subtítulos, tamaño de texto, efectos reducidos, modo de pantalla, calidad gráfica y sincronización vertical (VSync).
+* **Configuración:** Ajustes de audio, sensibilidad del mouse, inversión del eje vertical, modo de pantalla (ventana, sin bordes o pantalla completa) y sincronización vertical (VSync). Incluye un mapa de controles y la opción de restablecer los valores predeterminados.
 * **Inventario:** llaves y notas obtenidas, con su título y contenido, para consultarlas en el archivo de notas y llaves.
 * **Estadísticas:** no se guardan estadísticas del jugador (tiempo de juego, capturas u otras).
 * **Desbloqueos:** puertas abiertas y generadores encendidos, registrados como banderas de progreso.
@@ -36,7 +36,7 @@ Durante la partida, el progreso vive en memoria en la clase `GameProgress`. Cuan
 
 **Configuración (`GameSettings`)**
 
-Cada opción se guarda con el prefijo `dm.settings.`, por ejemplo `dm.settings.master` o `dm.settings.subtitles`. Si no existe un valor guardado, se usa el valor por defecto: volumen general 100 %, ambiente 80 %, voces 100 %, sensibilidad 1.0, subtítulos activados, texto normal, modo de pantalla sin bordes y VSync desactivado.
+Cada opción se guarda con el prefijo `dm.settings.`, por ejemplo `dm.settings.master` o `dm.settings.subtitles`. Si no existe un valor guardado, se usa el valor por defecto: volumen general 100 %, ambiente 80 %, sensibilidad, modo de pantalla sin bordes y VSync desactivado.
 
 ## Cuándo se guarda
 
